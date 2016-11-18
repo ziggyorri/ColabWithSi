@@ -1,0 +1,242 @@
+//sass --watch DropDead.scss:DropDead.css -compiled
+//Koala
+$fontSize:21px;
+$tveir: 70%;
+$ein: 29.5%;
+$colortheme:#fff;
+
+@mixin textSpacing($wid,$flo)
+{
+	box-sizing:border-box;//what
+	border: 5px ridge darken($colortheme, 25%);
+	padding: 13px;
+	margin:1px;
+	text-align:initial;
+	width:$wid;
+	float: $flo;
+	background-color: lighten($colortheme, 10%);
+	overflow:hidden;
+}
+
+body{
+	max-width: 940px;
+	margin:0 auto;
+	font-size: $fontSize;
+	background-color: darken($colortheme, 30%);
+}
+a{
+	color: lighten($colortheme, 30%);
+
+	
+}
+ul{
+	list-style:none;
+}
+a:hover{
+		color: lighten($colortheme, 40%);
+
+	}
+.mainbody{
+	@include textSpacing(100%,none);
+	background-color: $colortheme;
+	position:relative;
+	overflow: auto;
+	}
+
+nav
+{
+	margin:0;
+	padding: 0;
+	ul//öll ul tög sama hvar
+	{
+		margin:0;
+		padding:0;
+		list-style:none;
+		width: 100%;
+	}
+
+
+	&>ul//ista ul
+	{
+		text-align: center;
+
+		&>li//
+		{
+			display: inline-block;
+			background-color:#666;
+			position: relative;
+			width: 25%;
+			cursor: pointer;
+
+			&:hover
+			{
+				ul{
+					max-height:200px;
+				}
+			}
+
+			&>ul
+			{
+				max-height:0;
+				overflow:hidden;
+				position: absolute;
+				background-color: #aaa;
+				transition: max-height 0.7s;
+				//li eða &>li
+				a
+				{
+					display:block;
+					border-bottom: 1px solid black;
+					text-decoration:none;
+					transition: font-size 0.3s;
+
+					&:hover
+					{
+						color: black;
+						font-size:$fontSize;
+					}
+				}
+			}
+		}
+	}
+}
+.tittle{
+	@include textSpacing($tveir,left);
+}
+img{
+	width:100%;
+}
+.img{
+	@include textSpacing($tveir,left);
+	padding:0;
+	clear: left;
+}
+.opnun,
+.Price{
+	@include textSpacing($ein,none);
+	text-align:center;
+	.meh{
+		border-bottom:3px dotted black;
+	}
+	clear: right;
+	h3{
+		margin:-3px 0 0px 0;
+	}
+	h2{margin:0;}
+}
+.main{
+	@include textSpacing($tveir,left);
+
+	div{
+	@include textSpacing(100%,none);
+	}
+}
+.mapi{
+	@include textSpacing($ein,right);
+	padding: 0;
+	clear: right;
+	overflow:visible;
+	}
+#map{
+	width: 100%;
+}
+#map:hover{
+}
+footer{
+	display: flex;
+	clear:both;
+	overflow: auto;
+	@include textSpacing(100%,none);
+	ul{
+	@include textSpacing(33%,left);
+	}
+	padding:0;
+}
+
+
+@media screen and (max-width: 60em){
+	.tittle{
+	@include textSpacing(100%,left);
+	}
+	.img{
+	@include textSpacing(100%,left);
+	padding:0;
+	clear: left;
+	}
+	.opnun,
+	.Price{
+		text-align:center;
+		font-size: 17px;
+		h2{
+			font-size: 18px;
+		}
+
+	}
+	.mapi{
+	@include textSpacing($ein,none);
+	}
+}
+
+
+@media screen and (max-width: 48em){
+	.main{
+	@include textSpacing(100%,none);
+	}
+	.opnun,
+	.Price{
+	@include textSpacing($ein,left);
+	text-align:center;
+	clear:left;
+		font-size: 17px;
+		h2{
+			font-size: 18px;
+		}
+
+	}
+	.mapi{
+	@include textSpacing($tveir,none);
+	}
+}
+
+
+@media screen and (max-width: 30em){
+	.opnun,
+	.Price{
+	@include textSpacing(48%,left);
+	clear: none;
+	text-align:center;
+		font-size: 17px;
+		h2{
+			font-size: 18px;
+		}
+
+	}
+	.mapi{
+	@include textSpacing(100%,none);
+	}
+
+	img{
+		height: 200px;
+		width: auto;
+		&:hover{
+			overflow: visible;
+			animation-name: diagonal-slide;
+			animation-duration: 3s;
+			animation-iteration-count: 1;
+		}
+	}
+	.img{
+		
+	}
+}
+@keyframes diagonal-slide {
+
+  from {
+    margin-left: 0px;
+  }
+
+  to {
+    margin-left: -200px;
+  }
+
+}

@@ -1,0 +1,303 @@
+body {
+  max-width: 940px;
+  margin: 0 auto;
+  font-size: 21px;
+  background-color: #b3b3b3; }
+
+a {
+  color: white; }
+
+ul {
+  list-style: none; }
+
+a:hover {
+  color: white; }
+
+.mainbody {
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 100%;
+  float: none;
+  background-color: white;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  overflow: auto; }
+
+nav {
+  margin: 0;
+  padding: 0; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%; }
+  nav > ul {
+    text-align: center; }
+    nav > ul > li {
+      display: inline-block;
+      background-color: #666;
+      position: relative;
+      width: 25%;
+      cursor: pointer; }
+      nav > ul > li:hover ul {
+        max-height: 200px; }
+      nav > ul > li > ul {
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: #aaa;
+        transition: max-height 0.7s; }
+        nav > ul > li > ul a {
+          display: block;
+          border-bottom: 1px solid black;
+          text-decoration: none;
+          transition: font-size 0.3s; }
+          nav > ul > li > ul a:hover {
+            color: black;
+            font-size: 21px; }
+
+.tittle {
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 70%;
+  float: left;
+  background-color: white;
+  overflow: hidden; }
+
+img {
+  width: 100%; }
+
+.img {
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 70%;
+  float: left;
+  background-color: white;
+  overflow: hidden;
+  padding: 0;
+  clear: left; }
+
+.opnun,
+.Price {
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 29.5%;
+  float: none;
+  background-color: white;
+  overflow: hidden;
+  text-align: center;
+  clear: right; }
+  .opnun .meh,
+  .Price .meh {
+    border-bottom: 3px dotted black; }
+  .opnun h3,
+  .Price h3 {
+    margin: -3px 0 0px 0; }
+  .opnun h2,
+  .Price h2 {
+    margin: 0; }
+
+.main {
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 70%;
+  float: left;
+  background-color: white;
+  overflow: hidden; }
+  .main div {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 100%;
+    float: none;
+    background-color: white;
+    overflow: hidden; }
+
+.mapi {
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 29.5%;
+  float: right;
+  background-color: white;
+  overflow: hidden;
+  padding: 0;
+  clear: right;
+  overflow: visible; }
+
+#map {
+  width: 100%; }
+
+footer {
+  display: flex;
+  clear: both;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 5px ridge #bfbfbf;
+  padding: 13px;
+  margin: 1px;
+  text-align: initial;
+  width: 100%;
+  float: none;
+  background-color: white;
+  overflow: hidden;
+  padding: 0; }
+  footer ul {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 33%;
+    float: left;
+    background-color: white;
+    overflow: hidden; }
+
+@media screen and (max-width: 60em) {
+  .tittle {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 100%;
+    float: left;
+    background-color: white;
+    overflow: hidden; }
+
+  .img {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 100%;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+    padding: 0;
+    clear: left; }
+
+  .opnun,
+  .Price {
+    text-align: center;
+    font-size: 17px; }
+    .opnun h2,
+    .Price h2 {
+      font-size: 18px; }
+
+  .mapi {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 29.5%;
+    float: none;
+    background-color: white;
+    overflow: hidden; } }
+@media screen and (max-width: 48em) {
+  .main {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 100%;
+    float: none;
+    background-color: white;
+    overflow: hidden; }
+
+  .opnun,
+  .Price {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 29.5%;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    clear: left;
+    font-size: 17px; }
+    .opnun h2,
+    .Price h2 {
+      font-size: 18px; }
+
+  .mapi {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 70%;
+    float: none;
+    background-color: white;
+    overflow: hidden; } }
+@media screen and (max-width: 30em) {
+  .opnun,
+  .Price {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 48%;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+    clear: none;
+    text-align: center;
+    font-size: 17px; }
+    .opnun h2,
+    .Price h2 {
+      font-size: 18px; }
+
+  .mapi {
+    box-sizing: border-box;
+    border: 5px ridge #bfbfbf;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: 100%;
+    float: none;
+    background-color: white;
+    overflow: hidden; }
+
+  img {
+    height: 200px;
+    width: auto; }
+    img:hover {
+      overflow: visible;
+      animation-name: diagonal-slide;
+      animation-duration: 3s;
+      animation-iteration-count: 1; } }
+@keyframes diagonal-slide {
+  from {
+    margin-left: 0px; }
+  to {
+    margin-left: -200px; } }
+
+/*# sourceMappingURL=DropDead.css.map */
