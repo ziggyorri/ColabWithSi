@@ -30,6 +30,9 @@ a:hover {
   position: relative;
   overflow: auto; }
 
+input {
+  display: none; }
+
 nav {
   margin: 0;
   padding: 0; }
@@ -144,7 +147,9 @@ img {
     width: 100%;
     float: none;
     background-color: #a2a2a2;
-    overflow: hidden; }
+    overflow: hidden;
+    border: none;
+    font-weight: bold; }
 
 .mapi {
   box-sizing: border-box;
@@ -232,6 +237,55 @@ footer {
     background-color: #a2a2a2;
     overflow: hidden; } }
 @media screen and (max-width: 48em) {
+  input:checked ~ nav {
+    max-height: 500px;
+    overflow: scroll;
+    flex-flow: column;
+    display: box;
+    display: flex; }
+
+  nav {
+    max-height: 0px;
+    width: 100%;
+    overflow: hidden; }
+
+  label {
+    display: box;
+    padding: 10px;
+    border: 0.2em solid black;
+    border-radius: 5px;
+    position: relative;
+    width: 5em;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    z-index: 3; }
+
+  /*
+  
+  .ul {
+    cursor: pointer;
+    position: fixed;
+    top: 3.2em;
+    right: 1em;
+    z-index: 2;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+   */
+  /*.to {
+    color: white;
+    background-color: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-size: 24px;
+    letter-spacing: .05em;
+    list-style-type: none;
+    text-shadow: 2px 2px 1px #9f593f;
+    padding-left: 1em;
+    padding-top: 10px;
+  }*/
   .main {
     box-sizing: border-box;
     border: 5px ridge #484848;
@@ -273,18 +327,17 @@ footer {
     overflow: hidden; }
 
   footer {
-    flex-flow: column; }
+    display: block; }
     footer ul {
       box-sizing: border-box;
       border: 5px ridge #484848;
       padding: 13px;
       margin: 1px;
       text-align: initial;
-      width: 40%;
-      float: none;
+      width: 49%;
+      float: left;
       background-color: #a2a2a2;
-      overflow: hidden;
-      clear: none; }
+      overflow: hidden; }
     footer #ref {
       box-sizing: border-box;
       border: 5px ridge #484848;
@@ -313,6 +366,19 @@ footer {
     .opnun h2,
     .Price h2 {
       font-size: 18px; }
+
+  footer {
+    flex-flow: column; }
+    footer ul {
+      box-sizing: border-box;
+      border: 5px ridge #484848;
+      padding: 13px;
+      margin: 1px;
+      text-align: initial;
+      width: 100%;
+      float: none;
+      background-color: #a2a2a2;
+      overflow: hidden; }
 
   .mapi {
     box-sizing: border-box;

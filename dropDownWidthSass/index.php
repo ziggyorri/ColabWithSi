@@ -10,10 +10,12 @@
 <body>
 <div class="mainbody">
 <nav>
-	<ul>
+	<input type="checkbox" id="toggle">
+      <label for="toggle">&#9776menu</label>
+      <ul>
 		<li>Top tengill
 			<ul>
-				<li><a href="#">tengill</a></li>
+				<li><a id="link1" href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
@@ -45,7 +47,7 @@
 	<dir class="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
 	
 
-	<div class="main">
+	<div id="heading1" class="main">
 		<div>Hinn 12. nóvember verður sýningin Icelandic Sagas: The Greatest Hits in 75 minutes haldin í Hörpu til stuðnings Amnesty International. Allir listamennirnir gefa vinnu sína og rennur ágóðinn til Amnesty International. Aðstandendur sýningar ákváðu að halda sýninguna til stuðnings þeirra vegna flóttamannakrísunnar sem nú ríkir í heiminum og baráttu Amnesty International fyrir málefnum flóttafólks.</div>
 
 		<p>Tveir af frambærilegustu leikurum þjóðarinnar kynna Íslendingasögurnar – Brot af því besta á 75 mínútum – Stórskemmtilega leikhús rússíbanareið í gegnum þjóðararf íslensku fornbókmenntanna.</p>
@@ -100,7 +102,8 @@
 			<li><a href=""></a></li>
 		</ul>
 	</footer>
-	<script type="js.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js.js"></script>
 </div>
 </body>
 </html>

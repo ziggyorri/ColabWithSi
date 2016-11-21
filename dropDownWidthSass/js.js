@@ -3,7 +3,7 @@ var main = function(){
 	var yPos = $(document).scrollTop();
 	animateNav(); //for page refresh
 	
-	$(document).scroll(function(){
+	$(document).scroll(function(){//keirir þegar skrollar
 		animateNav();
 	});
 
@@ -31,13 +31,13 @@ var main = function(){
    	});
 	
 }  //end main
-
-var animateNav = function() {
+//function sem seigir til um skrollið
+var animateNav = function() {//keirist þegar skrollar
 
 	yPos = $(document).scrollTop();
-	var heading1Pos = $('#heading1').offset().top;
+	var heading1Pos = $('#heading1').offset().top;//hversu langt frá toppnum
 	
-	if(yPos > 100)
+	/*if(yPos > 100)//bæta við klassa
 	{
 		$('nav').addClass('scrollDown');		
 		$('nav>ul>li').addClass('scrollDown');
@@ -47,16 +47,18 @@ var animateNav = function() {
 	{
 		$('nav').removeClass('scrollDown');
 		$('nav>ul>li').removeClass('scrollDown');
-	}
+	}*/
 
-	if(yPos > heading1Pos)
+	if(yPos < 15)//breitist í abselute
 	{
-		$('nav').css('position','absolute');
-		$('nav').css('top', heading1Pos + 'px');
+		$('nav').css('position','relative');
+		$('nav').css('width','auto');
+		$('nav').css('top', 'none');
 	}
 	else
 	{
 		$('nav').css('position','fixed');
+		$('nav').css('width','905px');
 		$('nav').css('top','0');
 	}
 	
@@ -73,10 +75,11 @@ var scrollToElement = function(element)
 }
 
 //function call
+/*
 $("#link1").click(function (){
                 
            scrollToElement('#heading1');	  
                 
     });
-
+*/
 $(document).ready(main);

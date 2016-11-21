@@ -43,7 +43,11 @@ a:hover{
 	position:relative;
 	overflow: auto;
 	}
-
+label{
+  }
+  input{
+  display: none;
+}
 nav
 {
 	
@@ -116,6 +120,7 @@ nav
 		}
 	}
 }
+
 .title{
 	@include textSpacing($tveir,left);
 }
@@ -145,6 +150,8 @@ img{
 
 	div{
 	@include textSpacing(100%,none);
+	border:none;
+	font-weight: bold;
 	}
 }
 .mapi{
@@ -195,6 +202,60 @@ footer{
 
 //-------------------------------------------------------
 @media screen and (max-width: 48em){
+	//--
+	input:checked ~ nav {
+		max-height: 500px;
+		overflow: scroll;
+		flex-flow: column;
+		display: box;
+		display: flex;
+	}  
+	nav{
+		max-height: 0px;
+		width: 100%;
+		overflow: hidden;
+
+	}
+
+label{
+	display:box;
+	padding: 10px;
+	border: 0.2em solid black;
+	border-radius: 5px;
+	position: relative;
+	width: 5em;
+	position: fixed;
+	right: 1em;
+	top: 1em;
+	z-index: 3;
+}
+/*
+
+.ul {
+  cursor: pointer;
+  position: fixed;
+  top: 3.2em;
+  right: 1em;
+  z-index: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+ */
+ 
+/*.to {
+  color: white;
+  background-color: black;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-size: 24px;
+  letter-spacing: .05em;
+  list-style-type: none;
+  text-shadow: 2px 2px 1px #9f593f;
+  padding-left: 1em;
+  padding-top: 10px;
+}*/
+//--
 	.main{
 	@include textSpacing(100%,none);
 	}
@@ -213,10 +274,9 @@ footer{
 	@include textSpacing($tveir,none);
 	}
 	footer {
-		flex-flow: column;
+		display: block;
 		ul{
-		@include textSpacing(40%,none);
-		clear: none;
+		@include textSpacing(49%,left);
 		}
 		#ref{
 		@include textSpacing(100%,none);
@@ -236,6 +296,12 @@ footer{
 			font-size: 18px;
 		}
 
+	}
+	footer{
+		flex-flow: column;
+		ul{
+			@include textSpacing(100%,none);
+		}
 	}
 	.mapi{
 	@include textSpacing(100%,none);
