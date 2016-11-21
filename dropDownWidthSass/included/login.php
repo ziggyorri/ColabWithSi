@@ -3,17 +3,19 @@
 	require_once("connection.php");
 	include("query.php");
 
+	$Username=isset($_POST['Username']) ? $_POST['Username'] : '';$Password=isset($_POST['Password']) ? $_POST['Password'] : '';
+
 	if(isset($_POST['Submit']))
 	{
-		foreach ($tafla as $entry) {
-        	$logins += [ $entry[0] => $entry[1] ];
+		foreach ($tafla as $k) {
+        	if ($k[0] != $Username){}
+        	elseif ($k[0] == $Username && $k[1] == $Password){$logins = [$k[0] => $k[1]];}
         }
-		$Username=isset($_POST['Username']) ? $_POST['Username'] : '';$Password=isset($_POST['Password']) ? $_POST['Password'] : '';
 		if(isset($logins[$Username])&&$logins[$Username]==$Password)
 			{
 				$_SESSION['UserData']['Username']=$logins[$Username];header("location:../index.php");exit;
 			}
-	}?>
+	} ?>
 <form action="" method="post" name="Innskra">
 	<table>
 		<tr>
