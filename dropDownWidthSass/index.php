@@ -81,11 +81,6 @@
 
 	<footer>
 		<ul>
-		referenslist
-			<li><a href="https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/">https://www.harpa.is/</a></li>
-			<li><a href=""></a></li>
-		</ul>
-		<ul>
 		Harpa
 			<li><a href="">Austurbakka 2, 101 Reykjavík</a></li>
 			<li><a href="">Sími: 528 5000</a></li>
@@ -98,7 +93,14 @@
 			<li><a href="">Íslenska óperan</a></li>
 			<li><a href="">Stórsveit Reykjavíkur</a></li>
 			<li><a href="">Maxímús Músíkús</a></li>
+		</ul>
+		<ul id="ref">
+		referenslist
+			<li><a href="https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/">https://www.harpa.is/</a></li>
+			<li><a href=""></a></li>
+		</ul>
 	</footer>
+	<script type="js.js"></script>
 </div>
 </body>
 </html>

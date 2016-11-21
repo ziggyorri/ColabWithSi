@@ -280,8 +280,19 @@ footer {
       padding: 13px;
       margin: 1px;
       text-align: initial;
+      width: 40%;
+      float: none;
+      background-color: #a2a2a2;
+      overflow: hidden;
+      clear: none; }
+    footer #ref {
+      box-sizing: border-box;
+      border: 5px ridge #484848;
+      padding: 13px;
+      margin: 1px;
+      text-align: initial;
       width: 100%;
-      float: left;
+      float: none;
       background-color: #a2a2a2;
       overflow: hidden; } }
 @media screen and (max-width: 30em) {

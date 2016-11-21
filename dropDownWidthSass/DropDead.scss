@@ -215,7 +215,11 @@ footer{
 	footer {
 		flex-flow: column;
 		ul{
-		@include textSpacing(100%,left);
+		@include textSpacing(40%,none);
+		clear: none;
+		}
+		#ref{
+		@include textSpacing(100%,none);
 		}
 	}
 }
