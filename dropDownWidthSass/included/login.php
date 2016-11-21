@@ -1,4 +1,19 @@
-<?php session_start();if(isset($_POST['Submit'])){$logins=['admin' => '12345','Sindri Pálsson' => 'Why do you need to know this?',];$Username=isset($_POST['Username']) ? $_POST['Username'] : '';$Password=isset($_POST['Password']) ? $_POST['Password'] : '';if(isset($logins[$Username])&&$logins[$Username]==$Password){$_SESSION['UserData']['Username']=$logins[$Username];header("location:../index.php");exit;}}?>
+<?php session_start();
+
+	require_once("connection.php");
+	include("query.php");
+
+	if(isset($_POST['Submit']))
+	{
+		foreach ($tafla as $entry) {
+        	$logins += [ $entry[0] => $entry[1] ];
+        }
+		$Username=isset($_POST['Username']) ? $_POST['Username'] : '';$Password=isset($_POST['Password']) ? $_POST['Password'] : '';
+		if(isset($logins[$Username])&&$logins[$Username]==$Password)
+			{
+				$_SESSION['UserData']['Username']=$logins[$Username];header("location:../index.php");exit;
+			}
+	}?>
 <form action="" method="post" name="Innskra">
 	<table>
 		<tr>
