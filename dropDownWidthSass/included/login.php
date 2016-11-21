@@ -23,16 +23,34 @@
 		</tr>
 		<tr>
 			<td>Username</td>
-			<td><input name="Username" type="text" class="Input" style="color:#888;" value="admin" onfocus="inputFocus(this)" onblur="inputBlur(this)"></td>
+			<td><input name="Username" type="text" class="Input" style="color:#888;" value="username" onfocus="inputFocus(this)" onblur="inputBlur(this)"></td>
 		</tr>
 		<tr>
 			<td>Password</td>
-			<td><input name="Password" type="password" class="Input" value="12345" onfocus="inputFocus(this)" onblur="inputBlur(this)"></td>
+			<td><input name="Password" type="password" class="Input" style="color:#888;" value="password" onfocus="inputFocus(this)" onblur="inputBlur(this)"></td>
 		</tr>
 		<tr>
 			<td><input name="Submit" type="submit" value="Login" class="Button3"></td>
 		</tr>
 	</table>
+</form>
+<form action="insert.php" method="post" Name="Register">
+	<table>
+		<tr>
+			<td><h1>Register</h1></td>
+		</tr>
+		<tr>
+		    <td>Username</td>
+		    <td><input type="text" name="RegisterUsername" required ></td>
+	    </tr>
+	    <tr>
+		   	<td>Password</td>
+		    <td><input type="text" name="RegisterPassword" required ></td>
+	    </tr>
+	    <tr>
+	    	<td><input name="RegisterSubmit" type="submit" value="Register" class="Button3"></td>
+	   	</tr>
+    </table>
 </form>
 <script type="text/javascript">
 	function inputFocus(i){
