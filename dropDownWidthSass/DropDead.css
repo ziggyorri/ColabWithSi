@@ -48,6 +48,12 @@ nav {
     nav > ul > li {
       flex-grow: 1;
       border: 3px inset grey; }
+      nav > ul > li > a {
+        display: block;
+        border-bottom: 1px solid black;
+        text-decoration: none;
+        transition: font-size 0.3s;
+        color: black; }
       nav > ul > li:hover ul {
         max-height: 200px; }
       nav > ul > li > ul {
@@ -264,7 +270,20 @@ footer {
     width: 70%;
     float: none;
     background-color: #a2a2a2;
-    overflow: hidden; } }
+    overflow: hidden; }
+
+  footer {
+    flex-flow: column; }
+    footer ul {
+      box-sizing: border-box;
+      border: 5px ridge #484848;
+      padding: 13px;
+      margin: 1px;
+      text-align: initial;
+      width: 100%;
+      float: left;
+      background-color: #a2a2a2;
+      overflow: hidden; } }
 @media screen and (max-width: 30em) {
   .opnun,
   .Price {

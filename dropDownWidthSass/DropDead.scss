@@ -69,6 +69,14 @@ nav
 
 		&>li//
 		{
+			&>a
+				{
+					display:block;
+					border-bottom: 1px solid black;
+					text-decoration:none;
+					transition: font-size 0.3s;
+					color: black;
+				}
 			flex-grow: 1;
 			border: 3px inset grey;
 			&:hover
@@ -161,7 +169,7 @@ footer{
 	padding:0;
 }
 
-
+//-------------------------------------------------------
 @media screen and (max-width: 60em){
 	.title{
 	@include textSpacing(100%,left);
@@ -185,7 +193,7 @@ footer{
 	}
 }
 
-
+//-------------------------------------------------------
 @media screen and (max-width: 48em){
 	.main{
 	@include textSpacing(100%,none);
@@ -204,9 +212,15 @@ footer{
 	.mapi{
 	@include textSpacing($tveir,none);
 	}
+	footer {
+		flex-flow: column;
+		ul{
+		@include textSpacing(100%,left);
+		}
+	}
 }
 
-
+//-------------------------------------------------------
 @media screen and (max-width: 30em){
 	.opnun,
 	.Price{
@@ -232,9 +246,6 @@ footer{
 			animation-duration: 3s;
 			animation-iteration-count: 1;
 		}
-	}
-	.img{
-		
 	}
 }
 @keyframes diagonal-slide {

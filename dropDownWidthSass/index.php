@@ -35,13 +35,8 @@
 				<li><a href="#">tengill</a></li>
 			</ul>
 		</li>
-		<li>Top tengill
-			<ul>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-			</ul>
+		<li><a href="included/logout.php">Logout</a>
+			
 		</li>
 	</ul>
 </nav>
