@@ -2,28 +2,31 @@ body {
   max-width: 940px;
   margin: 0 auto;
   font-size: 21px;
-  background-color: #b3b3b3; }
+  background-color: #3c3c3c; }
 
 a {
-  color: white; }
+  color: #d5d5d5; }
 
 ul {
   list-style: none; }
 
+a {
+  color: #c8c8c8; }
+
 a:hover {
-  color: white; }
+  color: #eeeeee; }
 
 .mainbody {
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 100%;
   float: none;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #888;
   position: relative;
   overflow: auto; }
 
@@ -36,39 +39,45 @@ nav {
     list-style: none;
     width: 100%; }
   nav > ul {
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #6c6c6c;
+    max-height: 30px; }
     nav > ul > li {
-      display: inline-block;
-      background-color: #666;
-      position: relative;
-      width: 25%;
-      cursor: pointer; }
+      flex-grow: 1;
+      border: 3px inset grey; }
       nav > ul > li:hover ul {
         max-height: 200px; }
       nav > ul > li > ul {
+        color: #505050;
         max-height: 0;
         overflow: hidden;
-        position: absolute;
-        background-color: #aaa;
+        position: relative;
+        background-color: #363636;
         transition: max-height 0.7s; }
+        nav > ul > li > ul li {
+          color: black; }
+        nav > ul > li > ul li:hover {
+          color: #505050;
+          background-color: dimgray;
+          font-size: 21px; }
         nav > ul > li > ul a {
           display: block;
           border-bottom: 1px solid black;
           text-decoration: none;
           transition: font-size 0.3s; }
-          nav > ul > li > ul a:hover {
-            color: black;
-            font-size: 21px; }
 
-.tittle {
+.title {
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 70%;
   float: left;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden; }
 
 img {
@@ -76,13 +85,13 @@ img {
 
 .img {
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 70%;
   float: left;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden;
   padding: 0;
   clear: left; }
@@ -90,13 +99,13 @@ img {
 .opnun,
 .Price {
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 29.5%;
   float: none;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden;
   text-align: center;
   clear: right; }
@@ -112,34 +121,34 @@ img {
 
 .main {
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 70%;
   float: left;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden; }
   .main div {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: none;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; }
 
 .mapi {
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 29.5%;
   float: right;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden;
   padding: 0;
   clear: right;
@@ -153,47 +162,47 @@ footer {
   clear: both;
   overflow: auto;
   box-sizing: border-box;
-  border: 5px ridge #bfbfbf;
+  border: 5px ridge #484848;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 100%;
   float: none;
-  background-color: white;
+  background-color: #a2a2a2;
   overflow: hidden;
   padding: 0; }
   footer ul {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 33%;
     float: left;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; }
 
 @media screen and (max-width: 60em) {
-  .tittle {
+  .title {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: left;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; }
 
   .img {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: left;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden;
     padding: 0;
     clear: left; }
@@ -208,36 +217,36 @@ footer {
 
   .mapi {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 29.5%;
     float: none;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; } }
 @media screen and (max-width: 48em) {
   .main {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: none;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; }
 
   .opnun,
   .Price {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 29.5%;
     float: left;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden;
     text-align: center;
     clear: left;
@@ -248,25 +257,25 @@ footer {
 
   .mapi {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 70%;
     float: none;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; } }
 @media screen and (max-width: 30em) {
   .opnun,
   .Price {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 48%;
     float: left;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden;
     clear: none;
     text-align: center;
@@ -277,13 +286,13 @@ footer {
 
   .mapi {
     box-sizing: border-box;
-    border: 5px ridge #bfbfbf;
+    border: 5px ridge #484848;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: none;
-    background-color: white;
+    background-color: #a2a2a2;
     overflow: hidden; }
 
   img {

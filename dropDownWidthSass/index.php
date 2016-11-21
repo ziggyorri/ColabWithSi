@@ -3,6 +3,7 @@
 <head>
 	<title>drop down</title>
 	<link rel="stylesheet" type="text/css" href="DropDead.css">
+	<meta name="viewport" content="width=device-width">
 	<meta charset="utf-8">
 </head>
 <body>
@@ -19,7 +20,7 @@
 		</li>
 		<li>Top tengill
 			<ul>
-				<li><a href="#">tengill</a></li>
+				<li><a onclick="" href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
@@ -43,7 +44,7 @@
 		</li>
 	</ul>
 </nav>
-	<div class="tittle">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
+	<div class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
 
 	<dir class="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
 	
@@ -85,7 +86,7 @@
 	<footer>
 		<ul>
 		referenslist
-			<li><a href="https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/">https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/</a></li>
+			<li><a href="https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/">https://www.harpa.is/</a></li>
 			<li><a href=""></a></li>
 		</ul>
 		<ul>

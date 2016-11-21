@@ -3,7 +3,7 @@
 $fontSize:21px;
 $tveir: 70%;
 $ein: 29.5%;
-$colortheme:#fff;
+$colortheme:#888;
 
 @mixin textSpacing($wid,$flo)
 {
@@ -26,11 +26,12 @@ body{
 }
 a{
 	color: lighten($colortheme, 30%);
-
-	
 }
 ul{
 	list-style:none;
+}
+a{
+	color:lighten($colortheme, 25%);
 }
 a:hover{
 		color: lighten($colortheme, 40%);
@@ -45,6 +46,7 @@ a:hover{
 
 nav
 {
+	
 	margin:0;
 	padding: 0;
 	ul//öll ul tög sama hvar
@@ -59,15 +61,16 @@ nav
 	&>ul//ista ul
 	{
 		text-align: center;
+		display:flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		background-color:darken($colortheme,11%);
+		max-height: 30px;
 
 		&>li//
 		{
-			display: inline-block;
-			background-color:#666;
-			position: relative;
-			width: 25%;
-			cursor: pointer;
-
+			flex-grow: 1;
+			border: 3px inset grey;
 			&:hover
 			{
 				ul{
@@ -77,12 +80,22 @@ nav
 
 			&>ul
 			{
+				color: darken($colortheme, 22%);
 				max-height:0;
 				overflow:hidden;
-				position: absolute;
-				background-color: #aaa;
+				position: relative;
+				background-color: darken($colortheme, 32%);
 				transition: max-height 0.7s;
 				//li eða &>li
+				li{
+					color: black;
+				}
+				li:hover{
+
+						color: darken($colortheme, 22%);
+						background-color: darken($colortheme, 12%);
+						font-size:$fontSize;
+				}
 				a
 				{
 					display:block;
@@ -90,17 +103,12 @@ nav
 					text-decoration:none;
 					transition: font-size 0.3s;
 
-					&:hover
-					{
-						color: black;
-						font-size:$fontSize;
-					}
 				}
 			}
 		}
 	}
 }
-.tittle{
+.title{
 	@include textSpacing($tveir,left);
 }
 img{
@@ -155,7 +163,7 @@ footer{
 
 
 @media screen and (max-width: 60em){
-	.tittle{
+	.title{
 	@include textSpacing(100%,left);
 	}
 	.img{
