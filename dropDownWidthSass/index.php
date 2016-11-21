@@ -1,3 +1,4 @@
+<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;} ?>
 <!DOCTYPE html>
 <html>
 <head>
