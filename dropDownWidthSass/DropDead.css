@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
-#secrit {
-  content: #888; }
+#secrit:after {
+  content: "#888"; }
 
 body {
   max-width: 940px;
@@ -169,7 +169,7 @@ img {
     background-color: #a2a2a2;
     overflow: hidden; }
 
-.mapi {
+#mapi {
   box-sizing: border-box;
   border: 5px ridge #484848;
   padding: 13px;
@@ -244,7 +244,7 @@ footer {
     .Price h2 {
       font-size: 18px; }
 
-  .mapi {
+  #mapi {
     box-sizing: border-box;
     border: 5px ridge #484848;
     padding: 13px;
@@ -313,7 +313,7 @@ footer {
     .Price h2 {
       font-size: 18px; }
 
-  .mapi {
+  #mapi {
     box-sizing: border-box;
     border: 5px ridge #484848;
     padding: 13px;
@@ -366,7 +366,7 @@ footer {
     .Price h2 {
       font-size: 18px; }
 
-  .mapi {
+  #mapi {
     box-sizing: border-box;
     border: 5px ridge #484848;
     padding: 13px;

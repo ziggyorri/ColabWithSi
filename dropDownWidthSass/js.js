@@ -18,14 +18,14 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("img").style.backgroundColor);	 	  
+           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }
     });
     $("#link2").click(function (){
                 
-           scrollToElement('#map');	   
+           scrollToElement('#mapi');	   
            nb = 1;
            for (var i = tags.length - 1; i >= 0; i--) {
            	if (i==nb) {
@@ -33,11 +33,10 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("img").style.backgroundColor);	 	  
+           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }
-           console.write(document.getElementById("img").style.backgroundColor);
     });
     $("#link3").click(function (){
                 
@@ -49,7 +48,7 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("img").style.backgroundColor);	 	  
+           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }
@@ -64,7 +63,7 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("img").style.backgroundColor);	 	  
+           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }

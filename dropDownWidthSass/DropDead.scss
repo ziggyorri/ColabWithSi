@@ -5,8 +5,8 @@ $fontSize:21px;
 $tveir: 70%;
 $ein: 29.5%;
 $colortheme:#888;
-#secrit{
-	content: $colortheme;
+#secrit:after{
+	content: "#888";
 }
 @mixin textSpacing($wid,$flo)
 {
@@ -172,7 +172,7 @@ img{
 	@include textSpacing(100%,none);
 	}
 }
-.mapi{
+#mapi{
 	@include textSpacing($ein,right);
 	padding: 0;
 	clear: right;
@@ -213,7 +213,7 @@ footer{
 		}
 
 	}
-	.mapi{
+	#mapi{
 	@include textSpacing($ein,none);
 	}
 }
@@ -264,7 +264,7 @@ footer{
 		}
 
 	}
-	.mapi{
+	#mapi{
 	@include textSpacing($tveir,none);
 	}
 	footer {
@@ -292,7 +292,7 @@ footer{
 		}
 
 	}
-	.mapi{
+	#mapi{
 	@include textSpacing(100%,none);
 	}
 
