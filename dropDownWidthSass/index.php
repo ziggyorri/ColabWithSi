@@ -8,17 +8,18 @@
 	<meta charset="utf-8">
 </head>
 <body>
-<div class="mainbody">
+<div id="mainbody1" id="mainbody">
+<div class="navcontainer">
+<input type="checkbox" id="toggle">
+	<label for="toggle">&#9776menu</label>
 <nav>
-	<input type="checkbox" id="toggle">
-      <label for="toggle">&#9776menu</label>
       <ul>
-		<li>Top tengill
+		<li>Curent page
 			<ul>
-				<li><a id="link1" href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
+				<li><a id="link1" href="#">Discription</a></li>
+				<li><a id="link2" href="#">Map</a></li>
+				<li><a id="link3" href="#">Other info</a></li>
+				<li><a id="link4" href="#">Contacts</a></li>
 			</ul>
 		</li>
 		<li>Top tengill
@@ -42,9 +43,10 @@
 		</li>
 	</ul>
 </nav>
-	<div class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
+</div>
+	<div id="titleID" class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
 
-	<dir class="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
+	<dir id="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
 	
 
 	<div id="heading1" class="main">
@@ -63,12 +65,12 @@
 		<p>Þú hittir þau öll í Íslendingasögurnar – Brot af því besta á 75 mínútum. Leyfið sögunum að hrífa ykkur, uppfræða og skemmta – og komist að því hvað það merkir að kasta bláum brókum upp í opið geðið á fólki. Í alvöru.</p>
 
 	</div>
-<div class="Price">
-		<div class="meh"><h2>Dagsetning</h2><h3>12.nóvember 2016</h3><h3> kl. 16:00</h3></div>
+<div id="info" class="Price">
+		<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>
 
-		<div class="meh">Salur<h3>Norðurljóst</h3></div>
+		<div class="meh">Shown in<h3>Norðurljóst</h3></div>
 
-		<div>Verð <h3>4.900</h3></div>
+		<div>Price <h3>4.900</h3></div>
 	</div>
 
 	<div class="opnun">
@@ -98,8 +100,9 @@
 		</ul>
 		<ul id="ref">
 		referenslist
-			<li><a href="https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/">https://www.harpa.is/</a></li>
-			<li><a href=""></a></li>
+			<li><a href="https://www.harpa.is/">https://www.harpa.is/</a></li><!--https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/-->
+			<li><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></li>
+			<li><a href="http://stackoverflow.com/">http://stackoverflow.com/</a></li>
 		</ul>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

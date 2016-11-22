@@ -1,10 +1,13 @@
 //sass --watch DropDead.scss:DropDead.css -compiled
 //Koala
+@import url(http://fonts.googleapis.com/css?family=Oswald);
 $fontSize:21px;
 $tveir: 70%;
 $ein: 29.5%;
 $colortheme:#888;
-
+#secrit{
+	content: $colortheme;
+}
 @mixin textSpacing($wid,$flo)
 {
 	box-sizing:border-box;//what
@@ -24,6 +27,8 @@ body{
 	font-size: $fontSize;
 	background-color: darken($colortheme, 30%);
 }
+
+
 a{
 	color: lighten($colortheme, 30%);
 }
@@ -37,17 +42,33 @@ a:hover{
 		color: lighten($colortheme, 40%);
 
 	}
-.mainbody{
+#mainbody{
 	@include textSpacing(100%,none);
 	background-color: $colortheme;
 	position:relative;
 	overflow: auto;
 	}
+	input{
+		display: none;
+	}
 label{
-  }
-  input{
-  display: none;
+	display: none;
+	border: 5px ridge darken($colortheme, 25%);
+	background-color: darken($colortheme, 11%);
+	opacity: 0.3;
+	&:hover{
+		cursor: pointer;
+  		color:black;
+	}
+	&:checked + nav {
+		color:red;
+	  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+	  color: #9799a7;
+	}
 }
+input:checked ~ label {
+		opacity: 1;
+	}
 nav
 {
 	
@@ -68,11 +89,11 @@ nav
 		display:flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		background-color:darken($colortheme,11%);
 		max-height: 30px;
 
 		&>li//
 		{
+				background-color: darken($colortheme, 11%);
 			&>a
 				{
 					display:block;
@@ -106,7 +127,7 @@ nav
 
 						color: darken($colortheme, 22%);
 						background-color: darken($colortheme, 12%);
-						font-size:$fontSize;
+						font-size:$fontSize*1.2;
 				}
 				a
 				{
@@ -120,14 +141,13 @@ nav
 		}
 	}
 }
-
 .title{
 	@include textSpacing($tveir,left);
 }
 img{
 	width:100%;
 }
-.img{
+#img{
 	@include textSpacing($tveir,left);
 	padding:0;
 	clear: left;
@@ -150,8 +170,6 @@ img{
 
 	div{
 	@include textSpacing(100%,none);
-	border:none;
-	font-weight: bold;
 	}
 }
 .mapi{
@@ -181,7 +199,7 @@ footer{
 	.title{
 	@include textSpacing(100%,left);
 	}
-	.img{
+	#img{
 	@include textSpacing(100%,left);
 	padding:0;
 	clear: left;
@@ -202,60 +220,36 @@ footer{
 
 //-------------------------------------------------------
 @media screen and (max-width: 48em){
-	//--
-	input:checked ~ nav {
-		max-height: 500px;
-		overflow: scroll;
-		flex-flow: column;
-		display: box;
-		display: flex;
-	}  
-	nav{
-		max-height: 0px;
+	.navcontainer{
+		position: fixed;
+		left: 0px;
+		top: 0px;
 		width: 100%;
-		overflow: hidden;
-
+		font-size: $fontSize*1.6;
 	}
-
-label{
-	display:box;
-	padding: 10px;
-	border: 0.2em solid black;
-	border-radius: 5px;
-	position: relative;
-	width: 5em;
-	position: fixed;
-	right: 1em;
-	top: 1em;
-	z-index: 3;
-}
-/*
-
-.ul {
-  cursor: pointer;
-  position: fixed;
-  top: 3.2em;
-  right: 1em;
-  z-index: 2;
-  max-height: 0;
-  overflow: hidden;
-  transition: all .5s ease;
-}
- */
- 
-/*.to {
-  color: white;
-  background-color: black;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  font-size: 24px;
-  letter-spacing: .05em;
-  list-style-type: none;
-  text-shadow: 2px 2px 1px #9f593f;
-  padding-left: 1em;
-  padding-top: 10px;
-}*/
-//--
+	label{
+	display: inline-block;
+	position: static;
+	float: right;
+	}
+	nav{
+		max-height: 0;
+		min-width: 350px;
+		position: static;
+		float: right;
+		clear: right;
+		overflow: hidden;
+		&>ul{
+			flex-flow: column;
+		}
+	}
+	nav ul li ul li:hover{
+		font-size: $fontSize*1.8;
+	}
+	input:checked ~ nav {
+		max-height: none;
+		overflow: visible;
+	}
 	.main{
 	@include textSpacing(100%,none);
 	}
@@ -274,9 +268,10 @@ label{
 	@include textSpacing($tveir,none);
 	}
 	footer {
-		display: block;
+		display: inline-block;
 		ul{
-		@include textSpacing(49%,left);
+		@include textSpacing(48%,left);
+		clear: none;
 		}
 		#ref{
 		@include textSpacing(100%,none);
@@ -297,12 +292,6 @@ label{
 		}
 
 	}
-	footer{
-		flex-flow: column;
-		ul{
-			@include textSpacing(100%,none);
-		}
-	}
 	.mapi{
 	@include textSpacing(100%,none);
 	}
@@ -315,6 +304,17 @@ label{
 			animation-name: diagonal-slide;
 			animation-duration: 3s;
 			animation-iteration-count: 1;
+		}
+	}
+	footer {
+		display: flex;
+		flex-flow: column;
+		ul{
+		@include textSpacing(100%,none);
+		clear: none;
+		}
+		#ref{
+		@include textSpacing(100%,none);
 		}
 	}
 }

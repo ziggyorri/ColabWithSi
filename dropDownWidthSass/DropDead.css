@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+#secrit {
+  content: #888; }
+
 body {
   max-width: 940px;
   margin: 0 auto;
@@ -16,7 +20,7 @@ a {
 a:hover {
   color: #eeeeee; }
 
-.mainbody {
+#mainbody {
   box-sizing: border-box;
   border: 5px ridge #484848;
   padding: 13px;
@@ -33,6 +37,22 @@ a:hover {
 input {
   display: none; }
 
+label {
+  display: none;
+  border: 5px ridge #484848;
+  background-color: #6c6c6c;
+  opacity: 0.3; }
+  label:hover {
+    cursor: pointer;
+    color: black; }
+  label:checked + nav {
+    color: red;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #9799a7; }
+
+input:checked ~ label {
+  opacity: 1; }
+
 nav {
   margin: 0;
   padding: 0; }
@@ -46,9 +66,9 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #6c6c6c;
     max-height: 30px; }
     nav > ul > li {
+      background-color: #6c6c6c;
       flex-grow: 1;
       border: 3px inset grey; }
       nav > ul > li > a {
@@ -71,7 +91,7 @@ nav {
         nav > ul > li > ul li:hover {
           color: #505050;
           background-color: dimgray;
-          font-size: 21px; }
+          font-size: 25.2px; }
         nav > ul > li > ul a {
           display: block;
           border-bottom: 1px solid black;
@@ -92,7 +112,7 @@ nav {
 img {
   width: 100%; }
 
-.img {
+#img {
   box-sizing: border-box;
   border: 5px ridge #484848;
   padding: 13px;
@@ -147,9 +167,7 @@ img {
     width: 100%;
     float: none;
     background-color: #a2a2a2;
-    overflow: hidden;
-    border: none;
-    font-weight: bold; }
+    overflow: hidden; }
 
 .mapi {
   box-sizing: border-box;
@@ -205,7 +223,7 @@ footer {
     background-color: #a2a2a2;
     overflow: hidden; }
 
-  .img {
+  #img {
     box-sizing: border-box;
     border: 5px ridge #484848;
     padding: 13px;
@@ -237,55 +255,35 @@ footer {
     background-color: #a2a2a2;
     overflow: hidden; } }
 @media screen and (max-width: 48em) {
-  input:checked ~ nav {
-    max-height: 500px;
-    overflow: scroll;
-    flex-flow: column;
-    display: box;
-    display: flex; }
-
-  nav {
-    max-height: 0px;
+  .navcontainer {
+    position: fixed;
+    left: 0px;
+    top: 0px;
     width: 100%;
-    overflow: hidden; }
+    font-size: 33.6px; }
 
   label {
-    display: box;
-    padding: 10px;
-    border: 0.2em solid black;
-    border-radius: 5px;
-    position: relative;
-    width: 5em;
-    position: fixed;
-    right: 1em;
-    top: 1em;
-    z-index: 3; }
+    display: inline-block;
+    position: static;
+    float: right; }
 
-  /*
-  
-  .ul {
-    cursor: pointer;
-    position: fixed;
-    top: 3.2em;
-    right: 1em;
-    z-index: 2;
+  nav {
     max-height: 0;
-    overflow: hidden;
-    transition: all .5s ease;
-  }
-   */
-  /*.to {
-    color: white;
-    background-color: black;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    font-size: 24px;
-    letter-spacing: .05em;
-    list-style-type: none;
-    text-shadow: 2px 2px 1px #9f593f;
-    padding-left: 1em;
-    padding-top: 10px;
-  }*/
+    min-width: 350px;
+    position: static;
+    float: right;
+    clear: right;
+    overflow: hidden; }
+    nav > ul {
+      flex-flow: column; }
+
+  nav ul li ul li:hover {
+    font-size: 37.8px; }
+
+  input:checked ~ nav {
+    max-height: none;
+    overflow: visible; }
+
   .main {
     box-sizing: border-box;
     border: 5px ridge #484848;
@@ -327,17 +325,18 @@ footer {
     overflow: hidden; }
 
   footer {
-    display: block; }
+    display: inline-block; }
     footer ul {
       box-sizing: border-box;
       border: 5px ridge #484848;
       padding: 13px;
       margin: 1px;
       text-align: initial;
-      width: 49%;
+      width: 48%;
       float: left;
       background-color: #a2a2a2;
-      overflow: hidden; }
+      overflow: hidden;
+      clear: none; }
     footer #ref {
       box-sizing: border-box;
       border: 5px ridge #484848;
@@ -367,19 +366,6 @@ footer {
     .Price h2 {
       font-size: 18px; }
 
-  footer {
-    flex-flow: column; }
-    footer ul {
-      box-sizing: border-box;
-      border: 5px ridge #484848;
-      padding: 13px;
-      margin: 1px;
-      text-align: initial;
-      width: 100%;
-      float: none;
-      background-color: #a2a2a2;
-      overflow: hidden; }
-
   .mapi {
     box-sizing: border-box;
     border: 5px ridge #484848;
@@ -398,7 +384,32 @@ footer {
       overflow: visible;
       animation-name: diagonal-slide;
       animation-duration: 3s;
-      animation-iteration-count: 1; } }
+      animation-iteration-count: 1; }
+
+  footer {
+    display: flex;
+    flex-flow: column; }
+    footer ul {
+      box-sizing: border-box;
+      border: 5px ridge #484848;
+      padding: 13px;
+      margin: 1px;
+      text-align: initial;
+      width: 100%;
+      float: none;
+      background-color: #a2a2a2;
+      overflow: hidden;
+      clear: none; }
+    footer #ref {
+      box-sizing: border-box;
+      border: 5px ridge #484848;
+      padding: 13px;
+      margin: 1px;
+      text-align: initial;
+      width: 100%;
+      float: none;
+      background-color: #a2a2a2;
+      overflow: hidden; } }
 @keyframes diagonal-slide {
   from {
     margin-left: 0px; }
