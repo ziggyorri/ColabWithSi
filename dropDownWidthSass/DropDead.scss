@@ -318,7 +318,19 @@ footer{
   }
 
 }
-//----
+//----Login formið
 input{
 	display:inline-block;
+}
+.Login{
+	h1,
+	input
+	{
+	float:left;
+	clear:left;
+	padding:0px;
+	}
+	h1{
+		margin-bottom:2px;
+	}
 }

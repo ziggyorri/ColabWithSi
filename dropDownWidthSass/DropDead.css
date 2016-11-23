@@ -408,4 +408,12 @@ footer {
 input {
   display: inline-block; }
 
+.Login h1,
+.Login input {
+  float: left;
+  clear: left;
+  padding: 0px; }
+.Login h1 {
+  margin-bottom: 2px; }
+
 /*# sourceMappingURL=DropDead.css.map */
