@@ -1,12 +1,14 @@
 var main = function(){
-var tags = ['#heading1','#map','#info','footer']
+var tags = ['#heading1','#mapi','#info','footer']
 var nb = null;
+var test = $('.mainbody').css('border-color');
 	var yPos = $(document).scrollTop();
 	animateNav(); //for page refresh
 	
 	$(document).scroll(function(){//keirir þegar skrollar
 		animateNav();
 	});
+
 
 	$("#link1").click(function (){
                 
@@ -18,7 +20,7 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
+           		$(tags[i]).css('border-color',test);	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }
@@ -33,7 +35,7 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
+           		$(tags[i]).css('border-color',test);	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }
@@ -48,7 +50,7 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
+           		$(tags[i]).css('border-color',test);	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }
@@ -63,7 +65,7 @@ var nb = null;
            		$(tags[i]).css('border-width','20px');
            	}
            	else{
-           		$(tags[i]).css('border-color',document.getElementById("secrit"));	 	  
+           		$(tags[i]).css('border-color',test);	 	  
            		$(tags[i]).css('border-width','5px');
            	}
            }

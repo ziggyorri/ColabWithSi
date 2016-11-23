@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
-<div id="mainbody1" id="mainbody">
+<div id="mainbody1" class="mainbody">
 <div class="navcontainer">
 <input type="checkbox" id="toggle">
 	<label for="toggle">&#9776menu</label>
@@ -105,7 +105,6 @@
 			<li><a href="http://stackoverflow.com/">http://stackoverflow.com/</a></li>
 		</ul>
 	</footer>
-	<div id="secrit"></div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js.js"></script>
 </div>

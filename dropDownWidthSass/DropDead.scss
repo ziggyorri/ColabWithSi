@@ -4,20 +4,17 @@
 $fontSize:21px;
 $tveir: 70%;
 $ein: 29.5%;
-$colortheme:#888;
-#secrit:after{
-	content: "#888";
-}
+$colortheme:lighten(#66F,20%);
 @mixin textSpacing($wid,$flo)
 {
 	box-sizing:border-box;//what
-	border: 5px ridge darken($colortheme, 25%);
+	border: 5px ridge darken($colortheme, 15%);
 	padding: 13px;
 	margin:1px;
 	text-align:initial;
 	width:$wid;
 	float: $flo;
-	background-color: lighten($colortheme, 10%);
+	background-color: lighten($colortheme, 5%);
 	overflow:hidden;
 }
 
@@ -25,7 +22,7 @@ body{
 	max-width: 940px;
 	margin:0 auto;
 	font-size: $fontSize;
-	background-color: darken($colortheme, 30%);
+	background-color: lighten($colortheme, 2%);
 }
 
 
@@ -42,7 +39,7 @@ a:hover{
 		color: lighten($colortheme, 40%);
 
 	}
-#mainbody{
+.mainbody{
 	@include textSpacing(100%,none);
 	background-color: $colortheme;
 	position:relative;
@@ -93,7 +90,7 @@ nav
 
 		&>li//
 		{
-				background-color: darken($colortheme, 11%);
+				background-color: $colortheme;
 			&>a
 				{
 					display:block;
@@ -103,7 +100,7 @@ nav
 					color: black;
 				}
 			flex-grow: 1;
-			border: 3px inset grey;
+			border: 5px ridge darken($colortheme, 25%);
 			&:hover
 			{
 				ul{
