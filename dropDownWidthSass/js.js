@@ -94,30 +94,25 @@ var animateNav = function() {//keirist þegar skrollar
 
 	yPos = $(document).scrollTop();
 	var heading1Pos = $('#heading1').offset().top;//hversu langt frá toppnum
-	/*if(yPos > 100)//bæta við klassa
+	if(yPos > 15)//bæta við klassa
 	{
-		$('nav').addClass('scrollDown');		
-		$('nav>ul>li').addClass('scrollDown');
-		
+		$('.navcontainer').addClass('scrollDown');
 	}
 	else
 	{
-		$('nav').removeClass('scrollDown');
-		$('nav>ul>li').removeClass('scrollDown');
-	}*/
+		$('.navcontainer').removeClass('scrollDown');
+	}
 
-	if(yPos < 15)//breitist í abselute
+	/*if(yPos < 15)//breitist í abselute
 	{
-		$('nav').css('position','relative');
-		$('nav').css('max-width','auto');
-		$('nav').css('top', 'none');
+		$('.navcontainer').css('position','relative');
+		$('.navcontainer').css('top', 'none');
 	}
 	else
 	{
-		$('nav').css('position','fixed');
-		$('nav').css('max-width','905px');
-		$('nav').css('top','0');
-	}
+		$('.navcontainer').css('position','fixed');
+		$('.navcontainer').css('top','0');
+	}*/
 	
 }
 

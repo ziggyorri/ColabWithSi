@@ -4,18 +4,18 @@ body {
   margin: 0 auto;
   font-size: 21px;
   background-color: darkred;
-  color: #123; }
+  color: #341; }
 
 a {
-  color: #123; }
+  color: #341; }
   a:hover {
-    color: #24486c; }
+    color: #618120; }
 
 ul {
   list-style: none; }
 
 a:hover {
-  color: #1e3b59; }
+  color: #526d1b; }
 
 .mainbody {
   box-sizing: border-box;
@@ -37,10 +37,15 @@ a:hover {
 label {
   padding: 0px;
   display: none;
-  opacity: 0.3; }
+  opacity: 0.3;
+  border: 5px ridge black;
+  background-color: #be0000; }
   label:hover {
     cursor: pointer;
-    color: #123; }
+    color: #341; }
+
+#toggle:hover {
+  opacity: 1; }
 
 #toggle:checked ~ label {
   opacity: 1; }
@@ -71,11 +76,11 @@ nav {
       nav > ul > li:hover ul {
         max-height: 200px; }
       nav > ul > li > ul {
-        color: #123;
+        color: #341;
         max-height: 0;
         overflow: hidden;
         position: relative;
-        background-color: darkred;
+        background-color: #af0000;
         transition: max-height 0.7s; }
         nav > ul > li > ul li {
           color: black; }
@@ -87,6 +92,11 @@ nav {
           border-bottom: 1px solid black;
           text-decoration: none;
           transition: font-size 0.3s; }
+
+.scrollDown {
+  position: fixed;
+  top: 0px;
+  width: 905px; }
 
 .title {
   box-sizing: border-box;
@@ -243,7 +253,13 @@ footer {
     width: 29.5%;
     float: none;
     background-color: #be0000;
-    overflow: hidden; } }
+    overflow: hidden; }
+
+  .scrollDown {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%; } }
 @media screen and (max-width: 48em) {
   .navcontainer {
     position: fixed;
@@ -259,7 +275,8 @@ footer {
 
   nav {
     max-height: 0;
-    min-width: 350px;
+    min-width: 100%;
+    max-width: 350px;
     position: static;
     float: right;
     clear: right;
