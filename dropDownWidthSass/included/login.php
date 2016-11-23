@@ -22,12 +22,10 @@
 			<td><h1>Login</h1></td>
 		</tr>
 		<tr>
-			<td>Username</td>
-			<td><input name="Username" type="text" class="Input" style="color:#888;" value="username" onfocus="inputFocus(this)" onblur="inputBlur(this)"></td>
+			<td><input name="Username" type="text" class="Input" placeholder="Username"></td>
 		</tr>
 		<tr>
-			<td>Password</td>
-			<td><input name="Password" type="password" class="Input" style="color:#888;" value="password" onfocus="inputFocus(this)" onblur="inputBlur(this)"></td>
+			<td><input name="Password" type="password" class="Input" placeholder="Password"></td>
 		</tr>
 		<tr>
 			<td><input name="Submit" type="submit" value="Login" class="Button3"></td>
@@ -40,23 +38,13 @@
 			<td><h1>Register</h1></td>
 		</tr>
 		<tr>
-		    <td>Username</td>
-		    <td><input type="text" name="RegisterUsername" required ></td>
+		    <td><input type="text" name="RegisterUsername" placeholder="Username" required ></td>
 	    </tr>
 	    <tr>
-		   	<td>Password</td>
-		    <td><input type="text" name="RegisterPassword" required ></td>
+		    <td><input type="password" name="RegisterPassword" placeholder="Password" required ></td>
 	    </tr>
 	    <tr>
 	    	<td><input name="RegisterSubmit" type="submit" value="Register" class="Button3"></td>
 	   	</tr>
     </table>
 </form>
-<script type="text/javascript">
-	function inputFocus(i){
-	    if(i.value==i.defaultValue){ i.value=""; i.style.color="#000"; }
-	}
-	function inputBlur(i){
-	    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
-	}
-</script>
