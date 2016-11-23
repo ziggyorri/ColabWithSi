@@ -31,7 +31,7 @@ a:hover {
   position: relative;
   overflow: auto; }
 
-input {
+#toggle {
   display: none; }
 
 label {
@@ -42,7 +42,7 @@ label {
     cursor: pointer;
     color: #123; }
 
-input:checked ~ label {
+#toggle:checked ~ label {
   opacity: 1; }
 
 nav {
@@ -270,7 +270,7 @@ footer {
   nav ul li ul li:hover {
     font-size: 37.8px; }
 
-  input:checked ~ nav {
+  #toggle:checked ~ nav {
     max-height: none;
     overflow: visible; }
 
@@ -405,5 +405,7 @@ footer {
     margin-left: 0px; }
   to {
     margin-left: -200px; } }
+input {
+  display: inline-block; }
 
 /*# sourceMappingURL=DropDead.css.map */

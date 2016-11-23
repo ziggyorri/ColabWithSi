@@ -46,7 +46,7 @@ a:hover{
 	position:relative;
 	overflow: auto;
 	}
-	input{
+	#toggle{
 		display: none;
 	}
 label{
@@ -58,7 +58,7 @@ label{
   		color:$colorFont;
 	}
 }
-input:checked ~ label {
+#toggle:checked ~ label {
 		opacity: 1;
 	}
 nav
@@ -235,7 +235,7 @@ footer{
 	nav ul li ul li:hover{
 		font-size: $fontSize*1.8;
 	}
-	input:checked ~ nav {
+	#toggle:checked ~ nav {
 		max-height: none;
 		overflow: visible;
 	}
@@ -317,4 +317,8 @@ footer{
     margin-left: -200px;
   }
 
+}
+//----
+input{
+	display:inline-block;
 }
