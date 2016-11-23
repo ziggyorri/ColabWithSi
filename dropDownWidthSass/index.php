@@ -8,15 +8,18 @@
 	<meta charset="utf-8">
 </head>
 <body>
-<div class="mainbody">
+<div id="mainbody1" class="mainbody">
+<div class="navcontainer">
+<input type="checkbox" id="toggle">
+	<label for="toggle">&#9776menu</label>
 <nav>
-	<ul>
-		<li>Top tengill
+      <ul>
+		<li>Curent page
 			<ul>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
+				<li><a id="link1" href="#">Discription</a></li>
+				<li><a id="link2" href="#">Map</a></li>
+				<li><a id="link3" href="#">Other info</a></li>
+				<li><a id="link4" href="#">Contacts</a></li>
 			</ul>
 		</li>
 		<li>Top tengill
@@ -35,22 +38,18 @@
 				<li><a href="#">tengill</a></li>
 			</ul>
 		</li>
-		<li>Top tengill
-			<ul>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-				<li><a href="#">tengill</a></li>
-			</ul>
+		<li><a href="included/logout.php">Logout</a>
+			
 		</li>
 	</ul>
 </nav>
-	<div class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
+</div>
+	<div id="titleID" class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
 
-	<dir class="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
+	<dir id="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
 	
 
-	<div class="main">
+	<div id="heading1" class="main">
 		<div>Hinn 12. nóvember verður sýningin Icelandic Sagas: The Greatest Hits in 75 minutes haldin í Hörpu til stuðnings Amnesty International. Allir listamennirnir gefa vinnu sína og rennur ágóðinn til Amnesty International. Aðstandendur sýningar ákváðu að halda sýninguna til stuðnings þeirra vegna flóttamannakrísunnar sem nú ríkir í heiminum og baráttu Amnesty International fyrir málefnum flóttafólks.</div>
 
 		<p>Tveir af frambærilegustu leikurum þjóðarinnar kynna Íslendingasögurnar – Brot af því besta á 75 mínútum – Stórskemmtilega leikhús rússíbanareið í gegnum þjóðararf íslensku fornbókmenntanna.</p>
@@ -66,12 +65,12 @@
 		<p>Þú hittir þau öll í Íslendingasögurnar – Brot af því besta á 75 mínútum. Leyfið sögunum að hrífa ykkur, uppfræða og skemmta – og komist að því hvað það merkir að kasta bláum brókum upp í opið geðið á fólki. Í alvöru.</p>
 
 	</div>
-<div class="Price">
-		<div class="meh"><h2>Dagsetning</h2><h3>12.nóvember 2016</h3><h3> kl. 16:00</h3></div>
+<div id="info" class="Price">
+		<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>
 
-		<div class="meh">Salur<h3>Norðurljóst</h3></div>
+		<div class="meh">Shown in<h3>Norðurljóst</h3></div>
 
-		<div>Verð <h3>4.900</h3></div>
+		<div>Price <h3>4.900</h3></div>
 	</div>
 
 	<div class="opnun">
@@ -80,16 +79,11 @@
 
 		<div>Helgar: <h3>10:00 - 18:00</h3></div>
 	</div>
-		<div class="mapi">
+		<div id="mapi">
 			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13918.706224510119!2d-21.934276045776542!3d64.14662947364903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674d3023a19c7%3A0xdbbf050da40f5d28!2sHarpan%2C+101+Reykjav%C3%ADk!5e0!3m2!1sis!2sis!4v1478866535521" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 
 	<footer>
-		<ul>
-		referenslist
-			<li><a href="https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/">https://www.harpa.is/</a></li>
-			<li><a href=""></a></li>
-		</ul>
 		<ul>
 		Harpa
 			<li><a href="">Austurbakka 2, 101 Reykjavík</a></li>
@@ -103,7 +97,16 @@
 			<li><a href="">Íslenska óperan</a></li>
 			<li><a href="">Stórsveit Reykjavíkur</a></li>
 			<li><a href="">Maxímús Músíkús</a></li>
+		</ul>
+		<ul id="ref">
+		referenslist
+			<li><a href="https://www.harpa.is/">https://www.harpa.is/</a></li><!--https://www.harpa.is/dagskra/vidburdur/icelandic-sagas/-->
+			<li><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></li>
+			<li><a href="http://stackoverflow.com/">http://stackoverflow.com/</a></li>
+		</ul>
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js.js"></script>
 </div>
 </body>
 </html>

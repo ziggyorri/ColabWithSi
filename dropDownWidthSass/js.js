@@ -1,16 +1,74 @@
 var main = function(){
-
+var tags = ['#heading1','#mapi','#info','footer']
+var nb = null;
+var test = $('.mainbody').css('border-color');
 	var yPos = $(document).scrollTop();
 	animateNav(); //for page refresh
 	
-	$(document).scroll(function(){
+	$(document).scroll(function(){//keirir þegar skrollar
 		animateNav();
 	});
 
+
 	$("#link1").click(function (){
                 
-           scrollToElement('#heading1');	  
+           scrollToElement('#heading1');
+           nb =0;  
+           for (var i = tags.length - 1; i >= 0; i--) {
+           	if (i==nb) {
+           		$(tags[i]).css('border-color','white');	 	  
+           		$(tags[i]).css('border-width','20px');
+           	}
+           	else{
+           		$(tags[i]).css('border-color',test);	 	  
+           		$(tags[i]).css('border-width','5px');
+           	}
+           }
+    });
+    $("#link2").click(function (){
                 
+           scrollToElement('#mapi');	   
+           nb = 1;
+           for (var i = tags.length - 1; i >= 0; i--) {
+           	if (i==nb) {
+           		$(tags[i]).css('border-color','white');	 	  
+           		$(tags[i]).css('border-width','20px');
+           	}
+           	else{
+           		$(tags[i]).css('border-color',test);	 	  
+           		$(tags[i]).css('border-width','5px');
+           	}
+           }
+    });
+    $("#link3").click(function (){
+                
+           scrollToElement('#info');	
+           nb = 2;
+           for (var i = tags.length - 1; i >= 0; i--) {
+           	if (i==nb) {
+           		$(tags[i]).css('border-color','white');	 	  
+           		$(tags[i]).css('border-width','20px');
+           	}
+           	else{
+           		$(tags[i]).css('border-color',test);	 	  
+           		$(tags[i]).css('border-width','5px');
+           	}
+           }
+    });
+    $("#link4").click(function (){
+                
+           scrollToElement('footer');
+           nb=3
+           for (var i = tags.length - 1; i >= 0; i--) {
+           	if (i==nb) {
+           		$(tags[i]).css('border-color','white');	 	  
+           		$(tags[i]).css('border-width','20px');
+           	}
+           	else{
+           		$(tags[i]).css('border-color',test);	 	  
+           		$(tags[i]).css('border-width','5px');
+           	}
+           }
     });
 
 	// code for scrolling to top of page
@@ -31,13 +89,12 @@ var main = function(){
    	});
 	
 }  //end main
-
-var animateNav = function() {
+//function sem seigir til um skrollið
+var animateNav = function() {//keirist þegar skrollar
 
 	yPos = $(document).scrollTop();
-	var heading1Pos = $('#heading1').offset().top;
-	
-	if(yPos > 100)
+	var heading1Pos = $('#heading1').offset().top;//hversu langt frá toppnum
+	/*if(yPos > 100)//bæta við klassa
 	{
 		$('nav').addClass('scrollDown');		
 		$('nav>ul>li').addClass('scrollDown');
@@ -47,16 +104,18 @@ var animateNav = function() {
 	{
 		$('nav').removeClass('scrollDown');
 		$('nav>ul>li').removeClass('scrollDown');
-	}
+	}*/
 
-	if(yPos > heading1Pos)
+	if(yPos < 15)//breitist í abselute
 	{
-		$('nav').css('position','absolute');
-		$('nav').css('top', heading1Pos + 'px');
+		$('nav').css('position','relative');
+		$('nav').css('max-width','auto');
+		$('nav').css('top', 'none');
 	}
 	else
 	{
 		$('nav').css('position','fixed');
+		$('nav').css('max-width','905px');
 		$('nav').css('top','0');
 	}
 	
@@ -73,10 +132,11 @@ var scrollToElement = function(element)
 }
 
 //function call
+/*
 $("#link1").click(function (){
                 
            scrollToElement('#heading1');	  
                 
     });
-
+*/
 $(document).ready(main);
