@@ -4,19 +4,19 @@
 $fontSize:21px;
 $tveir: 70%;
 $ein: 29.5%;
-$colorDark:lighten(#66F,20%);
-$colorLight:lighten(#66F,20%);
-$colorFont:lighten(#66F,20%);
+$colorDark:black;
+$colorLight:darkred;
+$colorFont:#123;
 @mixin textSpacing($wid,$flo)
 {
 	box-sizing:border-box;//what
-	border: 5px ridge darken($colorFont, 25%);
+	border: 5px ridge darken($colorDark, 25%);
 	padding: 13px;
 	margin:1px;
 	text-align:initial;
 	width:$wid;
 	float: $flo;
-	background-color: lighten($colorFont, 10%);
+	background-color: lighten($colorLight, 10%);
 	overflow:hidden;
 }
 
@@ -29,6 +29,9 @@ body{
 }
 a{
 	color: $colorFont;
+	&:hover{
+	color: lighten($colorFont,15%);;
+	}
 }
 ul{
 	list-style:none;

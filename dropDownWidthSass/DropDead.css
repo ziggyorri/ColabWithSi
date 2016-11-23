@@ -3,29 +3,31 @@ body {
   max-width: 940px;
   margin: 0 auto;
   font-size: 21px;
-  background-color: #ccccff;
-  color: #ccccff; }
+  background-color: darkred;
+  color: #123; }
 
 a {
-  color: #ccccff; }
+  color: #123; }
+  a:hover {
+    color: #24486c; }
 
 ul {
   list-style: none; }
 
 a:hover {
-  color: white; }
+  color: #1e3b59; }
 
 .mainbody {
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 100%;
   float: none;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden;
-  background-color: #ccccff;
+  background-color: darkred;
   position: relative;
   overflow: auto; }
 
@@ -38,7 +40,7 @@ label {
   opacity: 0.3; }
   label:hover {
     cursor: pointer;
-    color: #ccccff; }
+    color: #123; }
 
 input:checked ~ label {
   opacity: 1; }
@@ -58,9 +60,9 @@ nav {
     flex-wrap: wrap;
     max-height: 30px; }
     nav > ul > li {
-      background-color: #ccccff;
+      background-color: darkred;
       flex-grow: 1;
-      border: 5px ridge #ccccff; }
+      border: 5px ridge black; }
       nav > ul > li > a {
         display: block;
         border-bottom: 1px solid black;
@@ -69,16 +71,16 @@ nav {
       nav > ul > li:hover ul {
         max-height: 200px; }
       nav > ul > li > ul {
-        color: #ccccff;
+        color: #123;
         max-height: 0;
         overflow: hidden;
         position: relative;
-        background-color: #ccccff;
+        background-color: darkred;
         transition: max-height 0.7s; }
         nav > ul > li > ul li {
           color: black; }
         nav > ul > li > ul li:hover {
-          background-color: #ccccff;
+          background-color: darkred;
           font-size: 25.2px; }
         nav > ul > li > ul a {
           display: block;
@@ -88,13 +90,13 @@ nav {
 
 .title {
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 70%;
   float: left;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden; }
 
 img {
@@ -102,13 +104,13 @@ img {
 
 #img {
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 70%;
   float: left;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden;
   padding: 0;
   clear: left; }
@@ -116,13 +118,13 @@ img {
 .opnun,
 .Price {
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 29.5%;
   float: none;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden;
   text-align: center;
   clear: right; }
@@ -138,34 +140,34 @@ img {
 
 .main {
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 70%;
   float: left;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden; }
   .main div {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: none;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; }
 
 #mapi {
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 29.5%;
   float: right;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden;
   padding: 0;
   clear: right;
@@ -179,47 +181,47 @@ footer {
   clear: both;
   overflow: auto;
   box-sizing: border-box;
-  border: 5px ridge #4d4dff;
+  border: 5px ridge black;
   padding: 13px;
   margin: 1px;
   text-align: initial;
   width: 100%;
   float: none;
-  background-color: white;
+  background-color: #be0000;
   overflow: hidden;
   padding: 0; }
   footer ul {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 33%;
     float: left;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; }
 
 @media screen and (max-width: 60em) {
   .title {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: left;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; }
 
   #img {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: left;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden;
     padding: 0;
     clear: left; }
@@ -234,13 +236,13 @@ footer {
 
   #mapi {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 29.5%;
     float: none;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; } }
 @media screen and (max-width: 48em) {
   .navcontainer {
@@ -274,25 +276,25 @@ footer {
 
   .main {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: none;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; }
 
   .opnun,
   .Price {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 29.5%;
     float: left;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden;
     text-align: center;
     clear: left;
@@ -303,49 +305,49 @@ footer {
 
   #mapi {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 70%;
     float: none;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; }
 
   footer {
     display: inline-block; }
     footer ul {
       box-sizing: border-box;
-      border: 5px ridge #4d4dff;
+      border: 5px ridge black;
       padding: 13px;
       margin: 1px;
       text-align: initial;
       width: 48%;
       float: left;
-      background-color: white;
+      background-color: #be0000;
       overflow: hidden;
       clear: none; }
     footer #ref {
       box-sizing: border-box;
-      border: 5px ridge #4d4dff;
+      border: 5px ridge black;
       padding: 13px;
       margin: 1px;
       text-align: initial;
       width: 100%;
       float: none;
-      background-color: white;
+      background-color: #be0000;
       overflow: hidden; } }
 @media screen and (max-width: 30em) {
   .opnun,
   .Price {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 48%;
     float: left;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden;
     clear: none;
     text-align: center;
@@ -356,13 +358,13 @@ footer {
 
   #mapi {
     box-sizing: border-box;
-    border: 5px ridge #4d4dff;
+    border: 5px ridge black;
     padding: 13px;
     margin: 1px;
     text-align: initial;
     width: 100%;
     float: none;
-    background-color: white;
+    background-color: #be0000;
     overflow: hidden; }
 
   img {
@@ -379,24 +381,24 @@ footer {
     flex-flow: column; }
     footer ul {
       box-sizing: border-box;
-      border: 5px ridge #4d4dff;
+      border: 5px ridge black;
       padding: 13px;
       margin: 1px;
       text-align: initial;
       width: 100%;
       float: none;
-      background-color: white;
+      background-color: #be0000;
       overflow: hidden;
       clear: none; }
     footer #ref {
       box-sizing: border-box;
-      border: 5px ridge #4d4dff;
+      border: 5px ridge black;
       padding: 13px;
       margin: 1px;
       text-align: initial;
       width: 100%;
       float: none;
-      background-color: white;
+      background-color: #be0000;
       overflow: hidden; } }
 @keyframes diagonal-slide {
   from {
