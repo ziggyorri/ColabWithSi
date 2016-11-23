@@ -16,35 +16,50 @@
 				$_SESSION['UserData']['Username']=$logins[$Username];header("location:../index.php");exit;
 			}
 	} ?>
-<form action="" method="post" name="Innskra">
-	<table>
-		<tr>
-			<td><h1>Login</h1></td>
-		</tr>
-		<tr>
-			<td><input name="Username" type="text" class="Input" placeholder="Username"></td>
-		</tr>
-		<tr>
-			<td><input name="Password" type="password" class="Input" placeholder="Password"></td>
-		</tr>
-		<tr>
-			<td><input name="Submit" type="submit" value="Login" class="Button3"></td>
-		</tr>
-	</table>
-</form>
-<form action="insert.php" method="post" Name="Register">
-	<table>
-		<tr>
-			<td><h1>Register</h1></td>
-		</tr>
-		<tr>
-		    <td><input type="text" name="RegisterUsername" placeholder="Username" required ></td>
-	    </tr>
-	    <tr>
-		    <td><input type="password" name="RegisterPassword" placeholder="Password" required ></td>
-	    </tr>
-	    <tr>
-	    	<td><input name="RegisterSubmit" type="submit" value="Register" class="Button3"></td>
-	   	</tr>
-    </table>
-</form>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login/Register</title>
+	<link rel="stylesheet" type="text/css" href="../DropDead.css">
+</head>
+<body>
+
+
+	<form action="" method="post" name="Innskra">
+		<table>
+			<tr>
+				<td><h1>Login</h1></td>
+			</tr>
+			<tr>
+				<td><input name="Username" type="text" class="Input" placeholder="Username"></td>
+			</tr>
+			<tr>
+				<td><input name="Password" type="password" class="Input" placeholder="Password"></td>
+			</tr>
+			<tr>
+				<td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+			</tr>
+		</table>
+	</form>
+	<form action="insert.php" method="post" Name="Register">
+		<table>
+			<tr>
+				<td><h1>Register</h1></td>
+			</tr>
+			<tr>
+			    <td><input type="text" name="RegisterUsername" placeholder="Username" required ></td>
+		    </tr>
+		    <tr>
+			    <td><input type="password" name="RegisterPassword" placeholder="Password" required ></td>
+		    </tr>
+		    <tr>
+		    	<td><input name="RegisterSubmit" type="submit" value="Register" class="Button3"></td>
+		   	</tr>
+	    </table>
+	</form>
+
+
+</body>
+</html>
