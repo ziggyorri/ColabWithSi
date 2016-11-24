@@ -6,7 +6,7 @@ $tveir: 70%;
 $ein: 29.5%;
 $colorDark:black;
 $colorLight:darkred;
-$colorFont:#341;
+$colorFont:#123;
 @mixin textSpacing($wid,$flo)
 {
 	box-sizing:border-box;//what
@@ -170,6 +170,9 @@ img{
 
 	div{
 	@include textSpacing(100%,none);
+	font-size: $fontSize*1.1;
+	font-weight: bold;
+	border: none;
 	}
 }
 #mapi{
