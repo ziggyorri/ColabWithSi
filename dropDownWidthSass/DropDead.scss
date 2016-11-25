@@ -1,4 +1,4 @@
-//sass --watch DropDead.scss:DropDead.css -compiled
+//sass --watch DropDead.scss:DropDead.css -compiled  2804992349
 //Koala
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 $fontSize:21px;
@@ -139,7 +139,7 @@ nav
 .scrollDown{
 	position:fixed;
 	top:0px;
-	width:905px;
+	width:903px;
 }
 .title{
 	@include textSpacing($tveir,left);
@@ -305,16 +305,13 @@ footer{
 	#mapi{
 	@include textSpacing(100%,none);
 	}
-
+	#img{
+		width: 640px;
+	}
 	img{
 		height: 200px;
 		width: auto;
-		&:hover{
-			overflow: visible;
-			animation-name: diagonal-slide;
-			animation-duration: 3s;
-			animation-iteration-count: 1;
-		}
+		transition: 2s;
 	}
 	footer {
 		display: flex;
@@ -327,17 +324,6 @@ footer{
 		@include textSpacing(100%,none);
 		}
 	}
-}
-@keyframes diagonal-slide {
-
-  from {
-    margin-left: 0px;
-  }
-
-  to {
-    margin-left: -200px;
-  }
-
 }
 //----Login formið
 input{

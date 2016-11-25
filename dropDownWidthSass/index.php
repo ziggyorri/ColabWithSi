@@ -1,4 +1,12 @@
-<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;} ?>
+<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;
+require_once('./included/connection.php');
+$ID = '1';
+if (isset($_POST['vidburdurID'])) {
+	$ID = $_POST['vidburdurID'];
+}
+else{
+}
+} ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +54,7 @@
 </div>
 	<div id="titleID" class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
 
-	<dir id="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></dir>
+	<div id="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></div>
 	
 
 	<div id="heading1" class="main">

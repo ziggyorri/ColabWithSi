@@ -7,6 +7,7 @@ var test = $('.mainbody').css('border-color');
 	
 	$(document).scroll(function(){//keirir þegar skrollar
 		animateNav();
+    $('img').css('margin-left','0px');
 	});
 
 
@@ -116,7 +117,19 @@ var animateNav = function() {//keirist þegar skrollar
 	
 }
 
-
+$("img").click(function (){
+      var breid = $(window).width();
+      if (breid<480) {
+        var margin = -640+breid;
+        $('img').animate({marginLeft:margin},{width:640},500);
+      }
+    });
+$(window).resize(function(){
+  var breid = $(window).width();
+        if (breid>480) {
+        $('img').css('margin-left','0px');
+      }
+});
 
 //smoothscroll function
 var scrollToElement = function(element)

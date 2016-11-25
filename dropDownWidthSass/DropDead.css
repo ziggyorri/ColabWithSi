@@ -96,7 +96,7 @@ nav {
 .scrollDown {
   position: fixed;
   top: 0px;
-  width: 905px; }
+  width: 903px; }
 
 .title {
   box-sizing: border-box;
@@ -387,14 +387,13 @@ footer {
     background-color: #be0000;
     overflow: hidden; }
 
+  #img {
+    width: 640px; }
+
   img {
     height: 200px;
-    width: auto; }
-    img:hover {
-      overflow: visible;
-      animation-name: diagonal-slide;
-      animation-duration: 3s;
-      animation-iteration-count: 1; }
+    width: auto;
+    transition: 2s; }
 
   footer {
     display: flex;
@@ -420,11 +419,6 @@ footer {
       float: none;
       background-color: #be0000;
       overflow: hidden; } }
-@keyframes diagonal-slide {
-  from {
-    margin-left: 0px; }
-  to {
-    margin-left: -200px; } }
 input {
   display: inline-block; }
 
