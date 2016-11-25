@@ -121,7 +121,7 @@ $("img").click(function (){
       var breid = $(window).width();
       if (breid<480) {
         var margin = -640+breid;
-        $('img').animate({marginLeft:margin},{width:640},500);
+        $('img').animate({marginLeft:margin},500);
       }
     });
 $(window).resize(function(){
