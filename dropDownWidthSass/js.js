@@ -116,7 +116,7 @@ var animateNav = function() {//keirist þegar skrollar
 	}*/
 	
 }
-
+var bul = false;
 $("img").click(function (){
       var breid = $(window).width();
       if (breid<480) {
