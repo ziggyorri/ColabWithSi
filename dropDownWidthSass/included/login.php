@@ -18,7 +18,7 @@
 		}
 	}
  ?>
- 
+
 <!DOCTYPE html>
 <html>
 	<head>
