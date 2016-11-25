@@ -53,10 +53,15 @@ label{
 	padding:0px;
 	display: none;
 	opacity: 0.3;
+	border: 5px ridge darken($colorDark, 25%);
+	background-color: lighten($colorLight, 10%);
 	&:hover{
 		cursor: pointer;
   		color:$colorFont;
 	}
+}
+#toggle:hover{
+		opacity: 1;
 }
 #toggle:checked ~ label {
 		opacity: 1;
@@ -108,7 +113,7 @@ nav
 				max-height:0;
 				overflow:hidden;
 				position: relative;
-				background-color:$colorLight;//-------
+				background-color:lighten($colorLight,7%);//-------
 				transition: max-height 0.7s;
 				//li eða &>li
 				li{
@@ -129,6 +134,12 @@ nav
 			}
 		}
 	}
+}
+
+.scrollDown{
+	position:fixed;
+	top:0px;
+	width:905px;
 }
 .title{
 	@include textSpacing($tveir,left);
@@ -159,6 +170,9 @@ img{
 
 	div{
 	@include textSpacing(100%,none);
+	font-size: $fontSize*1.1;
+	font-weight: bold;
+	border: none;
 	}
 }
 #mapi{
@@ -205,6 +219,12 @@ footer{
 	#mapi{
 	@include textSpacing($ein,none);
 	}
+	.scrollDown{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;;
+}
 }
 
 //-------------------------------------------------------
@@ -223,7 +243,8 @@ footer{
 	}
 	nav{
 		max-height: 0;
-		min-width: 350px;
+		min-width: 100%;
+		max-width: 350px;
 		position: static;
 		float: right;
 		clear: right;

@@ -37,10 +37,15 @@ a:hover {
 label {
   padding: 0px;
   display: none;
-  opacity: 0.3; }
+  opacity: 0.3;
+  border: 5px ridge black;
+  background-color: #be0000; }
   label:hover {
     cursor: pointer;
     color: #123; }
+
+#toggle:hover {
+  opacity: 1; }
 
 #toggle:checked ~ label {
   opacity: 1; }
@@ -75,7 +80,7 @@ nav {
         max-height: 0;
         overflow: hidden;
         position: relative;
-        background-color: darkred;
+        background-color: #af0000;
         transition: max-height 0.7s; }
         nav > ul > li > ul li {
           color: black; }
@@ -87,6 +92,11 @@ nav {
           border-bottom: 1px solid black;
           text-decoration: none;
           transition: font-size 0.3s; }
+
+.scrollDown {
+  position: fixed;
+  top: 0px;
+  width: 905px; }
 
 .title {
   box-sizing: border-box;
@@ -157,7 +167,10 @@ img {
     width: 100%;
     float: none;
     background-color: #be0000;
-    overflow: hidden; }
+    overflow: hidden;
+    font-size: 23.1px;
+    font-weight: bold;
+    border: none; }
 
 #mapi {
   box-sizing: border-box;
@@ -243,7 +256,13 @@ footer {
     width: 29.5%;
     float: none;
     background-color: #be0000;
-    overflow: hidden; } }
+    overflow: hidden; }
+
+  .scrollDown {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%; } }
 @media screen and (max-width: 48em) {
   .navcontainer {
     position: fixed;
@@ -259,7 +278,8 @@ footer {
 
   nav {
     max-height: 0;
-    min-width: 350px;
+    min-width: 100%;
+    max-width: 350px;
     position: static;
     float: right;
     clear: right;
