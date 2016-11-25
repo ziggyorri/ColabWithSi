@@ -3,14 +3,27 @@
 <?php
 // sækja skrá sem geymir tengingu við gagnagrunn
 require_once("connection.php");
+include("query.php");
 
 // erum hér að ná í playerinn úr forminu
-$Usernafn = $_POST['RegisterUsername']; 	
+$Usernafn = $_POST['RegisterUsername'];
 // erum hér að ná í skorið úr forminu, ath tölugildi koma sem strengur frá input í formi.
-$Passord = $_POST['RegisterPassword']; 		
+$Passord = $_POST['RegisterPassword'];
+$Teljari = 0;
+$Tjekk = 0;
+
+foreach ($tafla as $k)
+{
+	if ($k[0] != $Usernafn){$Teljari++;}
+	elseif ($k[0] == $Usernafn){$Teljari = 0;}
+	if ($Teljari == 0){$Tjekk = 1;break;}
+}
+
+	
+
 
 //er hérna að athuga hvort breyturnar séu ekki tómar
-if(!empty($Usernafn) && !empty($Passord)) 
+if(!empty($Usernafn) && !empty($Passord) && $Tjekk != 1)
 {
 	// SQL skipun/fyrirspurnin - gott að athuga fyrst hvort hún sé rétt  með að skrifa í og prófa í phpmyadmin eða workbench 
 	// hér erum við að nota placeholder (er með : á undan) fyrir gildi úr $_POST fylki.
@@ -33,7 +46,7 @@ if(!empty($Usernafn) && !empty($Passord))
 		// execute segir MySQL að framkvæma SQL kóða á gagnagrunn með gildunum.
 		$q->execute();  
 		echo "Það tókst að skrifa eftirfarandi upplýsingar í gagnagrunn<br>";
-		echo "Username: $Usernafn og Password: $Passord";
+		echo "Usernafn: $Usernafn og Passord: $Passord";
 		echo("<br><a href='login.php'>Til baka</a>");
 	}
 	//
@@ -41,5 +54,13 @@ if(!empty($Usernafn) && !empty($Passord))
 		echo 'Það tókst ekki að skrifa í gagnagrunn: '.$ex->getMessage();
 	}
 
+}
+elseif ($Tjekk == 1)
+{
+	echo 'Það tókst ekki að skrifa í gagnagrunn. Notandanafn nú þegar í notkun.';
+}
+else
+{
+	echo 'Það tókst ekki að skrifa í gagnagrunn.';
 }
 ?>
