@@ -46,6 +46,9 @@ a:hover{
 	position:relative;
 	overflow: auto;
 	}
+	#tog1,
+	#tog2,
+	#tog3,
 	#toggle{
 		display: none;
 	}
@@ -66,6 +69,14 @@ label{
 #toggle:checked ~ label {
 		opacity: 1;
 	}
+.undirtoggle{
+	display:inline-block;
+	border:none;
+	opacity:1;
+	background-color:transparent;
+	float:none;
+	clear:none;
+}
 nav
 {
 	
@@ -100,11 +111,9 @@ nav
 				}
 			flex-grow: 1;
 			border: 5px ridge $colorDark;
-			&:hover
+			&>input:checked~ul
 			{
-				ul{
-					max-height:200px;
-				}
+				max-height:200px;
 			}
 
 			&>ul
@@ -340,4 +349,8 @@ input{
 	h1{
 		margin-bottom:2px;
 	}
+}
+//----Form css
+#indexFormTA{
+	max-width:598px;
 }

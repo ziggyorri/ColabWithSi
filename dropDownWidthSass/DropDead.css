@@ -31,6 +31,9 @@ a:hover {
   position: relative;
   overflow: auto; }
 
+#tog1,
+#tog2,
+#tog3,
 #toggle {
   display: none; }
 
@@ -49,6 +52,14 @@ label {
 
 #toggle:checked ~ label {
   opacity: 1; }
+
+.undirtoggle {
+  display: inline-block;
+  border: none;
+  opacity: 1;
+  background-color: transparent;
+  float: none;
+  clear: none; }
 
 nav {
   margin: 0;
@@ -73,7 +84,7 @@ nav {
         border-bottom: 1px solid black;
         text-decoration: none;
         transition: font-size 0.3s; }
-      nav > ul > li:hover ul {
+      nav > ul > li > input:checked ~ ul {
         max-height: 200px; }
       nav > ul > li > ul {
         color: #123;
@@ -429,5 +440,8 @@ input {
   padding: 0px; }
 .Login h1 {
   margin-bottom: 2px; }
+
+#indexFormTA {
+  max-width: 598px; }
 
 /*# sourceMappingURL=DropDead.css.map */

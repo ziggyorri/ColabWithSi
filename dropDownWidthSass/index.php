@@ -1,4 +1,4 @@
-<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;
+<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;}
 require_once('./included/connection.php');
 $ID = '1';
 if (isset($_POST['vidburdurID'])) {
@@ -6,7 +6,7 @@ if (isset($_POST['vidburdurID'])) {
 }
 else{
 }
-} ?>
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,9 @@ else{
 	<label for="toggle">&#9776menu</label>
 <nav>
       <ul>
-		<li>Curent page
+		<li>
+			<input type="checkbox" id="tog1">
+			<label class="undirtoggle" for="tog1">Current page</label>
 			<ul>
 				<li><a id="link1" href="#">Discription</a></li>
 				<li><a id="link2" href="#">Map</a></li>
@@ -30,7 +32,9 @@ else{
 				<li><a id="link4" href="#">Contacts</a></li>
 			</ul>
 		</li>
-		<li>Top tengill
+		<li>
+			<input type="checkbox" id="tog2">
+			<label class="undirtoggle" for="tog2">Top tengill</label>
 			<ul>
 				<li><a onclick="" href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
@@ -38,7 +42,9 @@ else{
 				<li><a href="#">tengill</a></li>
 			</ul>
 		</li>
-		<li>Top tengill
+		<li>
+			<input type="checkbox" id="tog3">
+			<label class="undirtoggle" for="tog3">Top tengill</label>
 			<ul>
 				<li><a href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
