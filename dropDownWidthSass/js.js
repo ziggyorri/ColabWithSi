@@ -129,6 +129,7 @@ $(window).resize(function(){
         if (breid>480) {
         $('img').css('margin-left','0px');
       }
+      $('Login').css('font-size',breid/2);
 });
 
 //smoothscroll function

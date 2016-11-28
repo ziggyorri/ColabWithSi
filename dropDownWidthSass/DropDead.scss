@@ -335,22 +335,45 @@ footer{
 	}
 }
 //----Login formið
-input{
-	display:inline-block;
-}
-.Login{
+#Login{
+	display: flex;
+	form{
+		min-width:450px;
+		max-width: 800px;
+		margin: 0px;
+		padding:5px;
+	}
 	h1,
 	input
 	{
-	float:left;
-	clear:left;
+	width: 100%;
+	font-size: 50px;
 	padding:0px;
+	border:none;
+	float:left;
+	clear: left;
+	height:24%;
 	}
 	h1{
 		margin-bottom:2px;
+		display:inline-block;
 	}
 }
+@media screen and (max-width: 420px){
+	#Login{
+	display: flex;
+	max-width:none;
+	flex-flow: column;
+	form{
+		width: 100%;
+	}
+	
+}
+	}
 //----Form css
 #indexFormTA{
 	max-width:598px;
+}
+#imgInput{
+	margin-left: 13px;
 }

@@ -430,18 +430,37 @@ footer {
       float: none;
       background-color: #be0000;
       overflow: hidden; } }
-input {
-  display: inline-block; }
+#Login {
+  display: flex; }
+  #Login form {
+    min-width: 450px;
+    max-width: 800px;
+    margin: 0px;
+    padding: 5px; }
+  #Login h1,
+  #Login input {
+    width: 100%;
+    font-size: 50px;
+    padding: 0px;
+    border: none;
+    float: left;
+    clear: left;
+    height: 24%; }
+  #Login h1 {
+    margin-bottom: 2px;
+    display: inline-block; }
 
-.Login h1,
-.Login input {
-  float: left;
-  clear: left;
-  padding: 0px; }
-.Login h1 {
-  margin-bottom: 2px; }
-
+@media screen and (max-width: 420px) {
+  #Login {
+    display: flex;
+    max-width: none;
+    flex-flow: column; }
+    #Login form {
+      width: 100%; } }
 #indexFormTA {
   max-width: 598px; }
+
+#imgInput {
+  margin-left: 13px; }
 
 /*# sourceMappingURL=DropDead.css.map */
