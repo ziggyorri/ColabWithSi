@@ -52,12 +52,12 @@ else{
 </div>
 	<div id="titleID" class="title"><input type="text" name="heiti" placeholder="Title" required></div>
 
-	<div id="img"><input type="text" name="imgUrl" placeholder="Image URL" required></div>
+	<div id="img"><input id="imgInput" type="text" name="imgUrl" placeholder="Image URL" required></div>
 	
 
 	<div id="heading1" class="main">
 		
-		<textarea id="indexFormTA" rows="44" cols="83" name="lysing" placeholder="Description"></textarea>
+		<textarea id="indexFormTA" style="min-height: 836px;" rows="44" cols="83" name="lysing" placeholder="Description"></textarea>
 
 	</div>
 <div id="info" class="Price">
@@ -67,7 +67,7 @@ else{
 		<div class="meh">Shown in
 		<input type="text" name="shownIn" placeholder="Location" required></div>
 
-		<div>Price <input type="text" name="price" placeholder="Amount" required=></div>
+		<div>Price <input type="text" name="price" placeholder="Amount" required></div>
 	</div>
 
 	<div class="opnun">
@@ -79,7 +79,13 @@ else{
 		<div id="mapi">
 			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13918.706224510119!2d-21.934276045776542!3d64.14662947364903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674d3023a19c7%3A0xdbbf050da40f5d28!2sHarpan%2C+101+Reykjav%C3%ADk!5e0!3m2!1sis!2sis!4v1478866535521" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
-		<input type="submit" name="submit" value="Submit" Class="Button3">
+		<div class="Price">
+			<input type="text" name="color1" placeholder="Dark Color">
+			<input type="text" name="color2" placeholder="Light Color">
+			<input type="text" name="color3" placeholder="Font Color">
+			<input type="submit" name="submit" value="Submit" Class="Button3">
+		</div>
+		
 
 	<footer>
 		<ul>
