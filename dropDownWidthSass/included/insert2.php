@@ -6,10 +6,19 @@
 // sækja skrá sem geymir tengingu við gagnagrunn
 require_once("connection.php");
 
-// erum hér að ná í playerinn úr forminu
-$Usernafn = $_POST['RegisterUsername'];
-// erum hér að ná í skorið úr forminu, ath tölugildi koma sem strengur frá input í formi.
-$Passord = $_POST['RegisterPassword'];
+$ = $_POST[''];
+$lysing = $_POST['lysing'];
+$sublysing = explode("\n\n", $lysing);
+$lysingFinal = null;
+for ($i=0; $i < (count($sublysing)-1); $i++) { 
+	$lysingFinal = $lysingFinal.$sublysing[$i]. "◘";
+}
+$lysingFinal = $lysingFinal.$sublysing[count($sublysing)-1];
+$ = $_POST[''];
+$ = $_POST[''];
+$ = $_POST[''];
+$ = $_POST[''];
+$ = $_POST[''];
 
 
 	
