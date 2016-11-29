@@ -4,8 +4,7 @@ $ID = '1';
 if (isset($_POST['vidburdurID'])) {
 	$ID = $_POST['vidburdurID'];
 }
-else{
-}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,6 +13,14 @@ else{
 	<link rel="stylesheet" type="text/css" href="DropDead.css">
 	<meta name="viewport" content="width=device-width">
 	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			color: <?php $litir3 ?>
+		}
+		a{
+			color: <?php $litir3 ?>
+		}
+	</style>
 </head>
 <body>
 <div id="mainbody1" class="mainbody">
@@ -58,13 +65,30 @@ else{
 	</ul>
 </nav>
 </div>
-	<div id="titleID" class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
+	<div id="titleID" class="title"><?php echo $heiti; ?>
+	<!--ICELANDIC SAGAS: Sýning til stuðnings Amnesty International--></div>
 
-	<div id="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></div>
+	<div id="img"><?php echo '<img src="'. $imgUrl . '">'; ?>
+	<!--<img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg">--></div>
 	
 
 	<div id="heading1" class="main">
-		<div>Hinn 12. nóvember verður sýningin Icelandic Sagas: The Greatest Hits in 75 minutes haldin í Hörpu til stuðnings Amnesty International. Allir listamennirnir gefa vinnu sína og rennur ágóðinn til Amnesty International. Aðstandendur sýningar ákváðu að halda sýninguna til stuðnings þeirra vegna flóttamannakrísunnar sem nú ríkir í heiminum og baráttu Amnesty International fyrir málefnum flóttafólks.</div>
+	<?php 
+	$lysingLoka= explode('◘', $lysing)
+		for ($i=0; $i < count($lysingLoka); $i++) { 
+			if ($i==0) {
+				echo "<div>";
+				echo $lysingLoka[$i];
+				echo "</div>";
+			}
+			else{
+				echo "<p>";
+				echo $lysingLoka[$i];
+				echo "</p>";
+			}
+		}
+	 ?>
+		<!--<div>Hinn 12. nóvember verður sýningin Icelandic Sagas: The Greatest Hits in 75 minutes haldin í Hörpu til stuðnings Amnesty International. Allir listamennirnir gefa vinnu sína og rennur ágóðinn til Amnesty International. Aðstandendur sýningar ákváðu að halda sýninguna til stuðnings þeirra vegna flóttamannakrísunnar sem nú ríkir í heiminum og baráttu Amnesty International fyrir málefnum flóttafólks.</div>
 
 		<p>Tveir af frambærilegustu leikurum þjóðarinnar kynna Íslendingasögurnar – Brot af því besta á 75 mínútum – Stórskemmtilega leikhús rússíbanareið í gegnum þjóðararf íslensku fornbókmenntanna.</p>
 
@@ -77,14 +101,23 @@ else{
 		<p>Velkomin í heim Hallgerðar Langbrókar, Gunnlaugs Orms-Tungu, Víga-Glúms, Haraldar Hárfagra, Mjallar sem-stærst-var-allra-kvenna-sem-ekki-voru-risar og Leifs Heppna sem fann Ameríku… og týndi henni aftur.</p>
 
 		<p>Þú hittir þau öll í Íslendingasögurnar – Brot af því besta á 75 mínútum. Leyfið sögunum að hrífa ykkur, uppfræða og skemmta – og komist að því hvað það merkir að kasta bláum brókum upp í opið geðið á fólki. Í alvöru.</p>
-
+-->
 	</div>
 <div id="info" class="Price">
-		<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>
+		<?php 
+		$dagsLoka = explode('◘', $dags);
+		for ($i=0; $i < count($dagsLoka)-1; $i++) { 
+			echo '<div class="meh"><h3>'.$dagsLoka[$i].'</h3></div>';
+		}
+		if (count($dagsLoka)>=1) {
+			echo '<div><h3>'.$dagsLoka[count($dagsLoka-1)].'</h3></div>';
+		}
+		?>
+		<!--<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>
 
 		<div class="meh">Shown in<h3>Norðurljóst</h3></div>
 
-		<div>Price <h3>4.900</h3></div>
+		<div>Price <h3>4.900</h3></div>-->
 	</div>
 
 	<div class="opnun">
