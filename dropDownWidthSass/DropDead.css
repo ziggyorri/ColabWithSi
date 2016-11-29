@@ -59,7 +59,11 @@ label {
   opacity: 1;
   background-color: transparent;
   float: none;
-  clear: none; }
+  clear: none;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
 
 nav {
   margin: 0;
@@ -76,6 +80,7 @@ nav {
     flex-wrap: wrap;
     max-height: 30px; }
     nav > ul > li {
+      height: 30px;
       background-color: darkred;
       flex-grow: 1;
       border: 5px ridge black; }
@@ -83,7 +88,8 @@ nav {
         display: block;
         border-bottom: 1px solid black;
         text-decoration: none;
-        transition: font-size 0.3s; }
+        transition: font-size 0.3s;
+        border: none; }
       nav > ul > li > input:checked ~ ul {
         max-height: 200px; }
       nav > ul > li > ul {
@@ -121,7 +127,8 @@ nav {
   overflow: hidden; }
 
 img {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: -12px; }
 
 #img {
   box-sizing: border-box;
@@ -143,7 +150,7 @@ img {
   padding: 13px;
   margin: 1px;
   text-align: initial;
-  width: 29.5%;
+  width: auto;
   float: none;
   background-color: #be0000;
   overflow: hidden;
@@ -195,7 +202,8 @@ img {
   overflow: hidden;
   padding: 0;
   clear: right;
-  overflow: visible; }
+  overflow: visible;
+  height: 460px; }
 
 #map {
   width: 100%; }
@@ -267,7 +275,8 @@ footer {
     width: 29.5%;
     float: none;
     background-color: #be0000;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0px; }
 
   .scrollDown {
     position: fixed;
@@ -297,6 +306,8 @@ footer {
     overflow: hidden; }
     nav > ul {
       flex-flow: column; }
+      nav > ul > li {
+        height: auto; }
 
   nav ul li ul li:hover {
     font-size: 37.8px; }
@@ -340,10 +351,11 @@ footer {
     padding: 13px;
     margin: 1px;
     text-align: initial;
-    width: 70%;
+    width: auto;
     float: none;
     background-color: #be0000;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0px; }
 
   footer {
     display: inline-block; }
@@ -353,7 +365,7 @@ footer {
       padding: 13px;
       margin: 1px;
       text-align: initial;
-      width: 48%;
+      width: 49.53%;
       float: left;
       background-color: #be0000;
       overflow: hidden;
@@ -364,7 +376,7 @@ footer {
       padding: 13px;
       margin: 1px;
       text-align: initial;
-      width: 100%;
+      width: 99.4%;
       float: none;
       background-color: #be0000;
       overflow: hidden; } }
@@ -376,7 +388,7 @@ footer {
     padding: 13px;
     margin: 1px;
     text-align: initial;
-    width: 48%;
+    width: 50%;
     float: left;
     background-color: #be0000;
     overflow: hidden;
@@ -387,6 +399,18 @@ footer {
     .Price h2 {
       font-size: 18px; }
 
+  .opnun {
+    box-sizing: border-box;
+    border: 5px ridge black;
+    padding: 13px;
+    margin: 1px;
+    text-align: initial;
+    width: auto;
+    float: none;
+    background-color: #be0000;
+    overflow: hidden;
+    max-width: 100%; }
+
   #mapi {
     box-sizing: border-box;
     border: 5px ridge black;
@@ -396,10 +420,13 @@ footer {
     width: 100%;
     float: none;
     background-color: #be0000;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0px; }
 
   #img {
-    width: 640px; }
+    width: 100%;
+    overflow: hidden;
+    height: 200px; }
 
   img {
     height: 200px;
