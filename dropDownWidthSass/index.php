@@ -4,6 +4,27 @@ $ID = '1';
 if (isset($_POST['vidburdurID'])) {
 	$ID = $_POST['vidburdurID'];
 }
+//sækja gögn úr gaggnagrunni
+	if ($litur2[0]=='#') {
+		if (strlen(litur2)==4) {
+			$R = $litur2[1];
+			$G = $litur2[2];
+			$B = $litur2[3];
+		}
+		else if (strlen(litur2)==7) {
+			$R = $litur2[1].$litur2[2];
+			$G = $litur2[3].$litur2[4];
+			$B = $litur2[5].$litur2[6];
+		}
+		/*FA8000 = 244.128.0
+F58D1A = 245.141.26		+1.+13.+26
+F69933 = 246.153.51		+1.+12.+25
+F7A64D = 247.166.77		+1.+13.+26
+F8B366 = 248.179.102	+1.+13.+25
+						+1.+13.+26
+						+2.+13.+25
+						+1.+12.+26*/
+	}
 
 ?>
 <!DOCTYPE html>
