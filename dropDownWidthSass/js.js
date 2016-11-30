@@ -129,6 +129,7 @@ $(window).resize(function(){
         if (breid>480) {
         $('img').css('margin-left','0px');
       }
+      $('Login').css('font-size',breid/2);
 });
 
 //smoothscroll function
@@ -147,4 +148,12 @@ $("#link1").click(function (){
                 
     });
 */
+$("#undirtoggle").click(function (){
+	var tog = ["tog1","tog2","tog3"]
+	for (var i = tog.length - 1; i >= 0; i--) {
+		if (this != tog[i]) {			
+      document.getElementById(tog[i]).checked = false;
+		}
+	}
+    });
 $(document).ready(main);

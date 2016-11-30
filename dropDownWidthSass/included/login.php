@@ -25,22 +25,31 @@
 		<meta charset="utf-8">
 		<title>Login/Register</title>
 		<link rel="stylesheet" type="text/css" href="../DropDead.css">
+		<meta name="viewport" content="width=device-width">
 	</head>
-	<body class="Login">
+	<body id="Login">
 
 		<form action="" method="post" name="Innskra">
 			<h1>Login</h1>
+<<<<<<< HEAD
 			<input name="Username" type="text" class="Input" placeholder="Username" required>
 			<input name="Password" type="password" class="Input" placeholder="Password" required>
 			<input name="Submit" type="submit" value="Login" class="Button3">
+=======
+			<input class="formInput" name="Username" type="text" class="Input" placeholder="Username">
+			<input class="formInput" name="Password" type="password" class="Input" placeholder="Password">
+			<input class="formInput" name="Submit" type="submit" value="Login" class="Button3">
+>>>>>>> 43aaeb3a1671aae48a420a9578490ff76caf0a04
 		</form>
 
 		<form action="insert.php" method="post" Name="Register">
 			<h1>Register</h1>
-			<input type="text" name="RegisterUsername" placeholder="Username" required >
-			<input type="password" name="RegisterPassword" placeholder="Password" required >
-			<input name="RegisterSubmit" type="submit" value="Register" class="Button3">
-		</form>
+			<input class="formInput" type="text" name="RegisterUsername" placeholder="Username" required >
+			<input class="formInput" type="password" name="RegisterPassword" placeholder="Password" required >
+			<input class="formInput" name="RegisterSubmit" type="submit" value="Register" class="Button3">
+		</form> 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../js.js"></script>
 	</body>
 </html>

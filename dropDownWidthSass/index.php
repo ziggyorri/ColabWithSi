@@ -1,12 +1,32 @@
-<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;
+<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;}
 require_once('./included/connection.php');
 $ID = '1';
 if (isset($_POST['vidburdurID'])) {
 	$ID = $_POST['vidburdurID'];
 }
-else{
-}
-} ?>
+//sækja gögn úr gaggnagrunni
+	if ($litur2[0]=='#') {
+		if (strlen(litur2)==4) {
+			$R = $litur2[1];
+			$G = $litur2[2];
+			$B = $litur2[3];
+		}
+		else if (strlen(litur2)==7) {
+			$R = $litur2[1].$litur2[2];
+			$G = $litur2[3].$litur2[4];
+			$B = $litur2[5].$litur2[6];
+		}
+		/*FA8000 = 244.128.0
+F58D1A = 245.141.26		+1.+13.+26
+F69933 = 246.153.51		+1.+12.+25
+F7A64D = 247.166.77		+1.+13.+26
+F8B366 = 248.179.102	+1.+13.+25
+						+1.+13.+26
+						+2.+13.+25
+						+1.+12.+26*/
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +34,14 @@ else{
 	<link rel="stylesheet" type="text/css" href="DropDead.css">
 	<meta name="viewport" content="width=device-width">
 	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			color: <?php $litir3 ?>
+		}
+		a{
+			color: <?php $litir3 ?>
+		}
+	</style>
 </head>
 <body>
 <div id="mainbody1" class="mainbody">
@@ -22,7 +50,9 @@ else{
 	<label for="toggle">&#9776menu</label>
 <nav>
       <ul>
-		<li>Curent page
+		<li>
+			<input type="checkbox" id="tog1">
+			<label class="undirtoggle" for="tog1">Current page</label>
 			<ul>
 				<li><a id="link1" href="#">Discription</a></li>
 				<li><a id="link2" href="#">Map</a></li>
@@ -30,7 +60,9 @@ else{
 				<li><a id="link4" href="#">Contacts</a></li>
 			</ul>
 		</li>
-		<li>Top tengill
+		<li>
+			<input type="checkbox" id="tog2">
+			<label class="undirtoggle" for="tog2">Top tengill</label>
 			<ul>
 				<li><a onclick="" href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
@@ -38,7 +70,9 @@ else{
 				<li><a href="#">tengill</a></li>
 			</ul>
 		</li>
-		<li>Top tengill
+		<li>
+			<input type="checkbox" id="tog3">
+			<label class="undirtoggle" for="tog3">Top tengill</label>
 			<ul>
 				<li><a href="#">tengill</a></li>
 				<li><a href="#">tengill</a></li>
@@ -52,13 +86,30 @@ else{
 	</ul>
 </nav>
 </div>
-	<div id="titleID" class="title">ICELANDIC SAGAS: Sýning til stuðnings Amnesty International</div>
+	<div id="titleID" class="title"><?php echo $heiti; ?>
+	<!--ICELANDIC SAGAS: Sýning til stuðnings Amnesty International--></div>
 
-	<div id="img"><img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg"></div>
+	<div id="img"><?php echo '<img src="'. $imgUrl . '">'; ?>
+	<!--<img src="https://www.harpa.is/wp-content/uploads/2016/11/1600x500.jpg">--></div>
 	
 
 	<div id="heading1" class="main">
-		<div>Hinn 12. nóvember verður sýningin Icelandic Sagas: The Greatest Hits in 75 minutes haldin í Hörpu til stuðnings Amnesty International. Allir listamennirnir gefa vinnu sína og rennur ágóðinn til Amnesty International. Aðstandendur sýningar ákváðu að halda sýninguna til stuðnings þeirra vegna flóttamannakrísunnar sem nú ríkir í heiminum og baráttu Amnesty International fyrir málefnum flóttafólks.</div>
+	<?php 
+	$lysingLoka= explode('◘', $lysing)
+		for ($i=0; $i < count($lysingLoka); $i++) { 
+			if ($i==0) {
+				echo "<div>";
+				echo $lysingLoka[$i];
+				echo "</div>";
+			}
+			else{
+				echo "<p>";
+				echo $lysingLoka[$i];
+				echo "</p>";
+			}
+		}
+	 ?>
+		<!--<div>Hinn 12. nóvember verður sýningin Icelandic Sagas: The Greatest Hits in 75 minutes haldin í Hörpu til stuðnings Amnesty International. Allir listamennirnir gefa vinnu sína og rennur ágóðinn til Amnesty International. Aðstandendur sýningar ákváðu að halda sýninguna til stuðnings þeirra vegna flóttamannakrísunnar sem nú ríkir í heiminum og baráttu Amnesty International fyrir málefnum flóttafólks.</div>
 
 		<p>Tveir af frambærilegustu leikurum þjóðarinnar kynna Íslendingasögurnar – Brot af því besta á 75 mínútum – Stórskemmtilega leikhús rússíbanareið í gegnum þjóðararf íslensku fornbókmenntanna.</p>
 
@@ -71,14 +122,23 @@ else{
 		<p>Velkomin í heim Hallgerðar Langbrókar, Gunnlaugs Orms-Tungu, Víga-Glúms, Haraldar Hárfagra, Mjallar sem-stærst-var-allra-kvenna-sem-ekki-voru-risar og Leifs Heppna sem fann Ameríku… og týndi henni aftur.</p>
 
 		<p>Þú hittir þau öll í Íslendingasögurnar – Brot af því besta á 75 mínútum. Leyfið sögunum að hrífa ykkur, uppfræða og skemmta – og komist að því hvað það merkir að kasta bláum brókum upp í opið geðið á fólki. Í alvöru.</p>
-
+-->
 	</div>
 <div id="info" class="Price">
-		<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>
+		<?php 
+		$dagsLoka = explode('◘', $dags);
+		for ($i=0; $i < count($dagsLoka)-1; $i++) { 
+			echo '<div class="meh"><h3>'.$dagsLoka[$i].'</h3></div>';
+		}
+		if (count($dagsLoka)>=1) {
+			echo '<div><h3>'.$dagsLoka[count($dagsLoka-1)].'</h3></div>';
+		}
+		?>
+		<!--<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>
 
 		<div class="meh">Shown in<h3>Norðurljóst</h3></div>
 
-		<div>Price <h3>4.900</h3></div>
+		<div>Price <h3>4.900</h3></div>-->
 	</div>
 
 	<div class="opnun">
