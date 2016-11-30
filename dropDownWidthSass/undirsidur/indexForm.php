@@ -1,11 +1,7 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;}
 require_once('../included/connection.php');
-$ID = '1';
-if (isset($_POST['vidburdurID'])) {
-	$ID = $_POST['vidburdurID'];
-}
-else{
-} ?>
+/*list($width, $height) = getimagesize("http://bit.ly/2g6lqsi");
+echo($width." ".$height);*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
