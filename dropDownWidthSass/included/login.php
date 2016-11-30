@@ -32,9 +32,15 @@
 		<form action="" method="post" name="Innskra">
 			<h1>Login</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<input name="Username" type="text" class="Input" placeholder="Username" required>
 			<input name="Password" type="password" class="Input" placeholder="Password" required>
 			<input name="Submit" type="submit" value="Login" class="Button3">
+=======
+			<input class="formInput" name="Username" type="text" class="Input" placeholder="Username">
+			<input class="formInput" name="Password" type="password" class="Input" placeholder="Password">
+			<input class="formInput" name="Submit" type="submit" value="Login" class="Button3">
+>>>>>>> 43aaeb3a1671aae48a420a9578490ff76caf0a04
 =======
 			<input class="formInput" name="Username" type="text" class="Input" placeholder="Username">
 			<input class="formInput" name="Password" type="password" class="Input" placeholder="Password">
