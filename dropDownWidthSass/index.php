@@ -2,7 +2,7 @@
 require_once('./included/connection.php');
 include("./included/query2.php");
 
-$ID = '1';
+$ID = '6';
 if (isset($_POST['vidburdurID'])) {
 	$ID = $_POST['vidburdurID'];
 }
