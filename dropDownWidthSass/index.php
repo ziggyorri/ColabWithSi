@@ -2,7 +2,7 @@
 require_once('./included/connection.php');
 include("./included/query2.php");
 
-$ID = '1';
+$ID = '6';
 if (isset($_POST['vidburdurID'])) {
 	$ID = $_POST['vidburdurID'];
 }
@@ -17,22 +17,58 @@ $heiti = $vidburdsTafla[1];
 $imgUrl = $vidburdsTafla[2];
 $lysing = $vidburdsTafla[3];
 $dags = $vidburdsTafla[4];
-$litir1 = $vidburdsTafla[5];
-$litir2 = $vidburdsTafla[6];
-$litir3 = $vidburdsTafla[7];
-
-
+$litur1 = $vidburdsTafla[5];
+$litur2 = $vidburdsTafla[6];
+$litur3 = $vidburdsTafla[7];
 
 //sækja gögn úr gaggnagrunni
-	
+	if ($litur1[0]=='#') {
+		if (strlen($litur1)==4) {
+			$R1 = $litur1[1];
+			$G1 = $litur1[2];
+			$B1 = $litur1[3];
+		}
+		else if (strlen($litur1)==7) {
+			$R1 = $litur1[1].$litur1[2];
+			$G1 = $litur1[3].$litur1[4];
+			$B1 = $litur1[5].$litur1[6];
+		}
+		$litir1 = "#".$R1.$G1.$B1;
+	}
+	if ($litur2[0]=='#') {
+		if (strlen($litur2)==4) {
+			$R2 = $litur2[1];
+			$G2 = $litur2[2];
+			$B2 = $litur2[3];
+		}
+		else if (strlen($litur2)==7) {
+			$R2 = $litur2[1].$litur2[2];
+			$G2 = $litur2[3].$litur2[4];
+			$B2 = $litur2[5].$litur2[6];
+		}
+		$litir2 = "#".$R2.$G2.$B2;
+	}
+	if ($litur3[0]=='#') {
+		if (strlen($litur3)==4) {
+			$R3 = $litur3[1];
+			$G3 = $litur3[2];
+			$B3 = $litur3[3];
+		}
+		else if (strlen($litur3)==7) {
+			$R3 = $litur3[1].$litur3[2];
+			$G3 = $litur3[3].$litur3[4];
+			$B3 = $litur3[5].$litur3[6];
+		}
+		$litir3 = "#".$R3.$G3.$B3;
 		/*FA8000 = 244.128.0
-		F58D1A = 245.141.26		+1.+13.+26
-		F69933 = 246.153.51		+1.+12.+25
-		F7A64D = 247.166.77		+1.+13.+26
-		F8B366 = 248.179.102	+1.+13.+25
-								+1.+13.+26
-								+2.+13.+25
-								+1.+12.+26*/
+F58D1A = 245.141.26		+1.+13.+26
+F69933 = 246.153.51		+1.+12.+25
+F7A64D = 247.166.77		+1.+13.+26
+F8B366 = 248.179.102	+1.+13.+25
+						+1.+13.+26
+						+2.+13.+25
+						+1.+12.+26*/
+	}
 
 ?>
 <!DOCTYPE html>
@@ -186,40 +222,3 @@ $litir3 = $vidburdsTafla[7];
 </div>
 </body>
 </html>
-<?php 
-function brighten($color, $prosent){
-	if (count($color)==7) {
-		$R=$color[1].$color[2];
-		$G=$color[3].$color[4];
-		$B=$color[5].$color[6];
-
-	}
-}
-function hexOc($hex){
-	if (is_numeric($hex)) {
-		return $hex;
-	}
-	else{
-		switch ($hex) {
-			case 'A':
-			return '10';
-			break;
-			case 'B':
-			return '11';
-			break;
-			case 'C':
-			return '12';
-			break;
-			case 'D':
-			return '13';
-			break;
-			case 'E':
-			return '14';
-			break;
-			case 'F':
-			return '15';
-			break;
-		}
-	}
-}
-?>
