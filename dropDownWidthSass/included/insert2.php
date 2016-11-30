@@ -31,7 +31,7 @@ if (!empty($_POST['color1']) && !empty($_POST['color2']) && !empty($_POST['color
 }
 
 
-	
+
 
 
 //er hérna að athuga hvort breyturnar séu ekki tómar
@@ -39,7 +39,7 @@ if(!empty($heiti) && !empty($imgUrl) && !empty($dags))
 {
 	// SQL skipun/fyrirspurnin - gott að athuga fyrst hvort hún sé rétt  með að skrifa í og prófa í phpmyadmin eða workbench 
 	// hér erum við að nota placeholder (er með : á undan) fyrir gildi úr $_POST fylki.
-	$sql = 'INSERT INTO tafla(heiti, imgUrl, lysing, dags, litir1, litir2, litir3)VALUES(:heiti,:imgUrl,:lysing,:dags,:litur1,:litur2,:litur3)'; 
+	$sql = 'INSERT INTO vidburdur(heiti, imgUrl, lysing, dags, litir1, litir2, litir3)VALUES(:heiti,:imgUrl,:lysing,:dags,:litur1,:litur2,:litur3)'; 
 	
 	// Prepare setning (e. statement) er sql fyrirspurn sem þú sendir til miðlara (e. server) áður en þú framkvæmir hana
 	// þetta er gerir miðlaranum (MySQL) kleift að undirbúa sig fyrir keyrslu (kemur í veg árásir á gagnagrunn (SQL injection))
@@ -63,8 +63,8 @@ if(!empty($heiti) && !empty($imgUrl) && !empty($dags))
 
 		// execute segir MySQL að framkvæma SQL kóða á gagnagrunn með gildunum.
 		$q->execute();  
-		echo "Það tókst að skrifa eftirfarandi upplýsingar í gagnagrunn<br>";
-		echo "Title: ".$heiti."\n\n\nImage URL: ".$imgUrl."\n\n\nLýsing: ".$lysingTemp."\n\n\nDate: ".$dagsTemp."\n\n\nTime: ".$timi."\n\n\nLocation: ".$showIn."\n\n\nPrice: ".$price."\n\n\nColors: ".$litur1.", ".$litur2." & ".$litur3;
+		echo "<br>Það tókst að skrifa eftirfarandi upplýsingar í gagnagrunn<br>";
+		echo "<br> <br> <br>Title: ".$heiti."<br> <br>Image URL: ".$imgUrl."<br> <br>Lýsing: ".$lysingTemp."<br> <br>Date: ".$dagsTemp."<br> <br>Time: ".$timi."<br> <br>Location: ".$showIn."<br> <br>Price: ".$price."<br> <br>Colors: ".$litur1.", ".$litur2." & ".$litur3."<br> <br> <br>";
 		echo("<br><a href='../index.php'>Til baka</a>");
 	}
 	//
