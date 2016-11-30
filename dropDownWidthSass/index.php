@@ -1,21 +1,65 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;}
 require_once('./included/connection.php');
+include("./included/query2.php");
+
 $ID = '1';
 if (isset($_POST['vidburdurID'])) {
 	$ID = $_POST['vidburdurID'];
 }
+
+$vidburdsTafla = null;
+
+foreach ($vidburdur as $k)
+{
+	if ($k[0] == $ID) {$vidburdsTafla = $k;}
+}
+$heiti = $vidburdsTafla[1];
+$imgUrl = $vidburdsTafla[2];
+$lysing = $vidburdsTafla[3];
+$dags = $vidburdsTafla[4];
+$litur1 = $vidburdsTafla[5];
+$litur2 = $vidburdsTafla[6];
+$litur3 = $vidburdsTafla[7];
+
 //sækja gögn úr gaggnagrunni
+	if ($litur1[0]=='#') {
+		if (strlen($litur1)==4) {
+			$R1 = $litur1[1];
+			$G1 = $litur1[2];
+			$B1 = $litur1[3];
+		}
+		else if (strlen($litur1)==7) {
+			$R1 = $litur1[1].$litur1[2];
+			$G1 = $litur1[3].$litur1[4];
+			$B1 = $litur1[5].$litur1[6];
+		}
+		$litir1 = "#".$R1.$G1.$B1;
+	}
 	if ($litur2[0]=='#') {
-		if (strlen(litur2)==4) {
-			$R = $litur2[1];
-			$G = $litur2[2];
-			$B = $litur2[3];
+		if (strlen($litur2)==4) {
+			$R2 = $litur2[1];
+			$G2 = $litur2[2];
+			$B2 = $litur2[3];
 		}
-		else if (strlen(litur2)==7) {
-			$R = $litur2[1].$litur2[2];
-			$G = $litur2[3].$litur2[4];
-			$B = $litur2[5].$litur2[6];
+		else if (strlen($litur2)==7) {
+			$R2 = $litur2[1].$litur2[2];
+			$G2 = $litur2[3].$litur2[4];
+			$B2 = $litur2[5].$litur2[6];
 		}
+		$litir2 = "#".$R2.$G2.$B2;
+	}
+	if ($litur3[0]=='#') {
+		if (strlen($litur3)==4) {
+			$R3 = $litur3[1];
+			$G3 = $litur3[2];
+			$B3 = $litur3[3];
+		}
+		else if (strlen($litur3)==7) {
+			$R3 = $litur3[1].$litur3[2];
+			$G3 = $litur3[3].$litur3[4];
+			$B3 = $litur3[5].$litur3[6];
+		}
+		$litir3 = "#".$R3.$G3.$B3;
 		/*FA8000 = 244.128.0
 F58D1A = 245.141.26		+1.+13.+26
 F69933 = 246.153.51		+1.+12.+25
@@ -95,8 +139,8 @@ F8B366 = 248.179.102	+1.+13.+25
 
 	<div id="heading1" class="main">
 	<?php 
-	$lysingLoka= explode('◘', $lysing)
-		for ($i=0; $i < count($lysingLoka); $i++) { 
+	$lysingLoka = explode('◘', $lysing);
+		for ($i = 0; $i < count($lysingLoka); $i++) { 
 			if ($i==0) {
 				echo "<div>";
 				echo $lysingLoka[$i];
@@ -131,7 +175,7 @@ F8B366 = 248.179.102	+1.+13.+25
 			echo '<div class="meh"><h3>'.$dagsLoka[$i].'</h3></div>';
 		}
 		if (count($dagsLoka)>=1) {
-			echo '<div><h3>'.$dagsLoka[count($dagsLoka-1)].'</h3></div>';
+			echo '<div><h3>'.$dagsLoka[count($dagsLoka)-1].'</h3></div>';
 		}
 		?>
 		<!--<div class="meh"><h2>Date</h2><h3>12.november 2016</h3><h3>4:00pm</h3></div>

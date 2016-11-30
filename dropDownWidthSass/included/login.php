@@ -3,14 +3,14 @@
 	require_once("connection.php");
 	include("query.php");
 
-	$Username=isset($_POST['Username']) ? $_POST['Username'] : '';$Password=isset($_POST['Password']) ? $_POST['Password'] : '';
+	$Username=isset($_POST['Username']) ? $_POST['Username'] : '';
+	$Password=isset($_POST['Password']) ? $_POST['Password'] : '';
 
 	if(isset($_POST['Submit']))
 	{
 		foreach ($tafla as $k)
 		{
-        	if ($k[0] != $Username){}
-        	elseif ($k[0] == $Username && $k[1] == $Password){$logins = [$k[0] => $k[1]];break;}
+        	if ($k[0] == $Username && $k[1] == $Password){$logins = [$k[0] => $k[1]];break;}
         }
 		if(isset($logins[$Username])&&$logins[$Username]==$Password)
 		{
