@@ -21,18 +21,26 @@ $litir1 = $vidburdsTafla[5];
 $litir2 = $vidburdsTafla[6];
 $litir3 = $vidburdsTafla[7];
 
+$R = hexOc($litir2[0])*16+hexOc($litir2[1]);//breit í tvíundakerfi
+$G = hexOc($litir2[2])*16+hexOc($litir2[3]);//breit í tvíundakerfi
+$B = hexOc($litir2[4])*16+hexOc($litir2[5]);//breit í tvíundakerfi
+$proT = '11';//% tala
+if($R-5*($B+$G>10) || $G-5*($B+$R>10) || $B-5*($R+$G>10)) 				//extream colors
+{				
+	$proT='70';
+	$R = ceil($R+(($R)*$proT/100));//uppýstur um % tölu    		heldur lit
+		$G = ceil($G+(($G)*$proT/100));//uppýstur um % tölu
+		$B = ceil($B+(($B)*$proT/100));//uppýstur um % tölu
 
-
-//sækja gögn úr gaggnagrunni
-	
-		/*FA8000 = 244.128.0
-		F58D1A = 245.141.26		+1.+13.+26
-		F69933 = 246.153.51		+1.+12.+25
-		F7A64D = 247.166.77		+1.+13.+26
-		F8B366 = 248.179.102	+1.+13.+25
-								+1.+13.+26
-								+2.+13.+25
-								+1.+12.+26*/
+		if ($R>255) {$R=255;}
+		if ($G>255) {$G=255;}
+		if ($B>255) {$B=255;}
+}
+else{																//less so
+	$R = ceil($R+((255-$R)*$proT/100));//uppýstur um % tölu		feided
+	$G = ceil($G+((255-$G)*$proT/100));//uppýstur um % tölu
+	$B = ceil($B+((255-$B)*$proT/100));//uppýstur um % tölu
+}
 
 ?>
 <!DOCTYPE html>
@@ -44,10 +52,23 @@ $litir3 = $vidburdsTafla[7];
 	<meta charset="utf-8">
 	<style type="text/css">
 		body{
-			color: <?php $litir3 ?>
+			color: <?php echo $litir3 ?>;
+			background-color:<?php echo "#".$litir2 ?>;
+		}
+		nav ul li ul li,
+		#mainbody1{
+			background-color:<?php echo "#".$litir2; ?>;
 		}
 		a{
-			color: <?php $litir3 ?>
+			color: <?php echo $litir3 ?>;
+		}
+		nav ul li ul li:hover,
+		nav ul li,
+		.info,
+		.opnun,
+		footer,
+		div{
+			background-color:rgb(<?php echo $R.",".$G.",".$B; ?>);
 		}
 	</style>
 </head>
@@ -218,6 +239,9 @@ function hexOc($hex){
 			break;
 			case 'F':
 			return '15';
+			break;
+			default:
+			return 'F';
 			break;
 		}
 	}

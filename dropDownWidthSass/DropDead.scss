@@ -16,7 +16,6 @@ $colorFont:#123;
 	text-align:initial;
 	width:$wid;
 	float: $flo;
-	background-color: lighten($colorLight, 10%);
 	overflow:hidden;
 }
 
@@ -28,7 +27,6 @@ body{
 	color:$colorFont;
 }
 a{
-	color: $colorFont;
 	&:hover{
 	color: lighten($colorFont,15%);;
 	}
@@ -42,7 +40,6 @@ a:hover{
 	}
 .mainbody{
 	@include textSpacing(100%,none);
-	background-color: $colorLight;//-------
 	position:relative;
 	overflow: auto;
 	}
@@ -130,10 +127,6 @@ nav
 				position: relative;
 				background-color:lighten($colorLight,7%);//-------
 				transition: max-height 0.7s;
-				//li eða &>li
-				li{
-					color: black;
-				}
 				li:hover{
 						background-color: $colorLight;//-------
 						font-size:$fontSize*1.2;
@@ -386,34 +379,15 @@ footer{
 	flex-flow: column;
 	form{
 		width: 100%;
-<<<<<<< HEAD
 	}
 	
 }
 	}
 //----Form css
-#indexFormTA{
-	max-width:598px;
-}
-<<<<<<< HEAD
-
 //----Undirsíðu formið
 #indexFormTA{
 	max-width:598px;
-=======
-#imgInput{
-	margin-left: 13px;
->>>>>>> 43aaeb3a1671aae48a420a9578490ff76caf0a04
-=======
-	}
-	
-}
-	}
-//----Form css
-#indexFormTA{
-	max-width:598px;
 }
 #imgInput{
 	margin-left: 13px;
->>>>>>> 43aaeb3a1671aae48a420a9578490ff76caf0a04
 }
