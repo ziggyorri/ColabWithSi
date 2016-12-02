@@ -9,6 +9,7 @@ require_once("connection.php");
 
 $heiti = $_POST['heiti'];
 $imgUrl = $_POST['imgUrl'];
+Image_Size_From_URL($imgUrl);
 $lysingTemp = $_POST['lysing'];
 $sublysing = explode("\n\n", $lysingTemp);
 $lysing = null;
@@ -25,16 +26,18 @@ $litur1 = "#000000";
 $litur2 = "#8b0000";
 $litur3 = "#112233";
 if (!empty($_POST['color1']) && !empty($_POST['color2']) && !empty($_POST['color3'])) {
-    if (strpos($color_name, '#')!== false)
+    if (strpos($_POST['color2'], '#')!== false) //ekki ekki (double negative)
     {
-        $litur1 = $_POST['color1'];
-		$litur2 = $_POST['color2'];
-		$litur3 = $_POST['color3'];
+        if (srtlen($litur2) == 7){$litur2 = $_POST['color2'];}
+        if (srtlen($litur3) == 7){$litur3 = $_POST['color3'];}        
+        if (srtlen($litur2) == 4){$litur2 = '#'.$litur2[1].$litur2[1].$litur2[2].$litur2[2].$litur2[3].$litur2[3];
+            $litur2 = $_POST['color2'];}
+        if (srtlen($litur3) == 4){$litur3 = '#'.$litur3[1].$litur3[1].$litur3[2].$litur3[2].$litur3[3].$litur3[3];
+            $litur3 = $_POST['color3'];}
     }
     else{
-	$litur1 = color_name_to_hex($_POST['color1']);
-	$litur2 = color_name_to_hex($_POST['color2']);
-	$litur3 = color_name_to_hex($_POST['color3']);
+    	$litur2 = color_name_to_hex($_POST['color2']);
+        $litur3 = color_name_to_hex($_POST['color3']);
 	}
 }
 
@@ -247,7 +250,23 @@ function color_name_to_hex($color_name)
     }
     else
     {
-        return ($color_name);
+        return(null);
+    }
+}
+
+function Image_Size_From_URL ($image_URL)
+{
+    try
+    {
+        List($width, $height) = getimagesize($image_URL);
+    	if ($height/$width >= 1/2)
+    	{
+    		$imgUrl = null;
+    	}
+    }
+    catch (Exception $e)
+    {
+        echo('');
     }
 }
 ?>

@@ -1,7 +1,5 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;}
-require_once('../included/connection.php');
-/*list($width, $height) = getimagesize("http://bit.ly/2g6lqsi");
-echo($width." ".$height);*/ ?>
+require_once('../included/connection.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +40,7 @@ echo($width." ".$height);*/ ?>
 				<li><a href="#">tengill</a></li>
 			</ul>
 		</li>
-		<li><a href="included/logout.php">Logout</a></li>
+		<li><a href="../included/logout.php">Logout</a></li>
 	</ul>
 </nav>
 </div>
@@ -73,12 +71,12 @@ echo($width." ".$height);*/ ?>
 		<div>Helgar: <h3>10:00 - 18:00</h3></div>
 	</div>
 		<div id="mapi">
-			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13918.706224510119!2d-21.934276045776542!3d64.14662947364903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674d3023a19c7%3A0xdbbf050da40f5d28!2sHarpan%2C+101+Reykjav%C3%ADk!5e0!3m2!1sis!2sis!4v1478866535521" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13918.706224510119!2d-21.934276045776542!3d64.14662947364903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674d3023a19c7%3A0xdbbf050da40f5d28!2sHarpan%2C+101+Reykjav%C3%ADk!5e0!3m2!1sis!2sis!4v1478866535521" width="600" height="450" frameborder="0" style="border:0"></iframe>
 		</div>
 		<div class="Price">
-			<input type="text" name="color1" placeholder="Dark Color">
-			<input type="text" name="color2" placeholder="Light Color">
-			<input type="text" name="color3" placeholder="Font Color">
+			<input type="text" name="color1" placeholder="Dark Color (e.g.: '#000000')">
+			<input type="text" name="color2" placeholder="Light Color (example: 'darkred')">
+			<input type="text" name="color3" placeholder="Font Color (example: '#123')">
 			<input type="submit" name="submit" value="Submit" Class="Button3">
 		</div>
 		
@@ -105,9 +103,9 @@ echo($width." ".$height);*/ ?>
 			<li><a href="http://stackoverflow.com/">http://stackoverflow.com/</a></li>
 		</ul>
 	</footer>
-	</form>
+</div>
+</form>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../js.js"></script>
-</div>
 </body>
 </html>
