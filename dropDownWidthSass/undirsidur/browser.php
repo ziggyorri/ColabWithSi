@@ -12,7 +12,8 @@ require_once('./included/connection.php');
 <div id="mainbody1" class="mainbody">
 <?php include '../included/navbar.php'; ?>
 
+<a href="../index.php?viID=1"></a>
+
 </div>
-<a href=""></a>
 </body>
 </html>

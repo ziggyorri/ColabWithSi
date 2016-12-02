@@ -3,8 +3,8 @@ require_once('./included/connection.php');
 include("./included/query2.php");
 
 $ID = '1';
-if (isset($_POST['vidburdurID'])) {
-	$ID = $_POST['vidburdurID'];
+if (isset($_GET['viID'])) {
+	$ID = $_GET['viID'];
 }
 
 $vidburdsTafla = null;
