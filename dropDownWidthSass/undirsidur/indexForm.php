@@ -1,7 +1,5 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;}
-require_once('../included/connection.php');
-/*list($width, $height) = getimagesize("http://bit.ly/2g6lqsi");
-echo($width." ".$height);*/ ?>
+require_once('../included/connection.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
