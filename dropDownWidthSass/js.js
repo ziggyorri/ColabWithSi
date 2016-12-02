@@ -7,6 +7,7 @@ var test = $('.mainbody').css('border-color');
 	
 	$(document).scroll(function(){//keirir þegar skrollar
 		animateNav();
+    $('img').css('margin-left','0px');
 	});
 
 
@@ -115,8 +116,21 @@ var animateNav = function() {//keirist þegar skrollar
 	}*/
 	
 }
-
-
+var bul = false;
+$("img").click(function (){
+      var breid = $(window).width();
+      if (breid<480) {
+        var margin = -640+breid;
+        $('img').animate({marginLeft:margin},500);
+      }
+    });
+$(window).resize(function(){
+  var breid = $(window).width();
+        if (breid>480) {
+        $('img').css('margin-left','0px');
+      }
+      $('Login').css('font-size',breid/2);
+});
 
 //smoothscroll function
 var scrollToElement = function(element)
@@ -134,4 +148,28 @@ $("#link1").click(function (){
                 
     });
 */
+$("#undirtoggle").click(function (){
+	var tog = ["tog1","tog2","tog3"]
+	for (var i = tog.length - 1; i >= 0; i--) {
+		if (this != tog[i]) {			
+      document.getElementById(tog[i]).checked = false;
+		}
+	}
+    });
+
+var myRadios = document.getElementsByName('db');
+var setCheck;
+var x = 0;
+for(x = 0; x < myRadios.length; x++){
+
+    myRadios[x].onclick = function(){
+        if(setCheck != this){
+             setCheck = this;
+        }else{
+            this.checked = false;
+            setCheck = null;
+    }
+    };
+
+}
 $(document).ready(main);

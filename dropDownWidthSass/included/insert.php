@@ -1,4 +1,6 @@
-<meta charset="UTF-8"> <!-- fyrir íslensk stafamengi -->
+<meta charset="utf-8"> <!-- fyrir íslensk stafamengi -->
+<title>Registration Error</title>
+<link rel="stylesheet" type="text/css" href="../DropDead.css">
 
 <?php
 // sækja skrá sem geymir tengingu við gagnagrunn
@@ -58,9 +60,11 @@ if(!empty($Usernafn) && !empty($Passord) && $Tjekk != 1)
 elseif ($Tjekk == 1)
 {
 	echo 'Það tókst ekki að skrifa í gagnagrunn. Notandanafn nú þegar í notkun.';
+	echo("<br><a href='login.php'>Til baka</a>");
 }
 else
 {
 	echo 'Það tókst ekki að skrifa í gagnagrunn.';
+	echo("<br><a href='login.php'>Til baka</a>");
 }
 ?>
