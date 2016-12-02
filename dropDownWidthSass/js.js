@@ -116,14 +116,22 @@ var animateNav = function() {//keirist þegar skrollar
 	}*/
 	
 }
-var bul = false;
 $("img").click(function (){
       var breid = $(window).width();
       if (breid<480) {
         var margin = -640+breid;
-        $('img').animate({marginLeft:margin},500);
+        $(this).animate({marginLeft:margin},500);
       }
     });
+
+$(".thumbnailImg").hover(function (){
+      var breid = $(".thumbnail").width();
+      if (breid>480) {
+        var margin = -640+breid;
+        $(this).animate({marginLeft:margin},500);
+      }
+    });
+
 $(window).resize(function(){
   var breid = $(window).width();
         if (breid>480) {

@@ -6,8 +6,16 @@ body {
   background-color: darkred;
   color: #123; }
 
+a {
+  color: #123; }
+  a:hover {
+    color: #24486c; }
+
 ul {
   list-style: none; }
+
+a:hover {
+  color: #1e3b59; }
 
 .mainbody {
   box-sizing: border-box;
@@ -17,13 +25,12 @@ ul {
   text-align: initial;
   width: 100%;
   float: none;
+  background-color: #be0000;
   overflow: hidden;
+  background-color: darkred;
   position: relative;
   overflow: auto; }
 
-#tog1,
-#tog2,
-#tog3,
 #toggle {
   display: none; }
 
@@ -43,18 +50,6 @@ label {
 #toggle:checked ~ label {
   opacity: 1; }
 
-.undirtoggle {
-  display: inline-block;
-  border: none;
-  opacity: 1;
-  background-color: transparent;
-  float: none;
-  clear: none;
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px; }
-
 nav {
   margin: 0;
   padding: 0; }
@@ -70,7 +65,6 @@ nav {
     flex-wrap: wrap;
     max-height: 30px; }
     nav > ul > li {
-      height: 30px;
       background-color: darkred;
       flex-grow: 1;
       border: 5px ridge black; }
@@ -78,9 +72,8 @@ nav {
         display: block;
         border-bottom: 1px solid black;
         text-decoration: none;
-        transition: font-size 0.3s;
-        border: none; }
-      nav > ul > li > input:checked ~ ul {
+        transition: font-size 0.3s; }
+      nav > ul > li:hover ul {
         max-height: 200px; }
       nav > ul > li > ul {
         color: #123;
@@ -89,6 +82,8 @@ nav {
         position: relative;
         background-color: #af0000;
         transition: max-height 0.7s; }
+        nav > ul > li > ul li {
+          color: black; }
         nav > ul > li > ul li:hover {
           background-color: darkred;
           font-size: 25.2px; }
@@ -101,7 +96,7 @@ nav {
 .scrollDown {
   position: fixed;
   top: 0px;
-  width: 903px; }
+  width: 905px; }
 
 .title {
   box-sizing: border-box;
@@ -111,11 +106,11 @@ nav {
   text-align: initial;
   width: 70%;
   float: left;
+  background-color: #be0000;
   overflow: hidden; }
 
 img {
-  width: 100%;
-  margin-bottom: -12px; }
+  width: 100%; }
 
 #img {
   box-sizing: border-box;
@@ -125,6 +120,7 @@ img {
   text-align: initial;
   width: 70%;
   float: left;
+  background-color: #be0000;
   overflow: hidden;
   padding: 0;
   clear: left; }
@@ -136,8 +132,9 @@ img {
   padding: 13px;
   margin: 1px;
   text-align: initial;
-  width: auto;
+  width: 29.5%;
   float: none;
+  background-color: #be0000;
   overflow: hidden;
   text-align: center;
   clear: right; }
@@ -159,6 +156,7 @@ img {
   text-align: initial;
   width: 70%;
   float: left;
+  background-color: #be0000;
   overflow: hidden; }
   .main div {
     box-sizing: border-box;
@@ -168,11 +166,11 @@ img {
     text-align: initial;
     width: 100%;
     float: none;
+    background-color: #be0000;
     overflow: hidden;
     font-size: 23.1px;
     font-weight: bold;
-    border: none;
-    padding: none; }
+    border: none; }
 
 #mapi {
   box-sizing: border-box;
@@ -182,11 +180,11 @@ img {
   text-align: initial;
   width: 29.5%;
   float: right;
+  background-color: #be0000;
   overflow: hidden;
   padding: 0;
   clear: right;
-  overflow: visible;
-  height: 460px; }
+  overflow: visible; }
 
 #map {
   width: 100%; }
@@ -202,6 +200,7 @@ footer {
   text-align: initial;
   width: 100%;
   float: none;
+  background-color: #be0000;
   overflow: hidden;
   padding: 0; }
   footer ul {
@@ -212,6 +211,7 @@ footer {
     text-align: initial;
     width: 33%;
     float: left;
+    background-color: #be0000;
     overflow: hidden; }
 
 @media screen and (max-width: 60em) {
@@ -223,6 +223,7 @@ footer {
     text-align: initial;
     width: 100%;
     float: left;
+    background-color: #be0000;
     overflow: hidden; }
 
   #img {
@@ -233,6 +234,7 @@ footer {
     text-align: initial;
     width: 100%;
     float: left;
+    background-color: #be0000;
     overflow: hidden;
     padding: 0;
     clear: left; }
@@ -253,8 +255,8 @@ footer {
     text-align: initial;
     width: 29.5%;
     float: none;
-    overflow: hidden;
-    padding: 0px; }
+    background-color: #be0000;
+    overflow: hidden; }
 
   .scrollDown {
     position: fixed;
@@ -284,8 +286,6 @@ footer {
     overflow: hidden; }
     nav > ul {
       flex-flow: column; }
-      nav > ul > li {
-        height: auto; }
 
   nav ul li ul li:hover {
     font-size: 37.8px; }
@@ -302,6 +302,7 @@ footer {
     text-align: initial;
     width: 100%;
     float: none;
+    background-color: #be0000;
     overflow: hidden; }
 
   .opnun,
@@ -313,6 +314,7 @@ footer {
     text-align: initial;
     width: 29.5%;
     float: left;
+    background-color: #be0000;
     overflow: hidden;
     text-align: center;
     clear: left;
@@ -327,10 +329,10 @@ footer {
     padding: 13px;
     margin: 1px;
     text-align: initial;
-    width: auto;
+    width: 70%;
     float: none;
-    overflow: hidden;
-    padding: 0px; }
+    background-color: #be0000;
+    overflow: hidden; }
 
   footer {
     display: inline-block; }
@@ -340,8 +342,9 @@ footer {
       padding: 13px;
       margin: 1px;
       text-align: initial;
-      width: 49.53%;
+      width: 48%;
       float: left;
+      background-color: #be0000;
       overflow: hidden;
       clear: none; }
     footer #ref {
@@ -350,8 +353,9 @@ footer {
       padding: 13px;
       margin: 1px;
       text-align: initial;
-      width: 99.4%;
+      width: 100%;
       float: none;
+      background-color: #be0000;
       overflow: hidden; } }
 @media screen and (max-width: 30em) {
   .opnun,
@@ -361,8 +365,9 @@ footer {
     padding: 13px;
     margin: 1px;
     text-align: initial;
-    width: 50%;
+    width: 48%;
     float: left;
+    background-color: #be0000;
     overflow: hidden;
     clear: none;
     text-align: center;
@@ -370,17 +375,6 @@ footer {
     .opnun h2,
     .Price h2 {
       font-size: 18px; }
-
-  .opnun {
-    box-sizing: border-box;
-    border: 5px ridge black;
-    padding: 13px;
-    margin: 1px;
-    text-align: initial;
-    width: auto;
-    float: none;
-    overflow: hidden;
-    max-width: 100%; }
 
   #mapi {
     box-sizing: border-box;
@@ -390,18 +384,17 @@ footer {
     text-align: initial;
     width: 100%;
     float: none;
-    overflow: hidden;
-    padding: 0px; }
-
-  #img {
-    width: 100%;
-    overflow: hidden;
-    height: 200px; }
+    background-color: #be0000;
+    overflow: hidden; }
 
   img {
     height: 200px;
-    width: auto;
-    transition: 2s; }
+    width: auto; }
+    img:hover {
+      overflow: visible;
+      animation-name: diagonal-slide;
+      animation-duration: 3s;
+      animation-iteration-count: 1; }
 
   footer {
     display: flex;
@@ -414,6 +407,7 @@ footer {
       text-align: initial;
       width: 100%;
       float: none;
+      background-color: #be0000;
       overflow: hidden;
       clear: none; }
     footer #ref {
@@ -424,42 +418,22 @@ footer {
       text-align: initial;
       width: 100%;
       float: none;
+      background-color: #be0000;
       overflow: hidden; } }
-#Login {
-  display: flex; }
-  #Login form {
-    min-width: 450px;
-    max-width: 800px;
-    margin: 0px;
-    padding: 5px; }
-  #Login h1,
-  #Login input {
-    width: 100%;
-    font-size: 50px;
-    padding: 0px;
-    border: none;
-    float: left;
-    clear: left;
-    height: 24%; }
-  #Login h1 {
-    margin-bottom: 2px;
-    display: inline-block; }
+@keyframes diagonal-slide {
+  from {
+    margin-left: 0px; }
+  to {
+    margin-left: -200px; } }
+input {
+  display: inline-block; }
 
-@media screen and (max-width: 420px) {
-  #Login {
-    display: flex;
-    max-width: none;
-    flex-flow: column; }
-    #Login form {
-      width: 100%; } }
-#indexFormTA {
-  max-width: 598px; }
-
-#imgInput {
-  margin-left: 13px; }
-
-@media screen and (max-width: 30em) {
-  #indexFormTA {
-    min-height: none; } }
+.Login h1,
+.Login input {
+  float: left;
+  clear: left;
+  padding: 0px; }
+.Login h1 {
+  margin-bottom: 2px; }
 
 /*# sourceMappingURL=DropDead.css.map */
