@@ -458,4 +458,8 @@ footer {
 #imgInput {
   margin-left: 13px; }
 
+@media screen and (max-width: 30em) {
+  #indexFormTA {
+    min-height: none; } }
+
 /*# sourceMappingURL=DropDead.css.map */
