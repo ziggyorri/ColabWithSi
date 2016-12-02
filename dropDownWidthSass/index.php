@@ -21,27 +21,13 @@ $litir1 = $vidburdsTafla[5];
 $litir2 = $vidburdsTafla[6];
 $litir3 = $vidburdsTafla[7];
 
-$R = hexOc($litir2[0])*16+hexOc($litir2[1]);//breit í tvíundakerfi
-$G = hexOc($litir2[2])*16+hexOc($litir2[3]);//breit í tvíundakerfi
-$B = hexOc($litir2[4])*16+hexOc($litir2[5]);//breit í tvíundakerfi
-$proT = '11';//% tala
-if($R-5*($B+$G>10) || $G-5*($B+$R>10) || $B-5*($R+$G>10)) 				//extream colors
-{				
-	$proT='70';
-	$R = ceil($R+(($R)*$proT/100));//uppýstur um % tölu    		heldur lit
-		$G = ceil($G+(($G)*$proT/100));//uppýstur um % tölu
-		$B = ceil($B+(($B)*$proT/100));//uppýstur um % tölu
+$litir2r=RGB($litir2,'1');
+$litir2g=RGB($litir2,'2');
+$litir2b=RGB($litir2,'3');
 
-		if ($R>255) {$R=255;}
-		if ($G>255) {$G=255;}
-		if ($B>255) {$B=255;}
-}
-else{																//less so
-	$R = ceil($R+((255-$R)*$proT/100));//uppýstur um % tölu		feided
-	$G = ceil($G+((255-$G)*$proT/100));//uppýstur um % tölu
-	$B = ceil($B+((255-$B)*$proT/100));//uppýstur um % tölu
-}
-
+$litir3r=RGB($litir3,'1');
+$litir3g=RGB($litir3,'2');
+$litir3b=RGB($litir3,'3');
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,14 +39,17 @@ else{																//less so
 	<style type="text/css">
 		body{
 			color: <?php echo $litir3 ?>;
-			background-color:<?php echo "#".$litir2 ?>;
+			background-color:<?php echo $litir2 ?>;
 		}
 		nav ul li ul li,
 		#mainbody1{
-			background-color:<?php echo "#".$litir2; ?>;
+			background-color:<?php echo $litir2; ?>;
 		}
 		a{
 			color: <?php echo $litir3 ?>;
+		}
+		a:hover{
+			color:rgb(<?php echo $litir3r.",".$litir3g.",".$litir3b; ?>);
 		}
 		nav ul li ul li:hover,
 		nav ul li,
@@ -68,7 +57,11 @@ else{																//less so
 		.opnun,
 		footer,
 		div{
-			background-color:rgb(<?php echo $R.",".$G.",".$B; ?>);
+			background-color:rgb(<?php echo $litir2r.",".$litir2g.",".$litir2b; ?>);
+		}
+
+		.navcontainer{
+			background-color: transparent;
 		}
 	</style>
 </head>
@@ -80,7 +73,7 @@ else{																//less so
 <nav>
       <ul>
 		<li>
-			<input type="checkbox" id="tog1">
+			<input type="radio" name="db" id="tog1">
 			<label class="undirtoggle" for="tog1">Current page</label>
 			<ul>
 				<li><a id="link1" href="#">Discription</a></li>
@@ -90,7 +83,7 @@ else{																//less so
 			</ul>
 		</li>
 		<li>
-			<input type="checkbox" id="tog2">
+			<input type="radio" name="db" id="tog2">
 			<label class="undirtoggle" for="tog2">Top tengill</label>
 			<ul>
 				<li><a onclick="" href="#">tengill</a></li>
@@ -100,7 +93,7 @@ else{																//less so
 			</ul>
 		</li>
 		<li>
-			<input type="checkbox" id="tog3">
+			<input type="radio" name="db" id="tog3">
 			<label class="undirtoggle" for="tog3">Top tengill</label>
 			<ul>
 				<li><a href="#">tengill</a></li>
@@ -245,5 +238,43 @@ function hexOc($hex){
 			break;
 		}
 	}
+}
+
+function RGB($litir, $Ret){
+$R = hexOc($litir[1])*16+hexOc($litir[2]);//breit í tvíundakerfi
+$G = hexOc($litir[3])*16+hexOc($litir[4]);//breit í tvíundakerfi
+$B = hexOc($litir[5])*16+hexOc($litir[6]);//breit í tvíundakerfi
+$proT = '11';//% tala
+if($R-5*($B+$G>10) || $G-5*($B+$R>10) || $B-5*($R+$G>10)) 				//extream colors
+{				
+	$proT='70';
+	$R = ceil($R+(($R)*$proT/100));//uppýstur um % tölu    		heldur lit
+		$G = ceil($G+(($G)*$proT/100));//uppýstur um % tölu
+		$B = ceil($B+(($B)*$proT/100));//uppýstur um % tölu
+
+		if ($R>255) {$R=255;}
+		if ($G>255) {$G=255;}
+		if ($B>255) {$B=255;}
+}
+else{																//less so
+	$R = ceil($R+((255-$R)*$proT/100));//uppýstur um % tölu		feided
+	$G = ceil($G+((255-$G)*$proT/100));//uppýstur um % tölu
+	$B = ceil($B+((255-$B)*$proT/100));//uppýstur um % tölu
+}
+switch ($Ret) {
+		case '1':
+			return $R;
+		break;
+		case '2':
+			return $G;
+		break;
+		case '3':
+			return $B;
+		break;
+	
+	default:
+		# code...
+		break;
+}
 }
 ?>

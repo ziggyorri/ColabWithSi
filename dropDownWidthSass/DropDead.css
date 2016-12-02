@@ -6,14 +6,8 @@ body {
   background-color: darkred;
   color: #123; }
 
-a:hover {
-  color: #24486c; }
-
 ul {
   list-style: none; }
-
-a:hover {
-  color: #1e3b59; }
 
 .mainbody {
   box-sizing: border-box;
@@ -177,7 +171,8 @@ img {
     overflow: hidden;
     font-size: 23.1px;
     font-weight: bold;
-    border: none; }
+    border: none;
+    padding: none; }
 
 #mapi {
   box-sizing: border-box;

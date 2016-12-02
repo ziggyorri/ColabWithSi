@@ -26,18 +26,9 @@ body{
 	background-color: $colorLight;//-------
 	color:$colorFont;
 }
-a{
-	&:hover{
-	color: lighten($colorFont,15%);;
-	}
-}
 ul{
 	list-style:none;
 }
-a:hover{
-		color: lighten($colorFont, 10%);
-
-	}
 .mainbody{
 	@include textSpacing(100%,none);
 	position:relative;
@@ -182,6 +173,7 @@ img{
 	font-size: $fontSize*1.1;
 	font-weight: bold;
 	border: none;
+	padding:none;
 	}
 }
 #mapi{
