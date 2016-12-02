@@ -1,4 +1,4 @@
-//sass --watch DropDead.scss:DropDead.css -compiled
+//sass --watch DropDead.scss:DropDead.css -compiled  2804992349
 //Koala
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 $fontSize:21px;
@@ -10,13 +10,12 @@ $colorFont:#123;
 @mixin textSpacing($wid,$flo)
 {
 	box-sizing:border-box;//what
-	border: 5px ridge darken($colorDark, 25%);
+	border: 5px ridge $colorDark;
 	padding: 13px;
 	margin:1px;
 	text-align:initial;
 	width:$wid;
 	float: $flo;
-	background-color: lighten($colorLight, 10%);
 	overflow:hidden;
 }
 
@@ -27,25 +26,17 @@ body{
 	background-color: $colorLight;//-------
 	color:$colorFont;
 }
-a{
-	color: $colorFont;
-	&:hover{
-	color: lighten($colorFont,15%);;
-	}
-}
 ul{
 	list-style:none;
 }
-a:hover{
-		color: lighten($colorFont, 10%);
-
-	}
 .mainbody{
 	@include textSpacing(100%,none);
-	background-color: $colorLight;//-------
 	position:relative;
 	overflow: auto;
 	}
+	#tog1,
+	#tog2,
+	#tog3,
 	#toggle{
 		display: none;
 	}
@@ -53,7 +44,7 @@ label{
 	padding:0px;
 	display: none;
 	opacity: 0.3;
-	border: 5px ridge darken($colorDark, 25%);
+	border: 5px ridge $colorDark;
 	background-color: lighten($colorLight, 10%);
 	&:hover{
 		cursor: pointer;
@@ -66,6 +57,18 @@ label{
 #toggle:checked ~ label {
 		opacity: 1;
 	}
+.undirtoggle{
+	display:inline-block;
+	border:none;
+	opacity:1;
+	background-color:transparent;
+	float:none;
+	clear:none;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding:0px;
+}
 nav
 {
 	
@@ -90,21 +93,21 @@ nav
 
 		&>li//
 		{
-				background-color: $colorLight;//-------
+			height: 30px;
+			background-color: $colorLight;//-------
 			&>a
 				{
 					display:block;
 					border-bottom: 1px solid black;
 					text-decoration:none;
 					transition: font-size 0.3s;
+					border: none;
 				}
 			flex-grow: 1;
 			border: 5px ridge $colorDark;
-			&:hover
+			&>input:checked~ul
 			{
-				ul{
-					max-height:200px;
-				}
+				max-height:200px;
 			}
 
 			&>ul
@@ -115,10 +118,6 @@ nav
 				position: relative;
 				background-color:lighten($colorLight,7%);//-------
 				transition: max-height 0.7s;
-				//li eða &>li
-				li{
-					color: black;
-				}
 				li:hover{
 						background-color: $colorLight;//-------
 						font-size:$fontSize*1.2;
@@ -139,13 +138,14 @@ nav
 .scrollDown{
 	position:fixed;
 	top:0px;
-	width:905px;
+	width:903px;
 }
 .title{
 	@include textSpacing($tveir,left);
 }
 img{
 	width:100%;
+		margin-bottom: -12px;
 }
 #img{
 	@include textSpacing($tveir,left);
@@ -154,7 +154,7 @@ img{
 }
 .opnun,
 .Price{
-	@include textSpacing($ein,none);
+	@include textSpacing(auto,none);
 	text-align:center;
 	.meh{
 		border-bottom:3px dotted black;
@@ -173,6 +173,7 @@ img{
 	font-size: $fontSize*1.1;
 	font-weight: bold;
 	border: none;
+	padding:none;
 	}
 }
 #mapi{
@@ -180,6 +181,7 @@ img{
 	padding: 0;
 	clear: right;
 	overflow:visible;
+	height: 460px;
 	}
 #map{
 	width: 100%;
@@ -218,6 +220,7 @@ footer{
 	}
 	#mapi{
 	@include textSpacing($ein,none);
+	padding: 0px;
 	}
 	.scrollDown{
 	position:fixed;
@@ -251,6 +254,9 @@ footer{
 		overflow: hidden;
 		&>ul{
 			flex-flow: column;
+			&>li{
+			height: auto;
+			}
 		}
 	}
 	nav ul li ul li:hover{
@@ -275,16 +281,17 @@ footer{
 
 	}
 	#mapi{
-	@include textSpacing($tveir,none);
+	@include textSpacing(auto,none);
+	padding: 0px;
 	}
 	footer {
 		display: inline-block;
 		ul{
-		@include textSpacing(48%,left);
+		@include textSpacing(49.53%,left);
 		clear: none;
 		}
 		#ref{
-		@include textSpacing(100%,none);
+		@include textSpacing(99.4%,none);
 		}
 	}
 }
@@ -293,7 +300,7 @@ footer{
 @media screen and (max-width: 30em){
 	.opnun,
 	.Price{
-	@include textSpacing(48%,left);
+	@include textSpacing(50%,left);
 	clear: none;
 	text-align:center;
 		font-size: 17px;
@@ -302,19 +309,23 @@ footer{
 		}
 
 	}
+	.opnun{
+		@include textSpacing(auto,none);
+		max-width: 100%;
+	}
 	#mapi{
 	@include textSpacing(100%,none);
+	padding: 0px;
 	}
-
+	#img{
+		width: 100%;
+		overflow: hidden;
+		height: 200px;
+	}
 	img{
 		height: 200px;
 		width: auto;
-		&:hover{
-			overflow: visible;
-			animation-name: diagonal-slide;
-			animation-duration: 3s;
-			animation-iteration-count: 1;
-		}
+		transition: 2s;
 	}
 	footer {
 		display: flex;
@@ -328,30 +339,52 @@ footer{
 		}
 	}
 }
-@keyframes diagonal-slide {
-
-  from {
-    margin-left: 0px;
-  }
-
-  to {
-    margin-left: -200px;
-  }
-
-}
 //----Login formið
-input{
-	display:inline-block;
-}
-.Login{
+#Login{
+	display: flex;
+	form{
+		min-width:450px;
+		max-width: 800px;
+		margin: 0px;
+		padding:5px;
+	}
 	h1,
 	input
 	{
-	float:left;
-	clear:left;
+	width: 100%;
+	font-size: 50px;
 	padding:0px;
+	border:none;
+	float:left;
+	clear: left;
+	height:24%;
 	}
 	h1{
 		margin-bottom:2px;
+		display:inline-block;
 	}
 }
+@media screen and (max-width: 420px){
+	#Login{
+	display: flex;
+	max-width:none;
+	flex-flow: column;
+	form{
+		width: 100%;
+	}
+	
+}
+	}
+//----Form css
+//----Undirsíðu formið
+#indexFormTA{
+	max-width:598px;
+}
+#imgInput{
+	margin-left: 13px;
+}
+@media screen and (max-width: 30em){
+	#indexFormTA{
+		min-height: none;
+	}
+	}
