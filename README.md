@@ -1,6 +1,6 @@
 # CollabWith SI
 #File búið til af Sigurði Orra Hjaltason fyrir eina tilganginn að fá Sindra Pálson til að laga stafsettningavillur.
-#Höfundar: Sigurður Orri as: 'ziggyorri' and/or 'Sigurður Orri Hjaltason'; Sindri as: 'sindripal' and/or 'SKULL_HAX hornaldo'.
+#Höfundar: Sigurður Orri sem: 'ziggyorri' og/eða 'Sigurður Orri Hjaltason'; Sindri sem: 'sindripal' og/eða 'SKULL_HAX hornaldo'.
 
 #to do list{
 	index{
