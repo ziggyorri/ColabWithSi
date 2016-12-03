@@ -1,7 +1,7 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:included/login.php");exit;}
 require_once('./included/connection.php');
 include("./included/query2.php");
-
+$currentPage = '1';
 $ID = '1';
 if (isset($_GET['viID'])) {
 	$ID = $_GET['viID'];

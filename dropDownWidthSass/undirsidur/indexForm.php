@@ -1,5 +1,6 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;}
-require_once('../included/connection.php'); ?>
+require_once('../included/connection.php');
+$currentPage = '2'; ?>
 <!DOCTYPE html>
 <html>
 <head>
