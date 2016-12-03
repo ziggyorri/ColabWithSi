@@ -23,11 +23,10 @@
 	}
 
 	user edit page{
-		change name: 0
-		change image: 0
-		change username: 0
-		change password: 0
-		lockfunction to changing username and password: 0
+		change name: 0.5
+		change image: 0.5
+		change username: 0.5
+		change password: 0.5
 	}
 
 	user toolbar update: 0
