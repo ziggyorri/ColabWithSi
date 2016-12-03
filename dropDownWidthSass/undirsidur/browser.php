@@ -1,6 +1,7 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;} 
 require_once('../included/connection.php');
 include("../included/query3.php");
+include '../included/lighten.php';
 $currentPage = '3';
 ?>
 
@@ -15,48 +16,20 @@ $currentPage = '3';
 	<body>
 		<div id="mainbodyB" class="mainbody">
 			<?php include '../included/navbar.php'; ?>
-			<?php 
-			/*foreach ($vidburdur as $a) {
-				echo("<div class='browserDiv'><a href='../index.php?viID=".$a[0]."'>".$a[1]."</a></div>");
-			}*/
-			 ?>
 			 <div id="brosercontainer">
-			 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<a href="../index.php?viID=1">
-				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
-				 	<div class="browserTitle">Texti</div>
-				 	</a>
-				 </div>
-				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<a href="../index.php?viID=1">
-				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
-				 	<div class="browserTitle">Texti</div>
-				 	</a>
-				 </div>
-				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<a href="../index.php?viID=1">
-				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
-				 	<div class="browserTitle">Texti</div>
-				 	</a>
-				 </div>
-				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<a href="../index.php?viID=1">
-				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
-				 	<div class="browserTitle">Texti	</div>
-				 	</a>
-				 </div>
-				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<a href="../index.php?viID=1">
-				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
-				 	<div class="browserTitle">Texti</div>
-				 	</a>
-				 </div>
-				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<a href="../index.php?viID=1">
-				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
-				 	<div class="browserTitle">Texti</div>
-				 	</a>
-				 </div>
+			<?php 
+			foreach ($vidburdur as $a) {
+			$litir2r=RGB($a[4],'1');
+			$litir2g=RGB($a[4],'2');
+			$litir2b=RGB($a[4],'3');
+				echo '<div style="background-color:rgb('. $litir2r.','.$litir2g.','.$litir2b.');border: 5px ridge '.$a[3].';color:'.$a[5].';" class="browserDiv">';
+				echo 	'<a href="../index.php?viID='.$a[0].'">';
+				echo 		'<img src="'.$a[2].'">';
+				echo	  '<div class="browserTitle">'.$a[1].'</div>';
+				echo	"</a>";			 
+				echo "</div>";
+			}
+			 ?>
 			 </div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
