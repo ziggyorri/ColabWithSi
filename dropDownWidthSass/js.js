@@ -125,9 +125,7 @@ $("img").click(function (){
     });
 $(window).resize(function(){
   var breid = $(window).width();
-        if (breid>480) {
         $('img').css('margin-left','0px');
-      }
       $('Login').css('font-size',breid/2);
 });
 
@@ -139,14 +137,6 @@ var scrollToElement = function(element)
            }, 1000);
 }
 
-//function call
-/*
-$("#link1").click(function (){
-                
-           scrollToElement('#heading1');	  
-                
-    });
-*/
 $("#undirtoggle").click(function (){
 	var tog = ["tog1","tog2","tog3"]
 	for (var i = tog.length - 1; i >= 0; i--) {
@@ -169,14 +159,6 @@ for(x = 0; x < myRadios.length; x++){
             setCheck = null;
     }
     };
-
-$("browserDiv").click(function (){
-      var breid = $(window).width();
-      if (breid>480) {
-        var margin = -$('this').width()+breid;
-        $('this').animate({marginLeft:margin},500);
-      }
-    });
 
 }
 $(document).ready(main);
