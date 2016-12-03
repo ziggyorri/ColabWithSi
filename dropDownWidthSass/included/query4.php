@@ -14,6 +14,7 @@
 
 	$Username=isset($_SESSION['UserData']['Username']) ? $_SESSION['UserData']['Username'] : '';
 	$Password=isset($_SESSION['UserData']['Password']) ? $_SESSION['UserData']['Password'] : '';
+	$dataUser = null;
 
 	foreach ($User as $k)
 	{

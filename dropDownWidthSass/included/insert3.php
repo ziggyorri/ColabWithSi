@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <meta charset="utf-8"> <!-- fyrir íslensk stafamengi -->
 <title>Registration Error</title>
 <link rel="stylesheet" type="text/css" href="../DropDead.css">
@@ -5,6 +6,7 @@
 <?php
 // sækja skrá sem geymir tengingu við gagnagrunn
 require_once("connection.php");
+include("query.php");
 include("query4.php");
 
 // erum hér að ná í playerinn úr forminu
@@ -15,22 +17,32 @@ $Nafn = $_POST['userNafn'];
 $Teljari = 0;
 $Tjekk = 0;
 
-foreach ($User as $k)
+foreach ($tafla as $k)
 {
 	if ($k[0] != $Usernafn){$Teljari++;}
 	elseif ($k[0] == $Usernafn){$Teljari = 0;}
-	if ($Teljari == 0){$Tjekk = 1;break;}
+	if ($Teljari == 0){$Tjekk = 1;}
 }
 
+$Username=isset($_SESSION['UserData']['Username']) ? $_SESSION['UserData']['Username'] : '';
+$Password=isset($_SESSION['UserData']['Password']) ? $_SESSION['UserData']['Password'] : '';
+$dataUser = null;
+
+foreach ($User as $k)
+{
+	if ($k[0] == $Username && $k[1] == $Password){$dataUser = [$k[0], $k[1], $k[2], $k[3]];break;}
+}
+$oldUsernafn = $dataUser[0];
+$oldPassword = $dataUser[1];
 	
-if ($Usernafn == $_SESSION['UserData']['Username']) {$Tjekk = 0;}
+if ($Usernafn == $oldUsernafn) {$Tjekk = 0;}
 
 //er hérna að athuga hvort breyturnar séu ekki tómar
 if(!empty($Usernafn) && !empty($Passord) && !empty($profilePic) && !empty($Nafn) && $Tjekk != 1)
 {
 	// SQL skipun/fyrirspurnin - gott að athuga fyrst hvort hún sé rétt  með að skrifa í og prófa í phpmyadmin eða workbench 
 	// hér erum við að nota placeholder (er með : á undan) fyrir gildi úr $_POST fylki.
-	$sql = 'INSERT INTO tafla(Usernafn, Password, profilePic, Nafn)VALUES(:Usernafn,:Passord,:profilePic,:Nafn)'; 
+	$sql = "UPDATE tafla SET Usernafn=':Usernafn', Password=':Passord', profilePic=':profilePic', Nafn=':Nafn' WHERE Usernafn=':oldUsernafn' AND Password=':oldPassword';"; 
 	
 	// Prepare setning (e. statement) er sql fyrirspurn sem þú sendir til miðlara (e. server) áður en þú framkvæmir hana
 	// þetta er gerir miðlaranum (MySQL) kleift að undirbúa sig fyrir keyrslu (kemur í veg árásir á gagnagrunn (SQL injection))
@@ -47,6 +59,8 @@ if(!empty($Usernafn) && !empty($Passord) && !empty($profilePic) && !empty($Nafn)
 		$q->bindValue(':Passord',$Passord);
 		$q->bindValue(':profilePic',$profilePic);
 		$q->bindValue(':Nafn',$Nafn);
+		$q->bindValue(':oldUsernafn',$oldUsernafn);
+		$q->bindValue(':oldPassword',$oldPassword);
 
 		// execute segir MySQL að framkvæma SQL kóða á gagnagrunn með gildunum.
 		$q->execute();  

@@ -37,8 +37,8 @@ $currentPage = '2'; ?>
 
 	<div class="Price">
 		<input type="text" name="color1" placeholder="Dark Color (e.g.: '#000000')">
-		<input type="text" name="color2" placeholder="Light Color (example: 'darkred')">
-		<input type="text" name="color3" placeholder="Font Color (example: '#123')">
+		<input type="text" name="color2" placeholder="Light Color (e.g.: 'darkred')">
+		<input type="text" name="color3" placeholder="Font Color (e.g.: '#123')">
 		<input type="submit" name="submit" value="Submit" Class="Button3">
 	</div>
 <?php include("../included/footer.php"); ?>
