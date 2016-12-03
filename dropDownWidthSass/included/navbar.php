@@ -25,16 +25,15 @@
 			</li>
 			<li>
 				<input type="radio" name="db" id="tog3">
-				<label class="undirtoggle" for="tog3">Top tengill</label>
+				<label class="undirtoggle" for="tog3">User</label>
 				<ul>
-					<li><a href="#">tengill</a></li>
-					<li><a href="#">tengill</a></li>
-					<li><a href="#">tengill</a></li>
-					<li><a href="#">tengill</a></li>
+					<?php if ($currentPage == '1') {echo('<li><a href="./undirsidur/user.php">Edit profile</a></li>
+						<li><a href="./included/logout.php">Logout</a></li>');}
+					else {echo('<li><a href="./user.php">Edit profile</a></li>
+						<li><a href="../included/logout.php">Logout</a></li>');} ?>
 				</ul>
 			</li>
-			<?php if ($currentPage == '1') {echo('<li><a href="./included/logout.php">Logout</a></li>');}
-			else {echo('<li><a href="../included/logout.php">Logout</a></li>');} ?>
+			<?php echo('<li><p>'.$dataUser[3].'</p><img src="'.$dataUser[2].'" width="100px" height="100px"></li>'); ?>
 		</ul>
 	</nav>
 </div>

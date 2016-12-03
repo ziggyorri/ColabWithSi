@@ -2,16 +2,7 @@
 require_once('../included/connection.php');
 include('../included/query4.php');
 include('../included/lighten.php');
-$currentPage = '4';
-
-	$Username=isset($_SESSION['UserData']['Username']) ? $_SESSION['UserData']['Username'] : '';
-	$Password=isset($_SESSION['UserData']['Password']) ? $_SESSION['UserData']['Password'] : '';
-
-	foreach ($User as $k)
-	{
-    	if ($k[0] == $Username && $k[1] == $Password){$dataUser = [$k[0], $k[1], $k[2], $k[3]];break;}
-    }
-?>
+$currentPage = '4'; ?>
 
 <!DOCTYPE html>
 <html>

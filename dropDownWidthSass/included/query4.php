@@ -11,4 +11,12 @@
 	while($row = $result -> fetch()){
 		$User[] = array($row['Usernafn'], $row['Password'], $row['profilePic'], $row['Nafn']);
 	}
+
+	$Username=isset($_SESSION['UserData']['Username']) ? $_SESSION['UserData']['Username'] : '';
+	$Password=isset($_SESSION['UserData']['Password']) ? $_SESSION['UserData']['Password'] : '';
+
+	foreach ($User as $k)
+	{
+    	if ($k[0] == $Username && $k[1] == $Password){$dataUser = [$k[0], $k[1], $k[2], $k[3]];break;}
+    }
  ?>
