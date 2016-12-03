@@ -15,15 +15,15 @@ $currentPage = '4'; ?>
 	<body>
 		<div id="mainbodyB" class="mainbody">
 			<?php include '../included/navbar.php'; ?>
-			<form action="" method="post" name="Edit">
+			<form action="../included/insert3.php" method="post" name="Edit">
 				<label class="userLabel">Username:</label>
-				<input class="formInput" name="Username" type="text" class="Input" <?php echo('value="'.$dataUser[0].'"'); ?> placeholder="Username">
+				<input class="formInput" name="userUsername" type="text" class="Input" <?php echo('value="'.$dataUser[0].'"'); ?> placeholder="Username">
 				<label class="userLabel">Password:</label>
-				<input class="formInput" name="Password" type="password" class="Input" <?php echo('value="'.$dataUser[1].'"'); ?> placeholder="Password">
+				<input class="formInput" name="userPassword" type="password" class="Input" <?php echo('value="'.$dataUser[1].'"'); ?> placeholder="Password">
 				<label class="userLabel">Profile Image:</label>
-				<input class="formInput" name="ProfilePic" type="text" class="Input" <?php echo('value="'.$dataUser[2].'"'); ?> placeholder="Image URL">
+				<input class="formInput" name="userProfilePic" type="text" class="Input" <?php echo('value="'.$dataUser[2].'"'); ?> placeholder="Image URL">
 				<label class="userLabel">Name:</label>
-				<input class="formInput" name="Name" type="text" class="Input" <?php echo('value="'.$dataUser[3].'"'); ?> placeholder="Name">
+				<input class="formInput" name="userNafn" type="text" class="Input" <?php echo('value="'.$dataUser[3].'"'); ?> placeholder="Name">
 				<input class="formInput" name="Submit" type="submit" value="Save Changes" class="Button3">
 			</form>
 		</div>

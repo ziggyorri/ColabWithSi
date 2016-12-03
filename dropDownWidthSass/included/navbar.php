@@ -3,7 +3,7 @@
 	<label for="toggle">&#9776menu</label>
 	<nav>
 	    <ul>
-			<?php if ($currentPage !== '3' && $currentPage !== '4') {echo('<li>
+			<?php if ($currentPage != '3' && $currentPage != '4') {echo('<li>
 				<input type="radio" name="db" id="tog1">
 				<label class="undirtoggle" for="tog1" >Current page</label>
 				<ul>
