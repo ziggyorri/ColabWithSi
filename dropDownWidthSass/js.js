@@ -116,11 +116,10 @@ var animateNav = function() {//keirist þegar skrollar
 	}*/
 	
 }
-var bul = false;
 $("img").click(function (){
       var breid = $(window).width();
       if (breid<480) {
-        var margin = -640+breid;
+        var margin = -$('img').width()+breid;
         $('img').animate({marginLeft:margin},500);
       }
     });
@@ -170,6 +169,14 @@ for(x = 0; x < myRadios.length; x++){
             setCheck = null;
     }
     };
+
+$("browserDiv").click(function (){
+      var breid = $(window).width();
+      if (breid>480) {
+        var margin = -$('this').width()+breid;
+        $('this').animate({marginLeft:margin},500);
+      }
+    });
 
 }
 $(document).ready(main);

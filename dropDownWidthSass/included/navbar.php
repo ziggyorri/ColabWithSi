@@ -15,9 +15,9 @@
 			</li>
 			<li>
 				<input type="radio" name="db" id="tog2">
-				<label class="undirtoggle" for="tog2">Top tengill</label>
+				<label class="undirtoggle" for="tog2">Events</label>
 				<ul>
-					<li><a onclick="" href="#">tengill</a></li>
+					<li><a href="./undirsidur/browser.php">Brows enents</a></li>
 					<li><a href="#">tengill</a></li>
 					<li><a href="#">tengill</a></li>
 					<li><a href="#">tengill</a></li>

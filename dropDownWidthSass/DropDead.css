@@ -6,6 +6,9 @@ body {
   background-color: darkred;
   color: #123; }
 
+a {
+  color: #123; }
+
 ul {
   list-style: none; }
 
@@ -461,5 +464,16 @@ footer {
 @media screen and (max-width: 30em) {
   #indexFormTA {
     min-height: none; } }
+#brosercontainer {
+  display: flex;
+  flex-flow: row nowrap; }
+
+.browserDiv {
+  height: 200px;
+  width: 200px;
+  overflow: hidden; }
+  .browserDiv img {
+    height: 100%;
+    width: auto; }
 
 /*# sourceMappingURL=DropDead.css.map */

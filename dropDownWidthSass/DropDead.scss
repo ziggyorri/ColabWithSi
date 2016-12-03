@@ -26,6 +26,9 @@ body{
 	background-color: $colorLight;//-------
 	color:$colorFont;
 }
+a{
+	color:$colorFont;
+}
 ul{
 	list-style:none;
 }
@@ -388,3 +391,18 @@ footer{
 		min-height: none;
 	}
 	}
+
+//----Broswe sida
+#brosercontainer{
+	display: flex;
+    flex-flow:row nowrap;
+}
+.browserDiv{
+	height:200px;
+	width:200px;
+	overflow:hidden;
+	img{
+		height: 100%;
+		width: auto;
+	}
+}
