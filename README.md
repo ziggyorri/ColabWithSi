@@ -22,7 +22,14 @@
 		sql: 1
 	}
 
-	user edit page: 0
+	user edit page{
+		change name: 0
+		change image: 0
+		change username: 0
+		change password: 0
+		lockfunction to changing username and password: 0
+	}
+
 	user toolbar update: 0
 
 	bug fixes: work in progress
