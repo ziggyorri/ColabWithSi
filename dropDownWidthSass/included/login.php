@@ -14,7 +14,8 @@
         }
 		if(isset($logins[$Username])&&$logins[$Username]==$Password)
 		{
-			$_SESSION['UserData']['Username']=$logins[$Username];header("location:../index.php");exit;
+			$_SESSION['UserData']['Username']=$Username;
+			$_SESSION['UserData']['Password']=$logins[$Username];header("location:../index.php");exit;
 		}
 	}
  ?>

@@ -1,7 +1,7 @@
-<?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;} 
+<?php session_start();if(!isset($_SESSION['UserData']['Password'])){header("location:../included/login.php");exit;} 
 require_once('../included/connection.php');
 include("../included/query3.php");
-include '../included/lighten.php';
+include('../included/lighten.php');
 $currentPage = '3';
 ?>
 

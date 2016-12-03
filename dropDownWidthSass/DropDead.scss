@@ -393,8 +393,8 @@ footer{
 	}
 	}
 
-//----Broswe sida
-#brosercontainer{
+//----Browser sida
+#browsercontainer{
 	display: flex;
     flex-flow:row;
     flex-wrap: wrap;
@@ -412,4 +412,9 @@ footer{
 .browserTitle{
 	width:100%;
 	padding:5px;
+}
+
+//----User sida
+.userLabel{
+	display: block;
 }
