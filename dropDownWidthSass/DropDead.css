@@ -466,14 +466,19 @@ footer {
     min-height: none; } }
 #brosercontainer {
   display: flex;
-  flex-flow: row nowrap; }
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-content: center; }
 
 .browserDiv {
-  height: 200px;
-  width: 200px;
+  flex-grow: 2;
   overflow: hidden; }
   .browserDiv img {
-    height: 100%;
-    width: auto; }
+    width: 100%;
+    height: auto; }
+
+.browserTitle {
+  width: 100%;
+  padding: 5px; }
 
 /*# sourceMappingURL=DropDead.css.map */

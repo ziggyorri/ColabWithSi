@@ -1,7 +1,7 @@
 <?php session_start();if(!isset($_SESSION['UserData']['Username'])){header("location:../included/login.php");exit;} 
 require_once('../included/connection.php');
 include("../included/query3.php");
-
+$currentPage = '3';
 ?>
 
 <!DOCTYPE html>
@@ -22,20 +22,40 @@ include("../included/query3.php");
 			 ?>
 			 <div id="brosercontainer">
 			 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
+				 	<a href="../index.php?viID=1">
+				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
 				 	<div class="browserTitle">Texti</div>
+				 	</a>
 				 </div>
 				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
+				 	<a href="../index.php?viID=1">
+				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
 				 	<div class="browserTitle">Texti</div>
+				 	</a>
 				 </div>
 				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
+				 	<a href="../index.php?viID=1">
+				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
 				 	<div class="browserTitle">Texti</div>
+				 	</a>
 				 </div>
 				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
-				 	<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
+				 	<a href="../index.php?viID=1">
+				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
+				 	<div class="browserTitle">Texti	</div>
+				 	</a>
+				 </div>
+				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
+				 	<a href="../index.php?viID=1">
+				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
 				 	<div class="browserTitle">Texti</div>
+				 	</a>
+				 </div>
+				 <div style="border: 2px solid black;background-color:darkred;color:#112233;" class="browserDiv">
+				 	<a href="../index.php?viID=1">
+				 		<img src="http://www.msf-me.org/en/media/get/20100902_img-test.jpg">
+				 	<div class="browserTitle">Texti</div>
+				 	</a>
 				 </div>
 			 </div>
 		</div>
