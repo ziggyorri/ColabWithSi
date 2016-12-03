@@ -4,12 +4,11 @@
 <meta name="viewport" content="width=device-width">
 
 <?php
-// sækja skrá sem geymir tengingu við gagnagrunn
 require_once("connection.php");
 
 $heiti = $_POST['heiti'];
 $imgUrl = $_POST['imgUrl'];
-Image_Size_From_URL($imgUrl);
+$imgUrl = Image_Size_From_URL($imgUrl);
 $lysingTemp = $_POST['lysing'];
 $sublysing = explode("\n\n", $lysingTemp);
 $lysing = null;
@@ -261,12 +260,17 @@ function Image_Size_From_URL ($image_URL)
         List($width, $height) = getimagesize($image_URL);
     	if ($height/$width >= 1/2)
     	{
-    		$imgUrl = null;
+            echo('<script>alert("Please use an image with the height/width ratio 1/2 or less.")</script>');
+    		return(null);
     	}
+        else
+        {
+            return($image_URL);
+        }
     }
     catch (Exception $e)
     {
-        echo('');
+        echo('<script>alert("Please put a valid image in a valid URL format into the form.")</script>');
     }
 }
 ?>

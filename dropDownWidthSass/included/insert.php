@@ -29,7 +29,7 @@ if(!empty($Usernafn) && !empty($Passord) && $Tjekk != 1)
 {
 	// SQL skipun/fyrirspurnin - gott að athuga fyrst hvort hún sé rétt  með að skrifa í og prófa í phpmyadmin eða workbench 
 	// hér erum við að nota placeholder (er með : á undan) fyrir gildi úr $_POST fylki.
-	$sql = 'INSERT INTO tafla(Usernafn, Password)VALUES(:Usernafn,:Passord)'; 
+	$sql = 'INSERT INTO tafla(Usernafn, Password, profilePic)VALUES(:Usernafn,:Passord,"http://bit.ly/2gyDNpu")'; 
 	
 	// Prepare setning (e. statement) er sql fyrirspurn sem þú sendir til miðlara (e. server) áður en þú framkvæmir hana
 	// þetta er gerir miðlaranum (MySQL) kleift að undirbúa sig fyrir keyrslu (kemur í veg árásir á gagnagrunn (SQL injection))
