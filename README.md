@@ -15,9 +15,16 @@
 		sql: 1
 	}
 
+	event browser page{
+		html: 0
+		css: 0
+		php: 1
+		sql: 1
+	}
+
 	user edit page: 0
-	event browser page: 0
 	user toolbar update: 0
 
-	bug fix : 30/500
+	bug fixes: work in progress
+	grammar: work in progress
 }
