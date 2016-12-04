@@ -432,10 +432,42 @@ footer{
 }
 .browserTitle{
 	width:100%;
-	padding:5px;
+	padding:0px;
 }
 
 //----User sida
-.userLabel{
-	display: block;
+#userFormContainer{
+	display:flex;
+	flex-flow:column;
+	margin:0 auto;
+	margin-top:15px;
+
 }
+.userLabel{
+	margin:0px;
+	padding:0px;
+}
+.formInput{
+	max-width:none;
+	min-width:none;
+	float:right;
+	width:79%;
+    font-size: 22.4px;
+}
+@media screen and (max-width: 48em){
+.formInput{
+	width:100%;
+}
+}
+#subbmit{
+	clear:left;
+    float: left;
+    margin-top: 15px;
+}
+b{
+	float:left;
+	clear:left;
+}
+h3{
+    padding:15px 0;
+  }
