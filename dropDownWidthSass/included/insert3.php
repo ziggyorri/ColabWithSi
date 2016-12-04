@@ -22,7 +22,7 @@ foreach ($User as $k)
 $Usernafn = $dataUser[0];
 
 //er hérna að athuga hvort breyturnar séu ekki tómar
-if(!empty($Username) && !empty($profilePic) && !empty($Nafn))
+if(!empty($Usernafn) && !empty($profilePic) && !empty($Nafn))
 {
 	$pdo->beginTransaction();
 	// SQL skipun/fyrirspurnin - gott að athuga fyrst hvort hún sé rétt  með að skrifa í og prófa í phpmyadmin eða workbench 
@@ -50,7 +50,7 @@ if(!empty($Username) && !empty($profilePic) && !empty($Nafn))
 
 		echo "Það tókst að skrifa eftirfarandi upplýsingar í gagnagrunn<br>";
 		echo "Profile Picture: ".$profilePic.", Name: ".$Nafn;
-		
+		echo("<br><a href='../index.php'>Til baka</a>");
 	}
 	//
 	catch (PDOException $ex){
