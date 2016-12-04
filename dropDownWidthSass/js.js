@@ -116,11 +116,11 @@ var animateNav = function() {//keirist þegar skrollar
 	}*/
 	
 }
-$("img").click(function (){
+$("#img img").click(function (){
       var breid = $(window).width();
       if (breid<480) {
-        var margin = -$('img').width()+breid;
-        $('img').animate({marginLeft:margin},500);
+        var margin = -$('#img img').width()+breid;
+        $('#img img').animate({marginLeft:margin},500);
       }
     });
 $(window).resize(function(){

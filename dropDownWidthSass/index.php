@@ -44,6 +44,7 @@ $litir3b=RGB($litir3,'3');
 			background-color:<?php echo $litir2 ?>;
 		}
 		nav ul li ul li,
+		.navcontainer #mainlabel,
 		#mainbody1{
 			background-color:<?php echo $litir2; ?>;
 		}
