@@ -6,7 +6,6 @@
 <?php
 // sækja skrá sem geymir tengingu við gagnagrunn
 require_once("connection.php");
-include("query.php");
 include("query4.php");
 
 // erum hér að ná í playerinn úr forminu
@@ -17,7 +16,7 @@ $Nafn = $_POST['userNafn'];
 $Teljari = 0;
 $Tjekk = 0;
 
-foreach ($tafla as $k)
+foreach ($User as $k)
 {
 	if ($k[0] != $Usernafn){$Teljari++;}
 	elseif ($k[0] == $Usernafn){$Teljari = 0;}
@@ -30,10 +29,10 @@ $dataUser = null;
 
 foreach ($User as $k)
 {
-	if ($k[0] == $Username && $k[1] == $Password){$dataUser = [$k[0], $k[1], $k[2], $k[3]];break;}
+	if ($k[0] == $Username && $k[1] == $Password){$dataUser = [$k[0], $k[1], $k[2], $k[3], $k[4]];break;}
 }
 $oldUsernafn = $dataUser[0];
-$oldPassword = $dataUser[1];
+$userID = $dataUser[4];
 	
 if ($Usernafn == $oldUsernafn) {$Tjekk = 0;}
 
@@ -42,7 +41,7 @@ if(!empty($Usernafn) && !empty($Passord) && !empty($profilePic) && !empty($Nafn)
 {
 	// SQL skipun/fyrirspurnin - gott að athuga fyrst hvort hún sé rétt  með að skrifa í og prófa í phpmyadmin eða workbench 
 	// hér erum við að nota placeholder (er með : á undan) fyrir gildi úr $_POST fylki.
-	$sql = "UPDATE tafla SET Usernafn=':Usernafn', Password=':Passord', profilePic=':profilePic', Nafn=':Nafn' WHERE Usernafn=':oldUsernafn' AND Password=':oldPassword';"; 
+	$sql = "UPDATE tafla SET Usernafn=':Usernafn', Password=':Passord', profilePic=':profilePic', Nafn=':Nafn' WHERE ID=':userID';"; 
 	
 	// Prepare setning (e. statement) er sql fyrirspurn sem þú sendir til miðlara (e. server) áður en þú framkvæmir hana
 	// þetta er gerir miðlaranum (MySQL) kleift að undirbúa sig fyrir keyrslu (kemur í veg árásir á gagnagrunn (SQL injection))
@@ -59,8 +58,7 @@ if(!empty($Usernafn) && !empty($Passord) && !empty($profilePic) && !empty($Nafn)
 		$q->bindValue(':Passord',$Passord);
 		$q->bindValue(':profilePic',$profilePic);
 		$q->bindValue(':Nafn',$Nafn);
-		$q->bindValue(':oldUsernafn',$oldUsernafn);
-		$q->bindValue(':oldPassword',$oldPassword);
+		$q->bindValue(':userID',$userID);
 
 		// execute segir MySQL að framkvæma SQL kóða á gagnagrunn með gildunum.
 		$q->execute();  
