@@ -258,9 +258,9 @@ function Image_Size_From_URL ($image_URL)
     try
     {
         List($width, $height) = getimagesize($image_URL);
-    	if ($height/$width >= 1/2)
+    	if ($height/$width >= 1/1.3)
     	{
-            echo('<script>alert("Please use an image with the height/width ratio 1/2 or less.")</script>');
+            echo('<script>alert("Please use an image with the height/width ratio 1/1.3 or less.")</script>');
     		return(null);
     	}
         else
