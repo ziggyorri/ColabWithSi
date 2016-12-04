@@ -272,7 +272,10 @@ footer {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 100%; } }
+    width: 100%; }
+
+  .main {
+    min-height: 500px; } }
 @media screen and (max-width: 48em) {
   .navcontainer {
     position: fixed;
@@ -327,7 +330,8 @@ footer {
     text-align: initial;
     width: 100%;
     float: none;
-    overflow: hidden; }
+    overflow: hidden;
+    min-height: 0px; }
 
   .opnun,
   .Price {

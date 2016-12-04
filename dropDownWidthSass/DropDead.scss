@@ -240,6 +240,9 @@ footer{
 	left:0px;
 	width:100%;
 }
+.main{
+	min-height:500px;
+}
 }
 //-------------------------------------------------------
 @media screen and (max-width: 48em){
@@ -293,6 +296,7 @@ footer{
 }
 	.main{
 	@include textSpacing(100%,none);
+	min-height:0px;
 	}
 	.opnun,
 	.Price{
