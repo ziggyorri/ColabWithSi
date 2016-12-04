@@ -22,7 +22,7 @@ $showIn = $_POST['shownIn'];
 $price = $_POST['price'];
 $dags = $dagsTemp."◘".$timi."◘".$showIn."◘".$price;
 $litur1 = "#000000";
-$litur2 = "#8b0000";
+$litur2 = "#8B0000";
 $litur3 = "#112233";
 if (!empty($_POST['color1']) && !empty($_POST['color2']) && !empty($_POST['color3'])) {
     if (strpos($_POST['color2'], '#')!== false) //ekki ekki (double negative)
