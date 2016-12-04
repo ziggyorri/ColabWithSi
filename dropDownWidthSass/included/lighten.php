@@ -4,7 +4,7 @@ function hexOc($hex){
 		return $hex;
 	}
 	else{
-		switch ($hex) {
+		switch (strtoupper($hex)) {
 			case 'A':
 			return '10';
 			break;
