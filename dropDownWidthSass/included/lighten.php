@@ -42,7 +42,7 @@ function RGB($litir, $Ret){
 $R = hexOc($litir[1])*16+hexOc($litir[2]);//breit í tvíundakerfi
 $G = hexOc($litir[3])*16+hexOc($litir[4]);//breit í tvíundakerfi
 $B = hexOc($litir[5])*16+hexOc($litir[6]);//breit í tvíundakerfi
-$proT = '11';//% tala
+$proT = '21';//% tala
 if($R-5*($B+$G>10) || $G-5*($B+$R>10) || $B-5*($R+$G>10)) 				//extream colors
 {				
 	$proT='70';

@@ -33,7 +33,7 @@
 						<li><a href="../included/logout.php">Logout</a></li>');} ?>
 				</ul>
 			</li>
-			<li id="userInfoTab"><?php
+			<li id="userInfoTab" title=<?php echo '"'.$dataUser[3].'"'?>><?php
 			 if (17>strlen($dataUser[3])) 
 			{
 				echo $dataUser[3];

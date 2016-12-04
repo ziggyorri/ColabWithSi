@@ -56,17 +56,19 @@ $litir3b=RGB($litir3,'3');
 	<body>
 		<div id="mainbodyB" class="mainbody">
 			<?php include '../included/navbar.php'; ?>
-			<form action="../included/insert3.php" method="post" name="Edit">
-				<label class="userLabel">Username:</label>
-				<input class="formInput" name="userUsername" type="text" class="Input" <?php echo('value="'.$dataUser[0].'"'); ?> placeholder="Username">
-				<label class="userLabel">Password:</label>
-				<input class="formInput" name="userPassword" type="password" class="Input" <?php echo('value="'.$dataUser[1].'"'); ?> placeholder="Password">
-				<label class="userLabel">Profile Image:</label>
-				<input class="formInput" name="userProfilePic" type="text" class="Input" <?php echo('value="'.$dataUser[2].'"'); ?> placeholder="Image URL">
-				<label class="userLabel">Name:</label>
-				<input class="formInput" name="userNafn" type="text" class="Input" <?php echo('value="'.$dataUser[3].'"'); ?> placeholder="Name">
-				<input class="formInput" name="Submit" type="submit" value="Save Changes" class="Button3">
+			<div id="userFormContainer">
+				<form action="../included/insert3.php" method="post" name="Edit">
+				
+				<h3 class="userLabel"><b>Username:</b><input class="formInput" name="userUsername" type="text" class="Input" <?php echo('value="'.$dataUser[0].'"'); ?> placeholder="Username"></h3>
+				
+				<h3 class="userLabel"><b>Password:</b><input class="formInput" name="userPassword" type="password" class="Input" <?php echo('value="'.$dataUser[1].'"'); ?> placeholder="Password"></h3>
+				
+				<h3 class="userLabel"><b>Profile Image:</b><input class="formInput" name="userProfilePic" type="text" class="Input" <?php echo('value="'.$dataUser[2].'"'); ?> placeholder="Image URL"></h3>
+				
+				<h3 class="userLabel"><b>Name:</b> <input class="formInput" name="userNafn" type="text" class="Input" <?php echo('value="'.$dataUser[3].'"'); ?> placeholder="Name"></h3>
+				<input id="subbmit" name="Submit" type="submit" value="Save Changes" class="Button3">
 			</form>
+			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="../js.js"></script>

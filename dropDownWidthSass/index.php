@@ -56,11 +56,21 @@ $litir3b=RGB($litir3,'3');
 		}
 		nav ul li ul li:hover,
 		nav ul li,
-		.info,
+		footer ul,
+		ul#ref,
+		#mapi,
+		.main,
+		#img,
+		#info,
 		.opnun,
 		footer,
 		div{
 			background-color:rgb(<?php echo $litir2r.",".$litir2g.",".$litir2b; ?>);
+			border-color: <?php echo $litir1 ?>;
+		}
+		.mainbody
+		{
+			border-color: <?php echo $litir1 ?>;
 		}
 
 		.navcontainer{
