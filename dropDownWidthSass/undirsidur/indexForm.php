@@ -67,13 +67,12 @@ $litir3b=RGB($litir3,'3');
 
 	</div>
 <div id="info" class="Price">
-		<div class="meh"><h2>Date</h2><input type="text" name="dags" placeholder="Date" required>
-		<input type="text" name="timi" placeholder="Time" required></div>
+		<h2>Date</h2><input type="text" name="dags" placeholder="Date" required>
+		<input type="text" name="timi" placeholder="Time" required>
 
-		<div class="meh">Shown in
-		<input type="text" name="shownIn" placeholder="Location" required></div>
+		<input type="text" name="shownIn" placeholder="Location" required>
 
-		<div>Price <input type="text" name="price" placeholder="Amount" required></div>
+		<div><input type="text" name="price" placeholder="Price" required></div>
 	</div>
 
 	<div class="Price">

@@ -36,6 +36,7 @@ try{
 
 		echo "Það tókst að skrifa eftirfarandi upplýsingar í gagnagrunn<br>";
 		echo "Profile Picture: ".$profilePic.", Name: ".$Nafn;
+		echo("<br><a href='../index.php'>Til baka</a>");
 		
 	}
 	//
