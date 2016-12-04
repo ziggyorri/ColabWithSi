@@ -17,14 +17,14 @@
 			<li><a href="">harpa@harpa.is</a></li>
 		</ul>
 		<ul>
-		Íbúar
+		Groups
 			<li><a href="">Sinfóníuhljómsveit Íslands</a></li>
 			<li><a href="">Íslenska óperan</a></li>
 			<li><a href="">Stórsveit Reykjavíkur</a></li>
 			<li><a href="">Maxímús Músíkús</a></li>
 		</ul>
 		<ul id="ref">
-		referenslist
+		References
 			<li><a href="https://www.harpa.is/">https://www.harpa.is/</a></li>
 			<li><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></li>
 			<li><a href="http://stackoverflow.com/">http://stackoverflow.com/</a></li>

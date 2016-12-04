@@ -58,9 +58,9 @@ $litir3b=RGB($litir3,'3');
 			<?php include '../included/navbar.php'; ?>
 			<div id="userFormContainer">
 				<form action="../included/insert3.php" method="post" name="Edit">
-				<h3 class="userLabel"><b>Profile Image:</b><input class="formInput" name="userProfilePic" type="text" class="Input" <?php echo('value="'.$dataUser[2].'"'); ?> placeholder="Image URL"></h3>
+				<h3 class="userLabel"><b><sub><sup>(direct-URL)</sup></sub>Image:</b><input class="formInput" name="userProfilePic" type="text" class="Input" <?php echo('value="'.$dataUser[2].'"'); ?> placeholder="Image URL"></h3>
 				
-				<h3 class="userLabel"><b>Name:</b> <input class="formInput" name="userNafn" type="text" class="Input" <?php echo('value="'.$dataUser[3].'"'); ?> placeholder="Name"></h3>
+				<h3 class="userLabel"><b><sup><sub>(not username)</sub></sup>Name:</b> <input class="formInput" name="userNafn" type="text" class="Input" <?php echo('value="'.$dataUser[3].'"'); ?> placeholder="Name"></h3>
 				<input id="subbmit" name="Submit" type="submit" value="Save Changes" class="Button3">
 			</form>
 			</div>
