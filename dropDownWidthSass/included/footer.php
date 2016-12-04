@@ -17,11 +17,11 @@
 			<li><a href="">harpa@harpa.is</a></li>
 		</ul>
 		<ul>
-		Groups
-			<li><a href="">Sinfóníuhljómsveit Íslands</a></li>
-			<li><a href="">Íslenska óperan</a></li>
-			<li><a href="">Stórsveit Reykjavíkur</a></li>
-			<li><a href="">Maxímús Músíkús</a></li>
+		Residents
+			<li><a href="http://www.sinfonia.is/">Sinfóníuhljómsveit Íslands</a></li>
+			<li><a href="http://opera.is/is/">Íslenska óperan</a></li>
+			<li><a href="https://www.facebook.com/reykjavikbigband/">Stórsveit Reykjavíkur</a></li>
+			<li><a href="https://www.harpa.is/harpa/ibuar/maximus-musikus/">Maxímús Músíkús</a></li>
 		</ul>
 		<ul id="ref">
 		References
