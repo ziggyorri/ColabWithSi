@@ -1,6 +1,6 @@
 <div class="navcontainer">
 	<input type="checkbox" id="toggle">
-	<label for="toggle">&#9776menu</label>
+	<label id="mainlabel" for="toggle">&#9776menu</label>
 	<nav>
 	    <ul>
 			<?php if ($currentPage != '3' && $currentPage != '4') {echo('<li>
@@ -33,7 +33,17 @@
 						<li><a href="../included/logout.php">Logout</a></li>');} ?>
 				</ul>
 			</li>
-			<?php echo('<li><p>'.$dataUser[3].'</p><img src="'.$dataUser[2].'" width="100px" height="100px"></li>'); ?>
+			<li id="userInfoTab"><?php
+			 if (17>strlen($dataUser[3])) 
+			{
+				echo $dataUser[3];
+			}
+			else{
+				echo substr($dataUser[3], 0,14)."...";
+				} 
+				?>
+				<img id="userImg" src=<?php echo '"'.$dataUser[2].'"' ?>>		
+			</li>
 		</ul>
 	</nav>
 </div>

@@ -4,7 +4,18 @@ include("../included/query3.php");
 include('../included/query4.php');
 include('../included/lighten.php');
 $currentPage = '3';
-?>
+$litir1 = '#000000';
+$litir2 = '#8B0000';
+$litir3 = '#112233';
+
+$litir2r=RGB($litir2,'1');
+$litir2g=RGB($litir2,'2');
+$litir2b=RGB($litir2,'3');
+
+$litir3r=RGB($litir3,'1');
+$litir3g=RGB($litir3,'2');
+$litir3b=RGB($litir3,'3');
+?>	
 
 <!DOCTYPE html>
 <html>
@@ -13,6 +24,35 @@ $currentPage = '3';
 		<link rel="stylesheet" type="text/css" href="../DropDead.css">
 		<meta name="viewport" content="width=device-width">
 		<meta charset="utf-8">
+		<style type="text/css">
+		body{
+			color: <?php echo $litir3 ?>;
+			background-color:<?php echo $litir2 ?>;
+		}
+		nav ul li ul li,
+		.navcontainer #mainlabel,
+		#mainbody1{
+			background-color:<?php echo $litir2; ?>;
+		}
+		a{
+			color: <?php echo $litir3 ?>;
+		}
+		a:hover{
+			color:rgb(<?php echo $litir3r.",".$litir3g.",".$litir3b; ?>);
+		}
+		nav ul li ul li:hover,
+		nav ul li,
+		.info,
+		.opnun,
+		.mainbody,
+		footer{
+			background-color:rgb(<?php echo $litir2r.",".$litir2g.",".$litir2b; ?>);
+		}
+
+		.navcontainer{
+			background-color: transparent;
+		}
+	</style>
 	</head>
 	<body>
 		<div id="mainbodyB" class="mainbody">
