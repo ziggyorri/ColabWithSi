@@ -94,7 +94,7 @@ var test = $('.mainbody').css('border-color');
 var animateNav = function() {//keirist þegar skrollar
 
 	yPos = $(document).scrollTop();
-	var heading1Pos = $('#heading1').offset().top;//hversu langt frá toppnum
+	var heading1Pos = $('.mainbody').offset().top;//hversu langt frá toppnum
 	if(yPos > 15)//bæta við klassa
 	{
 		$('.navcontainer').addClass('scrollDown');
